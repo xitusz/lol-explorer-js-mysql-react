@@ -25,7 +25,21 @@ const addFavorite = async (req, res, next) => {
   }
 };
 
+const removeFavorite = async (req, res, next) => {
+  const { id } = req.user;
+  const { favoriteName } = req.body;
+
+  try {
+    await favoriteService.removeFavorite(id, favoriteName);
+
+    return res.status(200).json({ message: "Favorito removido com sucesso" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   listFavorites,
   addFavorite,
+  removeFavorite,
 };
