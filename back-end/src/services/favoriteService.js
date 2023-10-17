@@ -25,7 +25,20 @@ const addFavorite = async (userId, favoriteName) => {
   }
 };
 
+const removeFavorite = async (userId, favoriteName) => {
+  const favorites = await Favorite.findOne({ where: { userId } });
+
+  if (favorites) {
+    favorites.favorite = favorites.favorite.filter(
+      (name) => name !== favoriteName
+    );
+
+    await favorites.save();
+  }
+};
+
 module.exports = {
   listFavorites,
   addFavorite,
+  removeFavorite,
 };
