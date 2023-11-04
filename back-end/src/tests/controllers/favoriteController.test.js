@@ -24,4 +24,21 @@ describe("Favorite Controller", () => {
       expect(res.json.calledWith(favorites.favorite)).to.be.true;
     });
   });
+
+  describe("addFavorite", () => {
+    it("should add a favorite", async () => {
+      const favoriteName = "Aatrox";
+
+      sinon.stub(favoriteService, "addFavorite").resolves();
+
+      req.body = { favoriteName };
+
+      await favoriteController.addFavorite(req, res, next);
+
+      expect(res.status.calledWith(201)).to.be.true;
+      expect(
+        res.json.calledWith({ message: "Favorito adicionado com sucesso" })
+      ).to.be.true;
+    });
+  });
 });
