@@ -41,4 +41,20 @@ describe("Favorite Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("removeFavorite", () => {
+    it("should remove a favorite", async () => {
+      const favoriteName = "Aatrox";
+
+      sinon.stub(favoriteService, "removeFavorite").resolves();
+
+      req.body = { favoriteName };
+
+      await favoriteController.removeFavorite(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Favorito removido com sucesso" }))
+        .to.be.true;
+    });
+  });
 });
