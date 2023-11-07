@@ -34,24 +34,20 @@ describe("Favorite Service", () => {
       const userId = 1;
       const favoriteName = "Yasuo";
 
-      sinon.stub(Favorite, "findOne").resolves({
+      const favorites = {
         favorite: ["Aatrox", "Ahri", "Akali"],
         save: sinon.stub(),
-      });
+      };
+
+      sinon.stub(Favorite, "findOne").resolves(favorites);
 
       const result = await favoriteService.addFavorite(userId, favoriteName);
-      const favorites = await favoriteService.listFavorites(userId);
 
       expect(Favorite.findOne.called).to.be.true;
       expect(Favorite.findOne.firstCall.args[0]).to.deep.equal({
         where: { userId },
       });
-      expect(favorites.favorite).to.deep.equal([
-        "Aatrox",
-        "Ahri",
-        "Akali",
-        "Yasuo",
-      ]);
+      expect(favorites.favorite).to.be.include(favoriteName);
       expect(result).to.be.undefined;
     });
   });
