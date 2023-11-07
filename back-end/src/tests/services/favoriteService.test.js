@@ -51,4 +51,27 @@ describe("Favorite Service", () => {
       expect(result).to.be.undefined;
     });
   });
+
+  describe("removeFavorite", () => {
+    it("should remove a favorite", async () => {
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
+      const favorites = {
+        favorite: ["Aatrox", "Ahri", "Akali", "Yasuo"],
+        save: sinon.stub(),
+      };
+
+      sinon.stub(Favorite, "findOne").resolves(favorites);
+
+      const result = await favoriteService.removeFavorite(userId, favoriteName);
+
+      expect(Favorite.findOne.called).to.be.true;
+      expect(Favorite.findOne.firstCall.args[0]).to.deep.equal({
+        where: { userId },
+      });
+      expect(favorites.favorite).to.not.include(favoriteName);
+      expect(result).to.be.undefined;
+    });
+  });
 });
