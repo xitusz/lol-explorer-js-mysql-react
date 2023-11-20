@@ -1,0 +1,48 @@
+.form-field {
+  background-color: #1A242D;
+}
+
+.input-div {
+  box-shadow: 0 0 5px 1px white;
+}
+
+.form-input {
+  background-color: #1A242D !important;
+}
+
+.form-input::placeholder {
+  color: #8A90A2 !important;
+}
+
+.form-input:focus {
+  box-shadow: none;
+}
+
+.input-group {
+  transition: box-shadow 0.2s ease-out;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 5px 1px rgb(39 111 141);
+  outline: 0;
+}
+
+.input-group:focus-within .input-group-text {
+  color: rgb(39 111 141) !important;
+  transition: color 0.2s ease-out;
+}
+
+.btn-primary {
+  border-color: rgb(39 111 141);
+  background-color: rgb(39 111 141);
+}
+
+.btn-primary:hover {
+  border-color: rgb(32, 90, 116);
+  background-color: rgb(32, 90, 116);
+}
+
+.btn-primary:active {
+  border-color: rgb(20, 60, 80) !important;
+  background-color: rgb(20, 60, 80) !important;
+}

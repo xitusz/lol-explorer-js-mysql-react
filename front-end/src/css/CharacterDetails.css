@@ -1,0 +1,22 @@
+.img-button {
+  background-color: #0F1923;
+  transition: transform 0.2s ease-out;
+}
+
+.button-img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: border-radius 0.3s ease-out, box-shadow 0.2s ease-out;
+}
+
+.img-button.active .button-img {
+  transform: scale(1.1);
+  border-radius: 25%;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.button-img:hover {
+  border-radius: 25%;
+}

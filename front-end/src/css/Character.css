@@ -1,0 +1,64 @@
+.character-card {
+  width: max-content;
+}
+
+.search-input {
+  background-color: #1A242D !important;
+}
+
+.search-input::placeholder {
+  color: #8A90A2;
+}
+
+.search-input:focus {
+  box-shadow: none;
+}
+
+.input-group {
+  transition: box-shadow 0.2s ease-out;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 0 0.2rem rgb(39 111 141);
+  outline: 0;
+}
+
+.input-group:focus-within .input-group-text {
+  color: rgb(39 111 141) !important;
+  transition: color 0.2s ease-out;
+}
+
+.filter-button {
+  background-color: #1A242D;
+  transition: background-color 0.2s ease-out, box-shadow 0,2s ease-out;
+}
+
+.filter-button:hover, .filter-button.active:hover  {
+  background-color: rgb(32, 90, 116);
+}
+
+.filter-button:active, .filter-button.active:active  {
+  background-color: rgb(20, 60, 80);
+}
+
+.filter-button.active {
+  background-color: rgb(39 111 141);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.favorite-icon {
+  margin: auto;
+  width: max-content;
+  transition: transform 0.3s ease-out;
+}
+
+.fav-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.favorite-div {
+  background-color: #1A242D;
+}
