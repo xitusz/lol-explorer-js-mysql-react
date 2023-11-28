@@ -17,6 +17,7 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -37,6 +38,8 @@ const Register = () => {
       setError(emailError);
     } else if (passwordError) {
       setError(passwordError);
+    } else if (confirmPassword != password) {
+      setError("As senhas não são iguais.");
     } else {
       try {
         await axios.post("http://localhost:3001/register", {
@@ -94,7 +97,7 @@ const Register = () => {
                     className="form-control form-input text-white border-0 p-0"
                     id="email"
                     name="email"
-                    placeholder="email@example.com"
+                    placeholder="Digite seu email"
                     value={email}
                     onChange={(event) => handleInputChange(event, setEmail)}
                     required
@@ -114,7 +117,7 @@ const Register = () => {
                     className="form-control form-input text-white border-0 p-0"
                     id="password"
                     name="password"
-                    placeholder="*********"
+                    placeholder="Digite sua senha"
                     value={password}
                     onChange={(event) => handleInputChange(event, setPassword)}
                     required
@@ -124,6 +127,26 @@ const Register = () => {
               <div className="form-text mb-3">
                 Sua senha deve ter de 6 a 12 caracteres.
               </div>
+              <div className="input-group mb-2 input-div rounded-1">
+                <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                  <BsFillKeyFill size={23} />
+                </span>
+                <div className="form-floating">
+                  <input
+                    type="password"
+                    className="form-control form-input text-white border-0 p-0"
+                    id="password"
+                    name="password"
+                    placeholder="Confirme sua senha"
+                    value={confirmPassword}
+                    onChange={(event) =>
+                      handleInputChange(event, setConfirmPassword)
+                    }
+                    required
+                  />
+                </div>
+              </div>
+              <div className="form-text mb-3">Digite sua senha novamente.</div>
               <Button
                 className="btn btn-primary w-100 mb-2"
                 onClick={handleRegister}
