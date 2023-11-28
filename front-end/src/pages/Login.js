@@ -8,6 +8,7 @@ import {
 } from "../services/localStorage";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,19 +23,17 @@ const Login = () => {
     }
   }, [navigate]);
 
-  const handleLogin = () => {
-    const users = getItemFromLocalStorage("userData") || [];
+  const handleLogin = async () => {
+    try {
+      await axios.post("http://localhost:3001/login", {
+        email,
+        password,
+      });
 
-    const user = users.find(
-      (user) => user.email === email && user.password === password
-    );
-    if (user) {
       setItemToLocalStorage("isLoggedIn", true);
-      setItemToLocalStorage("user", [
-        { name: user.name, email: user.email, favorites: user.favorites },
-      ]);
+      setItemToLocalStorage("user", [{ email }]);
       navigate("/");
-    } else {
+    } catch (error) {
       setError("Email ou senha inválida");
     }
   };

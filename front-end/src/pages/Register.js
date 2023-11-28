@@ -7,12 +7,10 @@ import {
   validateEmail,
   validatePassword,
 } from "../middleware/validateRegister";
-import {
-  setItemToLocalStorage,
-  getItemFromLocalStorage,
-} from "../services/localStorage";
+import { getItemFromLocalStorage } from "../services/localStorage";
 import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
+import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -28,12 +26,10 @@ const Register = () => {
     }
   }, [navigate]);
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     const nameError = validateName(name);
     const passwordError = validatePassword(password);
     const emailError = validateEmail(email);
-
-    const users = getItemFromLocalStorage("userData") || [];
 
     if (nameError) {
       setError(nameError);
@@ -41,13 +37,18 @@ const Register = () => {
       setError(emailError);
     } else if (passwordError) {
       setError(passwordError);
-    } else if (users.find((user) => user.email === email)) {
-      setError("Email já registrado");
     } else {
-      const newUser = { name, email, password, favorites: [] };
-      users.push(newUser);
-      setItemToLocalStorage("userData", users);
-      navigate("/login");
+      try {
+        await axios.post("http://localhost:3001/register", {
+          name,
+          email,
+          password,
+        });
+
+        navigate("/login");
+      } catch (error) {
+        setError("Erro no registro.");
+      }
     }
   };
 

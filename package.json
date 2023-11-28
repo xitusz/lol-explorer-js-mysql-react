@@ -1,0 +1,24 @@
+{
+  "name": "personal-project-1",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run start-backend & npm run start-frontend",
+    "stop": "npm run stop-backend & npm run stop-frontend",
+    "start-backend": "cd back-end && npm start",
+    "start-frontend": "cd front-end && npm start",
+    "stop-backend": "lsof -ti :3001 | xargs kill",
+    "stop-frontend": "lsof -ti :3000 | xargs kill",
+    "install-all": "cd back-end && npm install && cd ../front-end && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xitusz/personal-project-1.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xitusz/personal-project-1/issues"
+  },
+  "homepage": "https://github.com/xitusz/personal-project-1#readme"
+}
