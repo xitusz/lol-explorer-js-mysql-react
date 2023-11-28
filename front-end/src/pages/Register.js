@@ -154,15 +154,18 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-text mb-3">Digite sua senha novamente.</div>
-              <div className="form-check">
+              <div className="form-check mb-3 d-flex align-items-center">
                 <input
                   type="checkbox"
-                  className="form-check-input"
+                  className="form-check-input me-2"
                   id="agreeTerms"
                   checked={agreedToTerms}
                   onChange={handleCheckboxChange}
                 />
-                <label className="form-text mb-3 form-check-label" htmlFor="">
+                <label
+                  className="form-text form-check-label"
+                  htmlFor="agreeTerms"
+                >
                   Eu li e concordo com os <Link to="">Termos de Uso</Link> e a{" "}
                   <Link to="">Política de Privacidade</Link>.
                 </label>
