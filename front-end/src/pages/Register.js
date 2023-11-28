@@ -18,6 +18,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -40,6 +41,8 @@ const Register = () => {
       setError(passwordError);
     } else if (confirmPassword != password) {
       setError("As senhas não são iguais.");
+    } else if (!agreedToTerms) {
+      setError("Você deve concordar com os Termos e Condições.");
     } else {
       try {
         await axios.post("http://localhost:3001/register", {
@@ -57,6 +60,10 @@ const Register = () => {
 
   const handleInputChange = (event, setValue) => {
     setValue(event.target.value);
+  };
+
+  const handleCheckboxChange = () => {
+    setAgreedToTerms(!agreedToTerms);
   };
 
   return (
@@ -147,6 +154,19 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-text mb-3">Digite sua senha novamente.</div>
+              <div className="form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="agreeTerms"
+                  checked={agreedToTerms}
+                  onChange={handleCheckboxChange}
+                />
+                <label className="form-text mb-3 form-check-label" htmlFor="">
+                  Eu li e concordo com os <Link to="">Termos de Uso</Link> e a{" "}
+                  <Link to="">Política de Privacidade</Link>.
+                </label>
+              </div>
               <Button
                 className="btn btn-primary w-100 mb-2"
                 onClick={handleRegister}
