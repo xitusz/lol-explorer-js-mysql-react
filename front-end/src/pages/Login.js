@@ -48,7 +48,7 @@ const Login = () => {
       <form className="container py-5">
         <h1 className="text-center text-white pt-5 p-4">Conectar-se</h1>
         <div className="row justify-content-center">
-          <div className="col-sm-12 col-md-10 col-lg-8">
+          <div className="col-sm-10 col-md-8 col-lg-6">
             <div className="p-5 rounded-3 mb-1 form-field">
               <div className="input-group mb-3 input-div rounded-1">
                 <span className="input-group-text form-input border-0 text-white p-2 px-3">
