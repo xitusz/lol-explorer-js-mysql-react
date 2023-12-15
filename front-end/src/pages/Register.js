@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
@@ -11,6 +12,7 @@ import { getItemFromLocalStorage } from "../services/localStorage";
 import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -19,6 +21,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -41,6 +44,8 @@ const Register = () => {
       setError(passwordError);
     } else if (confirmPassword != password) {
       setError("As senhas não são iguais.");
+    } else if (!recaptchaValue) {
+      setError("Captcha inválido");
     } else if (!agreedToTerms) {
       setError("Você deve concordar com os Termos e Condições.");
     } else {
@@ -49,6 +54,7 @@ const Register = () => {
           name,
           email,
           password,
+          recaptchaValue,
         });
 
         navigate("/login");
@@ -154,6 +160,12 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-text mb-3">Digite sua senha novamente.</div>
+              <div className="mb-2 d-flex justify-content-center">
+                <ReCAPTCHA
+                  sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                  onChange={(value) => setRecaptchaValue(value)}
+                />
+              </div>
               <div className="form-check mb-3 d-flex align-items-center">
                 <input
                   type="checkbox"
