@@ -1,9 +1,26 @@
 const userService = require("../services/userService");
+const axios = require("axios");
+
+const verifyRecaptcha = async (recaptchaValue) => {
+  if (!recaptchaValue) {
+    throw new Error("reCAPTCHA ausente");
+  }
+
+  const googleResponse = await axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaValue}`
+  );
+
+  if (!googleResponse.data.success) {
+    throw new Error("reCAPTCHA inválido");
+  }
+};
 
 const create = async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, recaptchaValue } = req.body;
 
   try {
+    await verifyRecaptcha(recaptchaValue);
+
     const message = await userService.create(name, email, password);
 
     return res.status(201).json({ message });
@@ -13,9 +30,11 @@ const create = async (req, res, next) => {
 };
 
 const login = async (req, res, next) => {
-  const { email, password } = req.body;
+  const { email, password, recaptchaValue } = req.body;
 
   try {
+    await verifyRecaptcha(recaptchaValue);
+
     const data = await userService.login(email, password);
 
     return res.status(200).json(data);
