@@ -11,9 +11,12 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { setUserToken } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [recaptchaValue, setRecaptchaValue] = useState(null);
@@ -31,14 +34,17 @@ const Login = () => {
       setError("Captcha inválido");
     } else {
       try {
-        await axios.post("http://localhost:3001/login", {
+        const response = await axios.post("http://localhost:3001/login", {
           email,
           password,
           recaptchaValue,
         });
 
+        const { token } = response.data;
+
+        setUserToken(token);
         setItemToLocalStorage("isLoggedIn", true);
-        setItemToLocalStorage("user", [{ email }]);
+        setItemToLocalStorage("token", token);
         navigate("/");
       } catch (error) {
         setError("Email ou senha inválida");
