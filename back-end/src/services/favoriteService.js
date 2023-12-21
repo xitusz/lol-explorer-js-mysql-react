@@ -37,8 +37,19 @@ const removeFavorite = async (userId, favoriteName) => {
   }
 };
 
+const clearFavorites = async (userId) => {
+  const favorites = await Favorite.findOne({ where: { userId } });
+
+  if (favorites) {
+    favorites.favorite = [];
+
+    await favorites.save();
+  }
+};
+
 module.exports = {
   listFavorites,
   addFavorite,
   removeFavorite,
+  clearFavorites,
 };
