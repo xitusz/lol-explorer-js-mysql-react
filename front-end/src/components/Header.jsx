@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import {
   getItemFromLocalStorage,
   removeItemFromLocalStorage,
@@ -9,9 +10,11 @@ import Button from "./Button";
 const Header = () => {
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(true);
+  const { setUserToken } = useAuth();
 
   const handleExiting = () => {
-    removeItemFromLocalStorage("user");
+    setUserToken("");
+    removeItemFromLocalStorage("token");
     removeItemFromLocalStorage("isLoggedIn");
     navigate("/login");
   };
@@ -108,7 +111,7 @@ const Header = () => {
               ))}
             </ul>
             <hr className="hr-header" />
-            {getItemFromLocalStorage("user")
+            {getItemFromLocalStorage("isLoggedIn")
               ? renderAuthenticatedLinks()
               : renderGuestLinks()}
           </div>
