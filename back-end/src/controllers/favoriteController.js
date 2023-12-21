@@ -38,8 +38,23 @@ const removeFavorite = async (req, res, next) => {
   }
 };
 
+const clearFavorite = async (req, res, next) => {
+  const { id } = req.user;
+
+  try {
+    await favoriteService.clearFavorites(id);
+
+    return res
+      .status(200)
+      .json({ message: "Todos os favoritos foram removidos com sucesso" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   listFavorites,
   addFavorite,
   removeFavorite,
+  clearFavorite,
 };
