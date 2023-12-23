@@ -6,10 +6,6 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
 import { AiOutlineSearch, AiOutlineStar, AiFillStar } from "react-icons/ai";
-import {
-  setItemToLocalStorage,
-  getItemFromLocalStorage,
-} from "../services/localStorage";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
@@ -76,15 +72,39 @@ const Character = () => {
     }
   };
 
-  const handleFavorite = (championId) => {
-    const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
+  const handleFavorite = async (favoriteName) => {
+    if (userToken) {
+      try {
+        const isFavorite = favorites.includes(favoriteName);
 
-    if (isLoggedIn) {
-      if (favorites.includes(championId)) {
-        setFavorites(favorites.filter((id) => id !== championId));
-      } else {
-        const sortedFavorites = [...favorites, championId].sort();
-        setFavorites(sortedFavorites);
+        if (!isFavorite) {
+          await axios.post(
+            "http://localhost:3001/favorites",
+            {
+              favoriteName,
+            },
+            {
+              headers: {
+                Authorization: userToken,
+              },
+            }
+          );
+        } else {
+          await axios.delete(`http://localhost:3001/favorites`, {
+            data: { favoriteName },
+            headers: {
+              Authorization: userToken,
+            },
+          });
+        }
+
+        const updatedFavorites = isFavorite
+          ? favorites.filter((id) => id !== favoriteName)
+          : [...favorites, favoriteName].sort();
+
+        setFavorites(updatedFavorites);
+      } catch (err) {
+        alert("Erro ao lidar com os favoritos.");
       }
     } else {
       alert("Você precisa estar conectado para favoritar um campeão.");
