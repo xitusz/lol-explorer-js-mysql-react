@@ -115,8 +115,18 @@ const Character = () => {
     setShowFavorites(!showFavorites);
   };
 
-  const clearFavorites = () => {
-    setFavorites([]);
+  const clearFavorites = async () => {
+    if (userToken) {
+      await axios.delete("http://localhost:3001/favorites/clear", {
+        headers: {
+          Authorization: userToken,
+        },
+      });
+
+      setFavorites([]);
+    } else {
+      alert("Erro ao limpar favoritos.");
+    }
   };
 
   const filteredChampions = Object.values(champions).filter(({ id, tags }) => {
