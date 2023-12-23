@@ -10,6 +10,8 @@ import {
   setItemToLocalStorage,
   getItemFromLocalStorage,
 } from "../services/localStorage";
+import axios from "axios";
+import { useAuth } from "../context/AuthContext";
 
 const Character = () => {
   const navigate = useNavigate();
@@ -17,40 +19,36 @@ const Character = () => {
   const [loading, setLoading] = useState(true);
   const [searchChampion, setSearchChampion] = useState("");
   const [filterTypes, setFilterTypes] = useState([]);
-  const [favorites, setFavorites] = useState(() => {
-    const user = getItemFromLocalStorage("user");
-    return user ? user[0].favorites : [];
-  });
+  const [favorites, setFavorites] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
+  const { userToken } = useAuth();
 
   useEffect(() => {
-    fetch(
-      "http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion.json"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setChampions(data.data);
-        setLoading(false);
-      });
-  }, []);
+    const fetchChampions = async () => {
+      const response = await fetch(
+        "http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion.json"
+      );
+      const data = await response.json();
 
-  useEffect(() => {
-    const user = getItemFromLocalStorage("user");
-    const users = getItemFromLocalStorage("userData");
+      setChampions(data.data);
+      setLoading(false);
+    };
 
-    if (user) {
-      const updatedUser = { ...user[0], favorites: favorites };
-      const updatedUsers = users.map((u) => {
-        if (u.email === user[0].email) {
-          return { ...u, favorites: favorites };
-        }
-        return u;
-      });
+    const loadUserFavorites = async () => {
+      if (userToken) {
+        const response = await axios.get("http://localhost:3001/favorites", {
+          headers: {
+            Authorization: userToken,
+          },
+        });
 
-      setItemToLocalStorage("user", [updatedUser]);
-      setItemToLocalStorage("userData", updatedUsers);
-    }
-  }, [favorites]);
+        setFavorites(response.data);
+      }
+    };
+
+    loadUserFavorites();
+    fetchChampions();
+  }, [userToken]);
 
   const handleSearch = (event) => {
     setSearchChampion(event.target.value);
