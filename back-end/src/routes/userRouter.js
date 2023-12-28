@@ -4,5 +4,6 @@ const { validToken } = require("../middlewares/createMiddleware");
 
 router.get("/", validToken, userController.getProfileInfo);
 router.put("/edit/name", validToken, userController.updateName);
+router.put("/edit/email", validToken, userController.updateEmail);
 
 module.exports = router;
