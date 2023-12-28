@@ -68,9 +68,23 @@ const updateName = async (req, res, next) => {
   }
 };
 
+const updateEmail = async (req, res, next) => {
+  const { id } = req.user;
+  const { newEmail } = req.body;
+
+  try {
+    await userService.updateEmail(id, newEmail);
+
+    return res.status(200).json({ message: "Email atualizado com sucesso!" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
   updateName,
+  updateEmail,
 };
