@@ -55,8 +55,22 @@ const getProfileInfo = async (req, res, next) => {
   }
 };
 
+const updateName = async (req, res, next) => {
+  const { id } = req.user;
+  const { newName } = req.body;
+
+  try {
+    await userService.updateName(id, newName);
+
+    return res.status(200).json({ message: "Nome atualizado com sucesso!" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
+  updateName,
 };
