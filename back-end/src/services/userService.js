@@ -81,10 +81,19 @@ const updateEmail = async (userId, newEmail) => {
   return "Email atualizado com sucesso!";
 };
 
+const updatePassword = async (userId, newPassword) => {
+  const hashedPassword = hash(newPassword);
+
+  await User.update({ password: hashedPassword }, { where: { id: userId } });
+
+  return "Senha atualizada com sucesso!";
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
   updateName,
   updateEmail,
+  updatePassword,
 };
