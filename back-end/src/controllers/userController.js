@@ -81,10 +81,24 @@ const updateEmail = async (req, res, next) => {
   }
 };
 
+const updatePassword = async (req, res, next) => {
+  const { id } = req.user;
+  const { newPassword } = req.body;
+
+  try {
+    await userService.updatePassword(id, newPassword);
+
+    return res.status(200).json({ message: "Senha atualizada com sucesso!" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
   updateName,
   updateEmail,
+  updatePassword,
 };
