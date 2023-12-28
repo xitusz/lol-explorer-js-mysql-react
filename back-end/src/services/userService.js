@@ -69,8 +69,15 @@ const getProfileInfo = async (userId) => {
   };
 };
 
+const updateName = async (userId, newName) => {
+  await User.update({ name: newName }, { where: { id: userId } });
+
+  return "Nome atualizado com sucesso!";
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
+  updateName,
 };
