@@ -75,9 +75,16 @@ const updateName = async (userId, newName) => {
   return "Nome atualizado com sucesso!";
 };
 
+const updateEmail = async (userId, newEmail) => {
+  await User.update({ email: newEmail }, { where: { id: userId } });
+
+  return "Email atualizado com sucesso!";
+};
+
 module.exports = {
   create,
   login,
   getProfileInfo,
   updateName,
+  updateEmail,
 };
