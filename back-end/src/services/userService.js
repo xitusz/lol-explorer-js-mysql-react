@@ -51,7 +51,26 @@ const login = async (email, password) => {
   };
 };
 
+const getProfileInfo = async (userId) => {
+  const user = await User.findOne({
+    where: { id: userId },
+    attributes: ["name", "email"],
+  });
+
+  if (!user) {
+    const error = new Error("Usuário não encontrado");
+    error.statusCode = 404;
+    throw error;
+  }
+
+  return {
+    name: user.name,
+    email: user.email,
+  };
+};
+
 module.exports = {
   create,
   login,
+  getProfileInfo,
 };
