@@ -7,6 +7,7 @@ import "./css/Card.css";
 import "./css/CharacterDetails.css";
 import "./css/Login.css";
 import "./css/Profile.css";
+import "./css/ProfileEdit.css";
 import "./css/Register.css";
 
 const App = () => {

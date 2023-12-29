@@ -157,7 +157,7 @@ const ProfileEdit = () => {
         <div className="row justify-content-center">
           <div className="col-sm-10 col-md-8 col-lg-6">
             <div className="p-5 rounded-3 mb-1 form-field">
-              <div>
+              <div className="mb-3 mt-5">
                 <div className="d-flex align-items-center">
                   <div className="input-group mb-2 input-div rounded-1">
                     <span className="input-group-text form-input border-0 text-white p-2 px-3">
@@ -178,7 +178,7 @@ const ProfileEdit = () => {
                   <div>
                     <AiOutlineSetting
                       size={35}
-                      className="text-white icon"
+                      className="text-white icon icon-setting"
                       onClick={() => setShowEditName(!showEditName)}
                     />
                   </div>
@@ -205,19 +205,19 @@ const ProfileEdit = () => {
                           />
                         </div>
                       </div>
-                      <div className="form-text mb-3">
+                      <div className="form-text mb-2">
                         Seu nome deve ter no mínimo 2 caracteres.
                       </div>
                       <div className="text-center">
                         <Button
-                          className="btn btn-primary text-white"
+                          className="btn btn-primary text-white mb-2"
                           onClick={handleSaveName}
                         >
                           Salvar
                         </Button>
                       </div>
                       {error && (
-                        <div className="my-3 alert alert-danger text-center">
+                        <div className="mb-3 alert alert-danger text-center">
                           {error}
                         </div>
                       )}
@@ -225,7 +225,7 @@ const ProfileEdit = () => {
                   )}
                 </div>
               </div>
-              <div>
+              <div className="mb-3">
                 <div className="d-flex align-items-center">
                   <div className="input-group mb-2 input-div rounded-1">
                     <span className="input-group-text form-input border-0 text-white p-2 px-3">
@@ -246,7 +246,7 @@ const ProfileEdit = () => {
                   <div>
                     <AiOutlineSetting
                       size={35}
-                      className="text-white icon"
+                      className="text-white icon icon-setting"
                       onClick={() => setShowEditEmail(!showEditEmail)}
                     />
                   </div>
@@ -273,19 +273,19 @@ const ProfileEdit = () => {
                           />
                         </div>
                       </div>
-                      <div className="form-text mb-3">
+                      <div className="form-text mb-2">
                         Seu email deve ser um email válido.
                       </div>
                       <div className="text-center">
                         <Button
-                          className="btn btn-primary text-white"
+                          className="btn btn-primary text-white mb-2"
                           onClick={handleSaveEmail}
                         >
                           Salvar
                         </Button>
                       </div>
                       {error && (
-                        <div className="my-3 alert alert-danger text-center">
+                        <div className="mb-3 alert alert-danger text-center">
                           {error}
                         </div>
                       )}
@@ -293,7 +293,7 @@ const ProfileEdit = () => {
                   )}
                 </div>
               </div>
-              <div>
+              <div className="mb-3">
                 <div className="d-flex align-items-center">
                   <div className="input-group mb-2 input-div rounded-1">
                     <span className="input-group-text form-input border-0 text-white p-2 px-3">
@@ -313,7 +313,7 @@ const ProfileEdit = () => {
                   <div>
                     <AiOutlineSetting
                       size={35}
-                      className="text-white icon"
+                      className="text-white icon icon-setting"
                       onClick={() => setShowEditPassword(!showEditPassword)}
                     />
                   </div>
@@ -340,7 +340,7 @@ const ProfileEdit = () => {
                           />
                         </div>
                       </div>
-                      <div className="form-text mb-3">
+                      <div className="form-text mb-2">
                         Sua senha deve ter de 6 a 12 caracteres.
                       </div>
                       <div className="input-group my-2 input-div rounded-1">
@@ -362,19 +362,19 @@ const ProfileEdit = () => {
                           />
                         </div>
                       </div>
-                      <div className="form-text mb-3">
+                      <div className="form-text mb-2">
                         Digite sua senha novamente.
                       </div>
                       <div className="text-center">
                         <Button
-                          className="btn btn-primary text-white"
+                          className="btn btn-primary text-white mb-2"
                           onClick={handleSavePassword}
                         >
                           Salvar
                         </Button>
                       </div>
                       {error && (
-                        <div className="my-3 alert alert-danger text-center">
+                        <div className="mb-3 alert alert-danger text-center">
                           {error}
                         </div>
                       )}
@@ -382,13 +382,13 @@ const ProfileEdit = () => {
                   )}
                 </div>
               </div>
-              <div className="d-flex justify-content-evenly mt-5">
-                <div className="text-center">
+              <div className="d-flex justify-content-evenly my-5">
+                <div className="text-center mt-5">
                   <Button className="btn btn-primary text-white">
                     Excluir Conta
                   </Button>
                 </div>
-                <div className="text-center">
+                <div className="text-center mt-5">
                   <Button
                     className="btn btn-primary text-white"
                     onClick={handleButtonClick}
