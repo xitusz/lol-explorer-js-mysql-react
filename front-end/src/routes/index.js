@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Character from "../pages/Character";
 import CharacterDetails from "../pages/CharacterDetails";
 import Profile from "../pages/Profile";
+import ProfileEdit from "../pages/ProfileEdit";
 
 const Router = () => (
   <Routes>
@@ -15,6 +16,7 @@ const Router = () => (
     <Route path="/character" element={<Character />} />
     <Route path="/character/:championName" element={<CharacterDetails />} />
     <Route path="/profile" element={<Profile />} />
+    <Route path="/profile/edit" element={<ProfileEdit />} />
   </Routes>
 );
 
