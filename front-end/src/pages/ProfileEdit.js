@@ -143,9 +143,6 @@ const ProfileEdit = () => {
       }
 
       loadUserProfile();
-      setNewName("");
-      setNewEmail("");
-      setNewPassword("");
       navigate("/profile");
     }
   };
@@ -153,7 +150,7 @@ const ProfileEdit = () => {
   return (
     <div>
       <Header />
-      <div className="py-5">
+      <form className="container py-5">
         <h1 className="text-center text-white py-5">Meus Dados</h1>
         <div className="row justify-content-center">
           <div className="col-sm-10 col-md-8 col-lg-6">
@@ -399,7 +396,7 @@ const ProfileEdit = () => {
             </div>
           </div>
         </div>
-      </div>
+      </form>
       <Footer />
     </div>
   );
