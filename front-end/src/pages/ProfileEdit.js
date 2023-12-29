@@ -3,8 +3,13 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
-import { validateName, validateEmail } from "../middleware/validateRegister";
+import {
+  validateName,
+  validateEmail,
+  validatePassword,
+} from "../middleware/validateRegister";
 import { AiOutlineMail, AiOutlineUser, AiOutlineSetting } from "react-icons/ai";
+import { BsFillKeyFill } from "react-icons/bs";
 import { getItemFromLocalStorage } from "../services/localStorage";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
@@ -23,6 +28,10 @@ const ProfileEdit = () => {
   const [newEmail, setNewEmail] = useState("");
   const [tempEmail, setTempEmail] = useState("");
   const [showEditEmail, setShowEditEmail] = useState(false);
+  const [newPassword, setNewPassword] = useState("");
+  const [tempPassword, setTempPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showEditPassword, setShowEditPassword] = useState(false);
   const [error, setError] = useState("");
 
   const loadUserProfile = async () => {
@@ -79,6 +88,22 @@ const ProfileEdit = () => {
     }
   };
 
+  const handleSavePassword = () => {
+    const passwordError = validatePassword(tempPassword);
+
+    if (passwordError) {
+      setError(passwordError);
+    } else if (confirmPassword != tempPassword) {
+      setError("As senhas não são iguais.");
+    } else {
+      setError("");
+      setNewPassword(confirmPassword);
+      setConfirmPassword("");
+      setTempPassword("");
+      setShowEditPassword(false);
+    }
+  };
+
   const handleButtonClick = async () => {
     if (userToken) {
       if (newName) {
@@ -105,7 +130,22 @@ const ProfileEdit = () => {
         );
       }
 
+      if (newPassword) {
+        await axios.put(
+          "http://localhost:3001/profile/edit/password",
+          { newPassword: newPassword },
+          {
+            headers: {
+              Authorization: userToken,
+            },
+          }
+        );
+      }
+
       loadUserProfile();
+      setNewName("");
+      setNewEmail("");
+      setNewPassword("");
     }
   };
 
@@ -240,6 +280,95 @@ const ProfileEdit = () => {
                         <Button
                           className="btn btn-primary text-white"
                           onClick={handleSaveEmail}
+                        >
+                          Salvar
+                        </Button>
+                      </div>
+                      {error && (
+                        <div className="my-3 alert alert-danger text-center">
+                          {error}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div>
+                <div className="d-flex align-items-center">
+                  <div className="input-group mb-2 input-div rounded-1">
+                    <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                      <BsFillKeyFill size={23} />
+                    </span>
+                    <div className="form-floating">
+                      <input
+                        type="password"
+                        className="form-control form-input text-white border-0 p-0"
+                        id="password"
+                        name="password"
+                        placeholder="*********"
+                        readOnly
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <AiOutlineSetting
+                      size={35}
+                      className="text-white icon"
+                      onClick={() => setShowEditPassword(!showEditPassword)}
+                    />
+                  </div>
+                </div>
+                <div>
+                  {showEditPassword && (
+                    <div>
+                      <div className="input-group my-2 input-div rounded-1">
+                        <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                          <BsFillKeyFill size={23} />
+                        </span>
+                        <div className="form-floating">
+                          <input
+                            type="password"
+                            className="form-control form-input text-white border-0 p-0"
+                            id="tempPassword"
+                            name="tempPassword"
+                            placeholder="Digite sua senha"
+                            value={tempPassword}
+                            onChange={(event) =>
+                              handleInputChange(event, setTempPassword)
+                            }
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="form-text mb-3">
+                        Sua senha deve ter de 6 a 12 caracteres.
+                      </div>
+                      <div className="input-group my-2 input-div rounded-1">
+                        <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                          <BsFillKeyFill size={23} />
+                        </span>
+                        <div className="form-floating">
+                          <input
+                            type="password"
+                            className="form-control form-input text-white border-0 p-0"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirme sua senha"
+                            value={confirmPassword}
+                            onChange={(event) =>
+                              handleInputChange(event, setConfirmPassword)
+                            }
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="form-text mb-3">
+                        Digite sua senha novamente.
+                      </div>
+                      <div className="text-center">
+                        <Button
+                          className="btn btn-primary text-white"
+                          onClick={handleSavePassword}
                         >
                           Salvar
                         </Button>
