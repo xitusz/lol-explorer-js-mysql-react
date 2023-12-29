@@ -69,7 +69,7 @@ const ProfileEdit = () => {
       setNameError(nameError);
     } else {
       setNewName(newName);
-      setProfileInfo({ name: newName });
+      setProfileInfo({ name: newName, email: profileInfo.email });
       setNameError("");
       setShowEditName(false);
     }
@@ -82,7 +82,7 @@ const ProfileEdit = () => {
       setEmailError(emailError);
     } else {
       setNewEmail(newEmail);
-      setProfileInfo({ email: newEmail });
+      setProfileInfo({ name: profileInfo.name, email: newEmail });
       setEmailError("");
       setShowEditEmail(false);
     }
@@ -142,7 +142,6 @@ const ProfileEdit = () => {
         );
       }
 
-      loadUserProfile();
       navigate("/profile");
     }
   };
