@@ -171,7 +171,6 @@ const ProfileEdit = () => {
                         className="form-control form-input text-white border-0 p-0"
                         id="name"
                         name="name"
-                        placeholder="Nome"
                         value={profileInfo.name}
                         readOnly
                       />
@@ -198,7 +197,7 @@ const ProfileEdit = () => {
                             className="form-control form-input text-white border-0 p-0"
                             id="name"
                             name="name"
-                            placeholder="Nome"
+                            placeholder="Digite seu novo nome"
                             value={tempName}
                             onChange={(event) =>
                               handleInputChange(event, setTempName)
@@ -239,7 +238,6 @@ const ProfileEdit = () => {
                         className="form-control form-input text-white border-0 p-0"
                         id="email"
                         name="email"
-                        placeholder="Email"
                         value={profileInfo.email}
                         readOnly
                       />
@@ -266,7 +264,7 @@ const ProfileEdit = () => {
                             className="form-control form-input text-white border-0 p-0"
                             id="email"
                             name="email"
-                            placeholder="Email"
+                            placeholder="Digite seu novo email"
                             value={tempEmail}
                             onChange={(event) =>
                               handleInputChange(event, setTempEmail)
@@ -307,7 +305,7 @@ const ProfileEdit = () => {
                         className="form-control form-input text-white border-0 p-0"
                         id="password"
                         name="password"
-                        placeholder="*********"
+                        value="*********"
                         readOnly
                       />
                     </div>
@@ -333,7 +331,7 @@ const ProfileEdit = () => {
                             className="form-control form-input text-white border-0 p-0"
                             id="tempPassword"
                             name="tempPassword"
-                            placeholder="Digite sua senha"
+                            placeholder="Digite sua nova senha"
                             value={tempPassword}
                             onChange={(event) =>
                               handleInputChange(event, setTempPassword)
@@ -355,7 +353,7 @@ const ProfileEdit = () => {
                             className="form-control form-input text-white border-0 p-0"
                             id="confirmPassword"
                             name="confirmPassword"
-                            placeholder="Confirme sua senha"
+                            placeholder="Confirme sua nova senha"
                             value={confirmPassword}
                             onChange={(event) =>
                               handleInputChange(event, setConfirmPassword)
