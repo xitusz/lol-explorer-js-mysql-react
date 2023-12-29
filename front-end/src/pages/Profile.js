@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
+import Card from "../components/Card";
 import { getItemFromLocalStorage } from "../services/localStorage";
 import { Link } from "react-router-dom";
 import { FiMail } from "react-icons/fi";
@@ -13,6 +15,8 @@ const Profile = () => {
   const navigate = useNavigate();
   const { userToken } = useAuth();
 
+  const [favorites, setFavorites] = useState([]);
+  const [showFavorites, setShowFavorites] = useState(false);
   const [profileInfo, setProfileInfo] = useState({
     name: "",
     email: "",
@@ -23,6 +27,18 @@ const Profile = () => {
     if (!isLoggedIn) {
       navigate("/");
     }
+
+    const loadUserFavorites = async () => {
+      if (userToken) {
+        const response = await axios.get("http://localhost:3001/favorites", {
+          headers: {
+            Authorization: userToken,
+          },
+        });
+
+        setFavorites(response.data);
+      }
+    };
 
     const loadUserProfile = async () => {
       if (userToken) {
@@ -40,7 +56,43 @@ const Profile = () => {
     };
 
     loadUserProfile();
+    loadUserFavorites();
   }, [navigate, userToken]);
+
+  const toggleShowFavorites = () => {
+    setShowFavorites(!showFavorites);
+  };
+
+  const renderFavorites = () => {
+    if (favorites.length === 0) {
+      return (
+        <p className="text-center text-white py-5">
+          Nenhum favorito encontrado.
+        </p>
+      );
+    }
+
+    return (
+      <div className="d-flex justify-content-center row mx-5">
+        {favorites.map((id) => {
+          const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`;
+
+          return (
+            <div key={id} className="mb-4 character-card">
+              <div className="favorite-div rounded">
+                <div
+                  className="text-decoration-none"
+                  onClick={() => navigate(`/character/${id}`)}
+                >
+                  <Card name={id} image={imageURL} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   return (
     <div>
@@ -66,6 +118,16 @@ const Profile = () => {
               <AiOutlineSetting size={30} className="text-white icon" />
             </Link>
           </div>
+        </div>
+        <div className="text-center">
+          <Button
+            className="btn btn-primary mb-5 text-white"
+            onClick={toggleShowFavorites}
+            data-testid="profile-button"
+          >
+            {showFavorites ? "Ocultar Favoritos" : "Mostrar Favoritos"}
+          </Button>
+          <div>{showFavorites && <div>{renderFavorites()}</div>}</div>
         </div>
       </div>
       <Footer />
