@@ -25,7 +25,6 @@ const ProfileEdit = () => {
   const [newName, setNewName] = useState("");
   const [showEditName, setShowEditName] = useState(false);
   const [newEmail, setNewEmail] = useState("");
-  const [tempEmail, setTempEmail] = useState("");
   const [showEditEmail, setShowEditEmail] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [tempPassword, setTempPassword] = useState("");
@@ -77,14 +76,14 @@ const ProfileEdit = () => {
   };
 
   const handleSaveEmail = () => {
-    const emailError = validateEmail(tempEmail);
+    const emailError = validateEmail(newEmail);
 
     if (emailError) {
       setEmailError(emailError);
     } else {
-      setNewEmail(tempEmail);
+      setNewEmail(newEmail);
+      setProfileInfo({ email: newEmail });
       setEmailError("");
-      setTempEmail("");
       setShowEditEmail(false);
     }
   };
@@ -265,9 +264,9 @@ const ProfileEdit = () => {
                             id="email"
                             name="email"
                             placeholder="Digite seu novo email"
-                            value={tempEmail}
+                            value={newEmail}
                             onChange={(event) =>
-                              handleInputChange(event, setTempEmail)
+                              handleInputChange(event, setNewEmail)
                             }
                             required
                           />
