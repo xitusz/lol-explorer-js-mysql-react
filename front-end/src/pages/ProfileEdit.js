@@ -23,7 +23,6 @@ const ProfileEdit = () => {
     email: "",
   });
   const [newName, setNewName] = useState("");
-  const [tempName, setTempName] = useState("");
   const [showEditName, setShowEditName] = useState(false);
   const [newEmail, setNewEmail] = useState("");
   const [tempEmail, setTempEmail] = useState("");
@@ -65,14 +64,14 @@ const ProfileEdit = () => {
   };
 
   const handleSaveName = () => {
-    const nameError = validateName(tempName);
+    const nameError = validateName(newName);
 
     if (nameError) {
       setNameError(nameError);
     } else {
-      setNewName(tempName);
+      setNewName(newName);
+      setProfileInfo({ name: newName });
       setNameError("");
-      setTempName("");
       setShowEditName(false);
     }
   };
@@ -199,9 +198,9 @@ const ProfileEdit = () => {
                             id="name"
                             name="name"
                             placeholder="Digite seu novo nome"
-                            value={tempName}
+                            value={newName}
                             onChange={(event) =>
-                              handleInputChange(event, setTempName)
+                              handleInputChange(event, setNewName)
                             }
                             required
                           />
