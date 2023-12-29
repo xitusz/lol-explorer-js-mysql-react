@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
-import { validateName } from "../middleware/validateRegister";
-import { AiOutlineUser, AiOutlineSetting } from "react-icons/ai";
+import { validateName, validateEmail } from "../middleware/validateRegister";
+import { AiOutlineMail, AiOutlineUser, AiOutlineSetting } from "react-icons/ai";
 import { getItemFromLocalStorage } from "../services/localStorage";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
@@ -20,6 +20,9 @@ const ProfileEdit = () => {
   const [newName, setNewName] = useState("");
   const [tempName, setTempName] = useState("");
   const [showEditName, setShowEditName] = useState(false);
+  const [newEmail, setNewEmail] = useState("");
+  const [tempEmail, setTempEmail] = useState("");
+  const [showEditEmail, setShowEditEmail] = useState(false);
   const [error, setError] = useState("");
 
   const loadUserProfile = async () => {
@@ -63,17 +66,44 @@ const ProfileEdit = () => {
     }
   };
 
+  const handleSaveEmail = () => {
+    const emailError = validateEmail(tempEmail);
+
+    if (emailError) {
+      setError(emailError);
+    } else {
+      setNewEmail(tempEmail);
+      setError("");
+      setTempEmail("");
+      setShowEditEmail(false);
+    }
+  };
+
   const handleButtonClick = async () => {
     if (userToken) {
-      await axios.put(
-        "http://localhost:3001/profile/edit/name",
-        { newName: newName },
-        {
-          headers: {
-            Authorization: userToken,
-          },
-        }
-      );
+      if (newName) {
+        await axios.put(
+          "http://localhost:3001/profile/edit/name",
+          { newName: newName },
+          {
+            headers: {
+              Authorization: userToken,
+            },
+          }
+        );
+      }
+
+      if (newEmail) {
+        await axios.put(
+          "http://localhost:3001/profile/edit/email",
+          { newEmail: newEmail },
+          {
+            headers: {
+              Authorization: userToken,
+            },
+          }
+        );
+      }
 
       loadUserProfile();
     }
@@ -142,6 +172,74 @@ const ProfileEdit = () => {
                         <Button
                           className="btn btn-primary text-white"
                           onClick={handleSaveName}
+                        >
+                          Salvar
+                        </Button>
+                      </div>
+                      {error && (
+                        <div className="my-3 alert alert-danger text-center">
+                          {error}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div>
+                <div className="d-flex align-items-center">
+                  <div className="input-group mb-2 input-div rounded-1">
+                    <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                      <AiOutlineMail size={23} />
+                    </span>
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        className="form-control form-input text-white border-0 p-0"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        value={profileInfo.email}
+                        readOnly
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <AiOutlineSetting
+                      size={35}
+                      className="text-white icon"
+                      onClick={() => setShowEditEmail(!showEditEmail)}
+                    />
+                  </div>
+                </div>
+                <div>
+                  {showEditEmail && (
+                    <div>
+                      <div className="input-group my-2 input-div rounded-1">
+                        <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                          <AiOutlineMail size={23} />
+                        </span>
+                        <div className="form-floating">
+                          <input
+                            type="text"
+                            className="form-control form-input text-white border-0 p-0"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            value={tempEmail}
+                            onChange={(event) =>
+                              handleInputChange(event, setTempEmail)
+                            }
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="form-text mb-3">
+                        Seu email deve ser um email válido.
+                      </div>
+                      <div className="text-center">
+                        <Button
+                          className="btn btn-primary text-white"
+                          onClick={handleSaveEmail}
                         >
                           Salvar
                         </Button>
