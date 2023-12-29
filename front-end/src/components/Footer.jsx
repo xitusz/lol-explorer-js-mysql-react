@@ -2,10 +2,11 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { BsArrowUp } from "react-icons/bs";
+import PropTypes from "prop-types";
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <div id="footer">
+    <div id="footer" className={className}>
       <div className="mx-5">
         <div className="w-full mx-auto p-4">
           <div className="arrow-div">
@@ -81,6 +82,14 @@ const Footer = () => {
       </div>
     </div>
   );
+};
+
+Footer.propTypes = {
+  className: PropTypes.string,
+};
+
+Footer.defaultProps = {
+  className: "",
 };
 
 export default Footer;
