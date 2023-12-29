@@ -148,6 +148,7 @@ const ProfileEdit = () => {
       setNewName("");
       setNewEmail("");
       setNewPassword("");
+      navigate("/profile");
     }
   };
 
