@@ -17,7 +17,7 @@ const ProfileEdit = () => {
     name: "",
     email: "",
   });
-  const [/*newName,*/ setNewName] = useState("");
+  const [newName, setNewName] = useState("");
   const [tempName, setTempName] = useState("");
   const [showEditName, setShowEditName] = useState(false);
   const [error, setError] = useState("");
@@ -60,6 +60,22 @@ const ProfileEdit = () => {
       setError("");
       setTempName("");
       setShowEditName(false);
+    }
+  };
+
+  const handleButtonClick = async () => {
+    if (userToken) {
+      await axios.put(
+        "http://localhost:3001/profile/edit/name",
+        { newName: newName },
+        {
+          headers: {
+            Authorization: userToken,
+          },
+        }
+      );
+
+      loadUserProfile();
     }
   };
 
@@ -146,7 +162,12 @@ const ProfileEdit = () => {
                   </Button>
                 </div>
                 <div className="text-center">
-                  <Button className="btn btn-primary text-white">Salvar</Button>
+                  <Button
+                    className="btn btn-primary text-white"
+                    onClick={handleButtonClick}
+                  >
+                    Salvar
+                  </Button>
                 </div>
               </div>
             </div>
