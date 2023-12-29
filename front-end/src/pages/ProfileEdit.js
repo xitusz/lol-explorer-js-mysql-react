@@ -32,7 +32,9 @@ const ProfileEdit = () => {
   const [tempPassword, setTempPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showEditPassword, setShowEditPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [errorName, setNameError] = useState("");
+  const [errorEmail, setEmailError] = useState("");
+  const [errorPassword, setPasswordError] = useState("");
 
   const loadUserProfile = async () => {
     if (userToken) {
@@ -66,10 +68,10 @@ const ProfileEdit = () => {
     const nameError = validateName(tempName);
 
     if (nameError) {
-      setError(nameError);
+      setNameError(nameError);
     } else {
       setNewName(tempName);
-      setError("");
+      setNameError("");
       setTempName("");
       setShowEditName(false);
     }
@@ -79,10 +81,10 @@ const ProfileEdit = () => {
     const emailError = validateEmail(tempEmail);
 
     if (emailError) {
-      setError(emailError);
+      setEmailError(emailError);
     } else {
       setNewEmail(tempEmail);
-      setError("");
+      setEmailError("");
       setTempEmail("");
       setShowEditEmail(false);
     }
@@ -92,11 +94,11 @@ const ProfileEdit = () => {
     const passwordError = validatePassword(tempPassword);
 
     if (passwordError) {
-      setError(passwordError);
+      setPasswordError(passwordError);
     } else if (confirmPassword != tempPassword) {
-      setError("As senhas não são iguais.");
+      setPasswordError("As senhas não são iguais.");
     } else {
-      setError("");
+      setPasswordError("");
       setNewPassword(confirmPassword);
       setConfirmPassword("");
       setTempPassword("");
@@ -216,9 +218,9 @@ const ProfileEdit = () => {
                           Salvar
                         </Button>
                       </div>
-                      {error && (
+                      {errorName && (
                         <div className="mb-3 alert alert-danger text-center">
-                          {error}
+                          {errorName}
                         </div>
                       )}
                     </div>
@@ -284,9 +286,9 @@ const ProfileEdit = () => {
                           Salvar
                         </Button>
                       </div>
-                      {error && (
+                      {errorEmail && (
                         <div className="mb-3 alert alert-danger text-center">
-                          {error}
+                          {errorEmail}
                         </div>
                       )}
                     </div>
@@ -373,9 +375,9 @@ const ProfileEdit = () => {
                           Salvar
                         </Button>
                       </div>
-                      {error && (
+                      {errorPassword && (
                         <div className="mb-3 alert alert-danger text-center">
-                          {error}
+                          {errorPassword}
                         </div>
                       )}
                     </div>
