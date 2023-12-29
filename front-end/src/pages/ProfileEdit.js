@@ -139,6 +139,16 @@ const ProfileEdit = () => {
                   )}
                 </div>
               </div>
+              <div className="d-flex justify-content-evenly mt-5">
+                <div className="text-center">
+                  <Button className="btn btn-primary text-white">
+                    Excluir Conta
+                  </Button>
+                </div>
+                <div className="text-center">
+                  <Button className="btn btn-primary text-white">Salvar</Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
