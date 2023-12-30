@@ -1,3 +1,19 @@
 .icon-setting {
   margin-left: 10px;
 }
+
+.active-icon {
+  color: rgb(39 111 141) !important;
+  transition: color 0.2s ease-out;
+}
+
+.active-edit {
+  color: rgb(39 111 141) !important;
+  transition: color 0.2s ease-out;
+  box-shadow: 0 0 5px 1px rgb(39 111 141) !important;
+}
+
+.active-edit input {
+  color: rgb(39 111 141) !important;
+  transition: color 0.2s ease-out;
+}

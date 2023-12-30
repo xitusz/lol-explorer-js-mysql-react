@@ -156,8 +156,16 @@ const ProfileEdit = () => {
             <div className="p-5 rounded-3 mb-1 form-field">
               <div className="mb-3 mt-5">
                 <div className="d-flex align-items-center">
-                  <div className="input-group mb-2 input-div rounded-1">
-                    <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                  <div
+                    className={`input-group mb-2 input-div rounded-1 ${
+                      showEditName ? "active-edit" : ""
+                    }`}
+                  >
+                    <span
+                      className={`input-group-text form-input border-0 text-white p-2 px-3 ${
+                        showEditName ? "active-edit" : ""
+                      }`}
+                    >
                       <AiOutlineUser size={23} />
                     </span>
                     <div className="form-floating">
@@ -174,7 +182,9 @@ const ProfileEdit = () => {
                   <div>
                     <AiOutlineSetting
                       size={35}
-                      className="text-white icon icon-setting"
+                      className={`text-white icon icon-setting ${
+                        showEditName ? "active-icon" : ""
+                      }`}
                       onClick={() => setShowEditName(!showEditName)}
                     />
                   </div>
