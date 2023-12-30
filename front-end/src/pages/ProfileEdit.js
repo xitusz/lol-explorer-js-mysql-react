@@ -233,8 +233,16 @@ const ProfileEdit = () => {
               </div>
               <div className="mb-3">
                 <div className="d-flex align-items-center">
-                  <div className="input-group mb-2 input-div rounded-1">
-                    <span className="input-group-text form-input border-0 text-white p-2 px-3">
+                  <div
+                    className={`input-group mb-2 input-div rounded-1 ${
+                      showEditEmail ? "active-edit" : ""
+                    }`}
+                  >
+                    <span
+                      className={`input-group-text form-input border-0 text-white p-2 px-3 ${
+                        showEditEmail ? "active-edit" : ""
+                      }`}
+                    >
                       <AiOutlineMail size={23} />
                     </span>
                     <div className="form-floating">
@@ -251,7 +259,9 @@ const ProfileEdit = () => {
                   <div>
                     <AiOutlineSetting
                       size={35}
-                      className="text-white icon icon-setting"
+                      className={`text-white icon icon-setting ${
+                        showEditEmail ? "active-icon" : ""
+                      }`}
                       onClick={() => setShowEditEmail(!showEditEmail)}
                     />
                   </div>
