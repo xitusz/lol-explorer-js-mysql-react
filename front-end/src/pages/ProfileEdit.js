@@ -153,8 +153,8 @@ const ProfileEdit = () => {
         <h1 className="text-center text-white py-5">Meus Dados</h1>
         <div className="row justify-content-center">
           <div className="col-sm-10 col-md-8 col-lg-6">
-            <div className="p-5 rounded-3 mb-1 form-field">
-              <div className="mb-3 mt-5">
+            <div className="p-5 rounded-3 mb-4 form-field">
+              <div className="mb-3">
                 <div className="d-flex align-items-center">
                   <div
                     className={`input-group mb-2 input-div rounded-1 ${
@@ -407,15 +407,15 @@ const ProfileEdit = () => {
                   )}
                 </div>
               </div>
-              <div className="d-flex justify-content-evenly my-5">
-                <div className="text-center mt-5">
-                  <Button className="btn btn-primary text-white">
+              <div className="d-flex justify-content-evenly mt-5">
+                <div className="mt-5">
+                  <Button className="btn btn-primary text-white mt-5">
                     Excluir Conta
                   </Button>
                 </div>
-                <div className="text-center mt-5">
+                <div className="mt-5">
                   <Button
-                    className="btn btn-primary text-white"
+                    className="btn btn-primary text-white mt-5"
                     onClick={handleButtonClick}
                   >
                     Salvar
