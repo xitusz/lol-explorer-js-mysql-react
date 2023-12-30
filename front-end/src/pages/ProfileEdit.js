@@ -104,7 +104,7 @@ const ProfileEdit = () => {
     }
   };
 
-  const handleButtonClick = async () => {
+  const handleSaveButtonClick = async () => {
     if (userToken) {
       if (newName) {
         await axios.put(
@@ -416,7 +416,7 @@ const ProfileEdit = () => {
                 <div className="mt-5">
                   <Button
                     className="btn btn-primary text-white mt-5"
-                    onClick={handleButtonClick}
+                    onClick={handleSaveButtonClick}
                   >
                     Salvar
                   </Button>
