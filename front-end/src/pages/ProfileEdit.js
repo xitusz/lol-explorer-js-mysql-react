@@ -10,7 +10,10 @@ import {
 } from "../middleware/validateRegister";
 import { AiOutlineMail, AiOutlineUser, AiOutlineSetting } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
-import { getItemFromLocalStorage } from "../services/localStorage";
+import {
+  getItemFromLocalStorage,
+  removeItemFromLocalStorage,
+} from "../services/localStorage";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
@@ -143,6 +146,24 @@ const ProfileEdit = () => {
       }
 
       navigate("/profile");
+    }
+  };
+
+  const handleDeleteButtonClick = async () => {
+    const confirmDelete = window.confirm(
+      "Tem certeza que deseja excluir sua conta? Esta ação é irreversível."
+    );
+
+    if (confirmDelete && userToken) {
+      await axios.delete("http://localhost:3001/profile", {
+        headers: {
+          Authorization: userToken,
+        },
+      });
+
+      removeItemFromLocalStorage("token");
+      removeItemFromLocalStorage("isLoggedIn");
+      navigate("/");
     }
   };
 
@@ -409,7 +430,10 @@ const ProfileEdit = () => {
               </div>
               <div className="d-flex justify-content-evenly mt-5">
                 <div className="mt-5">
-                  <Button className="btn btn-primary text-white mt-5">
+                  <Button
+                    className="btn btn-primary text-white mt-5"
+                    onClick={handleDeleteButtonClick}
+                  >
                     Excluir Conta
                   </Button>
                 </div>
