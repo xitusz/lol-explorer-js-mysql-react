@@ -112,6 +112,7 @@ const Register = () => {
                     id="email"
                     name="email"
                     placeholder="Digite seu email"
+                    autoComplete="username"
                     value={email}
                     onChange={(event) => handleInputChange(event, setEmail)}
                     required
@@ -132,6 +133,7 @@ const Register = () => {
                     id="password"
                     name="password"
                     placeholder="Digite sua senha"
+                    autoComplete="new-password"
                     value={password}
                     onChange={(event) => handleInputChange(event, setPassword)}
                     required
@@ -152,6 +154,7 @@ const Register = () => {
                     id="password"
                     name="password"
                     placeholder="Confirme sua senha"
+                    autoComplete="new-password"
                     value={confirmPassword}
                     onChange={(event) =>
                       handleInputChange(event, setConfirmPassword)
