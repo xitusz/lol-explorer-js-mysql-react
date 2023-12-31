@@ -151,8 +151,8 @@ const Register = () => {
                   <input
                     type="password"
                     className="form-control form-input text-white border-0 p-0"
-                    id="password"
-                    name="password"
+                    id="confirm-password"
+                    name="confirm-password"
                     placeholder="Confirme sua senha"
                     autoComplete="new-password"
                     value={confirmPassword}
