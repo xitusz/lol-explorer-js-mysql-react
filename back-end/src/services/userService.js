@@ -89,6 +89,20 @@ const updatePassword = async (userId, newPassword) => {
   return "Senha atualizada com sucesso!";
 };
 
+const deleteUser = async (userId) => {
+  const user = await User.findOne({ where: { id: userId } });
+
+  if (!user) {
+    const error = new Error("Usuário não encontrado");
+    error.statusCode = 404;
+    throw error;
+  }
+
+  await User.destroy({ where: { id: userId } });
+
+  return "Usuário excluído com sucesso!";
+};
+
 module.exports = {
   create,
   login,
@@ -96,4 +110,5 @@ module.exports = {
   updateName,
   updateEmail,
   updatePassword,
+  deleteUser,
 };
