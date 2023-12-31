@@ -106,6 +106,18 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
+const validateEmail = async (req, res, next) => {
+  const { newEmail } = req.body;
+
+  try {
+    const existingUser = await userService.validateEmail(newEmail);
+
+    return res.status(200).json(existingUser);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   login,
@@ -114,4 +126,5 @@ module.exports = {
   updateEmail,
   updatePassword,
   deleteUser,
+  validateEmail,
 };
