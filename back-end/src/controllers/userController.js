@@ -94,6 +94,18 @@ const updatePassword = async (req, res, next) => {
   }
 };
 
+const deleteUser = async (req, res, next) => {
+  const { id } = req.user;
+
+  try {
+    await userService.deleteUser(id);
+
+    return res.status(200).json({ message: "Usuário excluído com sucesso!" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   login,
@@ -101,4 +113,5 @@ module.exports = {
   updateName,
   updateEmail,
   updatePassword,
+  deleteUser,
 };
