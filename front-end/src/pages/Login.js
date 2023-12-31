@@ -76,6 +76,7 @@ const Login = () => {
                     id="email"
                     name="email"
                     placeholder="email@example.com"
+                    autoComplete="username"
                     value={email}
                     onChange={(event) => handleInputChange(event, setEmail)}
                     required
@@ -93,6 +94,7 @@ const Login = () => {
                     id="password"
                     name="password"
                     placeholder="*********"
+                    autoComplete="current-password"
                     value={password}
                     onChange={(event) => handleInputChange(event, setPassword)}
                     required
