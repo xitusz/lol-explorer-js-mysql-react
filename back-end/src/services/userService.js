@@ -103,6 +103,12 @@ const deleteUser = async (userId) => {
   return "Usuário excluído com sucesso!";
 };
 
+const validateEmail = async (newEmail) => {
+  const existingUser = await User.findOne({ where: { email: newEmail } });
+
+  return !!existingUser;
+};
+
 module.exports = {
   create,
   login,
@@ -111,4 +117,5 @@ module.exports = {
   updateEmail,
   updatePassword,
   deleteUser,
+  validateEmail,
 };
