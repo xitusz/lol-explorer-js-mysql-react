@@ -78,16 +78,37 @@ const ProfileEdit = () => {
     }
   };
 
-  const handleSaveEmail = () => {
+  const handleSaveEmail = async () => {
     const emailError = validateEmail(newEmail);
 
     if (emailError) {
       setEmailError(emailError);
     } else {
-      setNewEmail(newEmail);
-      setProfileInfo({ name: profileInfo.name, email: newEmail });
-      setEmailError("");
-      setShowEditEmail(false);
+      if (newEmail !== profileInfo.email) {
+        const existingUser = await axios.post(
+          "http://localhost:3001/profile/validate/email",
+          { newEmail },
+          {
+            headers: {
+              Authorization: userToken,
+            },
+          }
+        );
+
+        if (existingUser.data) {
+          setEmailError("Este email já está registrado");
+        } else {
+          setNewEmail(newEmail);
+          setProfileInfo({ name: profileInfo.name, email: newEmail });
+          setEmailError("");
+          setShowEditEmail(false);
+        }
+      } else if (newEmail === profileInfo.email) {
+        setNewEmail(newEmail);
+        setProfileInfo({ name: profileInfo.name, email: newEmail });
+        setEmailError("");
+        setShowEditEmail(false);
+      }
     }
   };
 
