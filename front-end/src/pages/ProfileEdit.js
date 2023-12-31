@@ -108,7 +108,11 @@ const ProfileEdit = () => {
   };
 
   const handleSaveButtonClick = async () => {
-    if (userToken) {
+    const confirmSave = window.confirm(
+      "Tem certeza que deseja salvar os novos dados?"
+    );
+
+    if (confirmSave && userToken) {
       if (newName) {
         await axios.put(
           "http://localhost:3001/profile/edit/name",
@@ -121,7 +125,7 @@ const ProfileEdit = () => {
         );
       }
 
-      if (newEmail) {
+      if (confirmSave && newEmail) {
         await axios.put(
           "http://localhost:3001/profile/edit/email",
           { newEmail: newEmail },
@@ -133,7 +137,7 @@ const ProfileEdit = () => {
         );
       }
 
-      if (newPassword) {
+      if (confirmSave && newPassword) {
         await axios.put(
           "http://localhost:3001/profile/edit/password",
           { newPassword: newPassword },
