@@ -1,5 +1,18 @@
 const { Favorite } = require("../database/models");
 
+const createFavorites = async (userId) => {
+  const favorites = await Favorite.findOne({
+    where: { userId },
+  });
+
+  if (!favorites) {
+    await Favorite.create({
+      userId,
+      favorite: [],
+    });
+  }
+};
+
 const listFavorites = async (userId) => {
   const favorites = await Favorite.findOne({
     where: { userId },
@@ -48,6 +61,7 @@ const clearFavorites = async (userId) => {
 };
 
 module.exports = {
+  createFavorites,
   listFavorites,
   addFavorite,
   removeFavorite,
