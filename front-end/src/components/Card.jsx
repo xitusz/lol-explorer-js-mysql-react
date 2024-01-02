@@ -7,7 +7,7 @@ const Card = ({ name, image }) => {
       <img
         src={image}
         alt={name}
-        className="card-img-top img-fluid h-100 card-image"
+        className="card-img-top img-fluid card-image"
       />
       <div className="card-body p-0">
         <h5 className="card-title text-center pt-1 text-white">{name}</h5>
