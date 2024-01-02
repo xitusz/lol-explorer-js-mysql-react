@@ -153,7 +153,7 @@ const Character = () => {
     }
     if (displayedChampions.length > 0) {
       return displayedChampions.map(({ id }) => {
-        const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`;
+        const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`;
         const isFavorite = favorites.includes(id);
 
         return (
