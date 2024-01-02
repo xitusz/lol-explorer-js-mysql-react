@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
+import { getItemFromLocalStorage } from "../services/localStorage";
 import { AiOutlineSearch, AiOutlineStar, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
@@ -19,6 +20,8 @@ const Character = () => {
   const [showFavorites, setShowFavorites] = useState(false);
   const { userToken } = useAuth();
 
+  const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
+
   useEffect(() => {
     const fetchChampions = async () => {
       const response = await fetch(
@@ -31,7 +34,7 @@ const Character = () => {
     };
 
     const loadUserFavorites = async () => {
-      if (userToken) {
+      if (userToken && isLoggedIn) {
         const response = await axios.get("http://localhost:3001/favorites", {
           headers: {
             Authorization: userToken,
@@ -73,7 +76,7 @@ const Character = () => {
   };
 
   const handleFavorite = async (favoriteName) => {
-    if (userToken) {
+    if (userToken && isLoggedIn) {
       try {
         const isFavorite = favorites.includes(favoriteName);
 
