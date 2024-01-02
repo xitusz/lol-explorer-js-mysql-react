@@ -30,6 +30,20 @@ const Login = () => {
     }
   }, [navigate]);
 
+  const createFavorites = async (token) => {
+    if (token) {
+      await axios.post(
+        "http://localhost:3001/favorites/create",
+        {},
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
+    }
+  };
+
   const handleLogin = async () => {
     if (!recaptchaValue) {
       setError("Captcha inválido");
@@ -46,6 +60,7 @@ const Login = () => {
         setUserToken(token);
         setItemToLocalStorage("isLoggedIn", true);
         setItemToLocalStorage("token", token);
+        createFavorites(token);
         navigate("/");
       } catch (error) {
         setError("Email ou senha inválida");
