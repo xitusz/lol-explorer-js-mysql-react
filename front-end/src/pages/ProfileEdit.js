@@ -26,8 +26,10 @@ const ProfileEdit = () => {
     email: "",
   });
   const [newName, setNewName] = useState("");
+  const [tempName, setTempName] = useState("");
   const [showEditName, setShowEditName] = useState(false);
   const [newEmail, setNewEmail] = useState("");
+  const [tempEmail, setTempEmail] = useState("");
   const [showEditEmail, setShowEditEmail] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [tempPassword, setTempPassword] = useState("");
@@ -66,28 +68,28 @@ const ProfileEdit = () => {
   };
 
   const handleSaveName = () => {
-    const nameError = validateName(newName);
+    const nameError = validateName(tempName);
 
     if (nameError) {
       setNameError(nameError);
     } else {
-      setNewName(newName);
-      setProfileInfo({ name: newName, email: profileInfo.email });
+      setNewName(tempName);
+      setProfileInfo({ name: tempName, email: profileInfo.email });
       setNameError("");
       setShowEditName(false);
     }
   };
 
   const handleSaveEmail = async () => {
-    const emailError = validateEmail(newEmail);
+    const emailError = validateEmail(tempEmail);
 
     if (emailError) {
       setEmailError(emailError);
     } else {
-      if (newEmail !== profileInfo.email) {
+      if (tempEmail !== profileInfo.email) {
         const existingUser = await axios.post(
           "http://localhost:3001/profile/validate/email",
-          { newEmail },
+          { newEmail: tempEmail },
           {
             headers: {
               Authorization: userToken,
@@ -98,14 +100,14 @@ const ProfileEdit = () => {
         if (existingUser.data) {
           setEmailError("Este email já está registrado");
         } else {
-          setNewEmail(newEmail);
-          setProfileInfo({ name: profileInfo.name, email: newEmail });
+          setNewEmail(tempEmail);
+          setProfileInfo({ name: profileInfo.name, email: tempEmail });
           setEmailError("");
           setShowEditEmail(false);
         }
-      } else if (newEmail === profileInfo.email) {
-        setNewEmail(newEmail);
-        setProfileInfo({ name: profileInfo.name, email: newEmail });
+      } else if (tempEmail === profileInfo.email) {
+        setNewEmail(tempEmail);
+        setProfileInfo({ name: profileInfo.name, email: tempEmail });
         setEmailError("");
         setShowEditEmail(false);
       }
@@ -249,9 +251,9 @@ const ProfileEdit = () => {
                             id="name"
                             name="name"
                             placeholder="Digite seu novo nome"
-                            value={newName}
+                            value={tempName}
                             onChange={(event) =>
-                              handleInputChange(event, setNewName)
+                              handleInputChange(event, setTempName)
                             }
                             required
                           />
@@ -326,9 +328,9 @@ const ProfileEdit = () => {
                             id="email"
                             name="email"
                             placeholder="Digite seu novo email"
-                            value={newEmail}
+                            value={tempEmail}
                             onChange={(event) =>
-                              handleInputChange(event, setNewEmail)
+                              handleInputChange(event, setTempEmail)
                             }
                             required
                           />
