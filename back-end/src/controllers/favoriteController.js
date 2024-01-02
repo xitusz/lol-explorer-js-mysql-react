@@ -1,5 +1,17 @@
 const favoriteService = require("../services/favoriteService");
 
+const createFavorites = async (req, res, next) => {
+  const { id } = req.user;
+
+  try {
+    await favoriteService.createFavorites(id);
+
+    return res.status(200).json({ message: "Favorito criado com sucesso" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const listFavorites = async (req, res, next) => {
   const { id } = req.user;
 
@@ -53,6 +65,7 @@ const clearFavorite = async (req, res, next) => {
 };
 
 module.exports = {
+  createFavorites,
   listFavorites,
   addFavorite,
   removeFavorite,
