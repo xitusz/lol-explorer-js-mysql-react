@@ -3,6 +3,7 @@
   width: 15rem;
   background-color: #1A242D;
   transition: transform 0.3s ease-out, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s ease-out;
+  overflow: hidden;
 }
 
 .card-div:hover {
@@ -14,4 +15,6 @@
 
 .card-image {
   object-fit: cover;
+  height: 89%;
+  object-position: center top;
 }
