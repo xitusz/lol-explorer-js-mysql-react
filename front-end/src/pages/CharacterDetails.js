@@ -105,6 +105,29 @@ const CharacterDetails = () => {
     );
   };
 
+  const handleVideoError = () => {
+    const noSkillImage = skillVideos.NoSkillVideo.IMG;
+    const noSkillImage2 = skillVideos.NoSkillVideo.IMG2;
+
+    return (
+      <div className="text-center imgStyle">
+        <div>
+          <img src={noSkillImage} alt="No Skill Video" className="img-fluid" />
+          <div className="img2Style">
+            <img
+              src={noSkillImage2}
+              alt="No Skill Icon"
+              className="img-fluid"
+            />
+            <p className="mt-2 fw-bold">
+              Não é possível exibir esta habilidade em vídeo.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const renderSkillVideo = () => {
     const championVideos = skillVideos[championName];
     if (!championVideos) {
@@ -116,12 +139,20 @@ const CharacterDetails = () => {
     return (
       <div className="p-3">
         {skillVideoUrl ? (
-          <video key={skillState} controls width="100%" height="auto">
+          <video
+            key={skillState}
+            muted
+            autoPlay
+            loop
+            width="100%"
+            height="auto"
+            onError={() => handleVideoError()}
+          >
             <source src={skillVideoUrl} type="video/webm" />
             Seu navegador não suporta o elemento de vídeo.
           </video>
         ) : (
-          <p>Nenhum vídeo disponível para esta habilidade.</p>
+          handleVideoError()
         )}
       </div>
     );
