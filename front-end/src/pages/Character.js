@@ -132,16 +132,18 @@ const Character = () => {
     }
   };
 
-  const filteredChampions = Object.values(champions).filter(({ id, tags }) => {
-    const isMatch = id.toLowerCase().includes(searchChampion.toLowerCase());
+  const filteredChampions = Object.values(champions).filter(
+    ({ name, tags }) => {
+      const isMatch = name.toLowerCase().includes(searchChampion.toLowerCase());
 
-    const hasSelectedTypes =
-      filterTypes.length > 0
-        ? filterTypes.every((type) => tags.includes(type))
-        : true;
+      const hasSelectedTypes =
+        filterTypes.length > 0
+          ? filterTypes.every((type) => tags.includes(type))
+          : true;
 
-    return isMatch && hasSelectedTypes;
-  });
+      return isMatch && hasSelectedTypes;
+    }
+  );
 
   const renderChampions = () => {
     let displayedChampions = filteredChampions;
@@ -152,7 +154,7 @@ const Character = () => {
       );
     }
     if (displayedChampions.length > 0) {
-      return displayedChampions.map(({ id }) => {
+      return displayedChampions.map(({ id, name }) => {
         const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`;
         const isFavorite = favorites.includes(id);
 
@@ -181,7 +183,7 @@ const Character = () => {
                 className="text-decoration-none"
                 onClick={() => navigate(`/character/${id}`)}
               >
-                <Card name={id} image={imageURL} />
+                <Card name={name} image={imageURL} />
               </div>
             </div>
           </div>
