@@ -1,4 +1,8 @@
 {
+  "NoSkillVideo": {
+    "IMG": "https://www.leagueoflegends.com/static/no-ability-background-b82287ba3e7f3b6af9cde0a994af0829.jpg",
+    "IMG2": "https://www.leagueoflegends.com/static/no-ability-icon-3a12d11f77a64872a4800722e1a63844.png"
+  },
   "Aatrox": {
     "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm",
     "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm",
