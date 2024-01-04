@@ -25,7 +25,7 @@ const Character = () => {
   useEffect(() => {
     const fetchChampions = async () => {
       const response = await fetch(
-        "http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion.json"
+        "http://ddragon.leagueoflegends.com/cdn/13.24.1/data/pt_BR/champion.json"
       );
       const data = await response.json();
 
