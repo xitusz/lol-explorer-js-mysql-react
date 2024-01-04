@@ -14,7 +14,7 @@ const CharacterDetails = () => {
 
   useEffect(() => {
     fetch(
-      `http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion/${championName}.json`
+      `http://ddragon.leagueoflegends.com/cdn/13.24.1/data/pt_BR/champion/${championName}.json`
     )
       .then((response) => response.json())
       .then((data) => {
