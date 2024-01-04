@@ -4,13 +4,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
+import skillVideos from "../data/skillVideos.json";
 
 const CharacterDetails = () => {
   const [championDetail, setChampionDetail] = useState({});
   const [loading, setLoading] = useState(true);
-  const [skillState, setSkillState] = useState("passive");
+  const [skillState, setSkillState] = useState("P");
   const [skinState, setSkinState] = useState("default");
   const { championName } = useParams();
+
+  const skillOrder = ["Q", "W", "E", "R"];
 
   useEffect(() => {
     fetch(
@@ -23,7 +26,8 @@ const CharacterDetails = () => {
       });
   }, [championName]);
 
-  const { id, title, lore, tags, passive, spells, skins } = championDetail;
+  const { id, name, title, lore, tags, passive, spells, skins } =
+    championDetail;
 
   const renderTags = () => {
     return tags.map((tag) => (
@@ -50,28 +54,28 @@ const CharacterDetails = () => {
       <div className="p-2">
         <Button
           className={`border-0 p-0 mx-2 img-button ${
-            skillState === "passive" ? "active" : ""
+            skillState === "P" ? "active" : ""
           }`}
           dataTestId={"passive-skill"}
-          onClick={() => setSkillState("passive")}
+          onClick={() => setSkillState("P")}
         >
           <img
-            src={`http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/${passive.image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/13.24.1/img/passive/${passive.image.full}`}
             alt={passive.name}
             className="button-img"
           />
         </Button>
-        {spells.map((spell) => (
+        {spells.map((spell, index) => (
           <Button
             className={`border-0 p-0 m-2 img-button ${
-              skillState === spell.name ? "active" : ""
+              skillState === skillOrder[index] ? "active" : ""
             }`}
             key={spell.id}
-            dataTestId={`${spell.id.charAt(spell.id.length - 1)}-skill`}
-            onClick={() => setSkillState(spell.name)}
+            dataTestId={`${skillOrder[index]}-skill`}
+            onClick={() => setSkillState(skillOrder[index])}
           >
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/${spell.image.full}`}
+              src={`http://ddragon.leagueoflegends.com/cdn/13.24.1/img/spell/${spell.image.full}`}
               alt={spell.name}
               className="button-img"
             />
@@ -91,12 +95,34 @@ const CharacterDetails = () => {
     );
   };
 
-  const renderSpell = (spell) => {
+  const renderSpell = (spell, index) => {
     return (
       <div key={spell.id} className="p-3">
-        <span>{spell.id.charAt(spell.id.length - 1)}</span>
+        <span>{skillOrder[index]}</span>
         <h6>{spell.name}</h6>
         <span>{spell.description}</span>
+      </div>
+    );
+  };
+
+  const renderSkillVideo = () => {
+    const championVideos = skillVideos[championName];
+    if (!championVideos) {
+      return <p className="mt-3">Nenhum vídeo disponível para este campeão.</p>;
+    }
+
+    const skillVideoUrl = championVideos[skillState];
+
+    return (
+      <div className="p-3">
+        {skillVideoUrl ? (
+          <video key={skillState} controls width="100%" height="auto">
+            <source src={skillVideoUrl} type="video/webm" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        ) : (
+          <p>Nenhum vídeo disponível para esta habilidade.</p>
+        )}
       </div>
     );
   };
@@ -104,8 +130,11 @@ const CharacterDetails = () => {
   const renderSkillDetails = () => {
     return (
       <div>
-        {skillState === "passive" && renderPassiveSkill()}
-        {spells.map((spell) => skillState === spell.name && renderSpell(spell))}
+        {skillState === "P" && renderPassiveSkill()}
+        {spells.map(
+          (spell, index) =>
+            skillState === skillOrder[index] && renderSpell(spell, index)
+        )}
       </div>
     );
   };
@@ -142,7 +171,7 @@ const CharacterDetails = () => {
               <div key={skin.num} className="mx-auto">
                 <h6>
                   {skin.name === "default" ? (
-                    <span data-testid={"default-skin"}>{id}</span>
+                    <span data-testid={"default-skin"}>{name}</span>
                   ) : (
                     <span data-testid={`${skin.name}-skin`}>{skin.name}</span>
                   )}
@@ -168,7 +197,7 @@ const CharacterDetails = () => {
         ) : (
           <div className="p-5 text-white text-center">
             <div>
-              <h1>{id}</h1>
+              <h1>{name}</h1>
               <h2>{title}</h2>
               <div>{renderTags()}</div>
               {renderImage(
@@ -186,6 +215,8 @@ const CharacterDetails = () => {
               <h3>Habilidades</h3>
               <div className="border">
                 {renderSkillButtons()}
+                <hr className="m-0" />
+                {renderSkillVideo()}
                 <hr className="m-0" />
                 {renderSkillDetails()}
               </div>
