@@ -32,3 +32,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.character-details-container {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  scroll-padding-top: 120px;
+  scroll-padding-bottom: 60px;
+}
+
+.section-container {
+  scroll-snap-align: start;
+}
