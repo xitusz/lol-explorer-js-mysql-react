@@ -1,7 +1,5 @@
 #footer {
   background-color: #1A242D;
-  scroll-snap-stop: always;
-	scroll-snap-align: end;
 }
 
 .text-footer, .a-footer {
