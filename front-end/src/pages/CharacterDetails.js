@@ -220,31 +220,29 @@ const CharacterDetails = () => {
   };
 
   return (
-    <div className="character-details-container">
+    <div>
       <Header />
       <div className="py-5">
         {loading ? (
           <Loading />
         ) : (
           <div className="p-5 text-white text-center">
-            <div className="section-container">
-              <div>
-                <h1>{name}</h1>
-                <h2>{title}</h2>
-                <div>{renderTags()}</div>
-                {renderImage(
-                  `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`,
-                  id
-                )}
-              </div>
-              <hr className="w-25 mx-auto my-5" />
-              <div className="w-75 mx-auto">
-                <h3>História</h3>
-                {renderLore()}
-              </div>
+            <div>
+              <h1>{name}</h1>
+              <h2>{title}</h2>
+              <div>{renderTags()}</div>
+              {renderImage(
+                `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`,
+                id
+              )}
             </div>
             <hr className="w-25 mx-auto my-5" />
-            <div className="w-75 mx-auto section-container">
+            <div className="w-75 mx-auto">
+              <h3>História</h3>
+              {renderLore()}
+            </div>
+            <hr className="w-25 mx-auto my-5" />
+            <div className="w-75 mx-auto">
               <h3>Habilidades</h3>
               <div className="border">
                 {renderSkillButtons()}
@@ -255,7 +253,7 @@ const CharacterDetails = () => {
               </div>
             </div>
             <hr className="w-25 mx-auto my-5" />
-            <div className="w-75 mx-auto section-container">
+            <div className="w-75 mx-auto">
               <h3>Skins</h3>
               <div className="border">
                 {renderSkinButtons()}
