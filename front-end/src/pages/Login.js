@@ -23,6 +23,7 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const passwordRef = useRef(null);
+  const recaptchaRef = useRef();
 
   useEffect(() => {
     const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
@@ -65,6 +66,10 @@ const Login = () => {
         navigate("/");
       } catch (error) {
         setError("Email ou senha inválida");
+        setRecaptchaValue(null);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
       }
     }
   };
@@ -114,6 +119,7 @@ const Login = () => {
               </div>
               <div className="mb-2 d-flex justify-content-center">
                 <ReCAPTCHA
+                  ref={recaptchaRef}
                   sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                   onChange={(value) => setRecaptchaValue(value)}
                 />
