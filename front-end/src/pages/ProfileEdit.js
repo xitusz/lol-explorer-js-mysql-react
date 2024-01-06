@@ -89,12 +89,7 @@ const ProfileEdit = () => {
       if (tempEmail !== profileInfo.email) {
         const existingUser = await axios.post(
           "http://localhost:3001/profile/validate/email",
-          { newEmail: tempEmail },
-          {
-            headers: {
-              Authorization: userToken,
-            },
-          }
+          { newEmail: tempEmail }
         );
 
         if (existingUser.data) {
