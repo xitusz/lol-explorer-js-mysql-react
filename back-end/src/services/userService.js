@@ -3,7 +3,7 @@ const { User } = require("../database/models");
 const { hash, verify } = require("../utils/hash");
 
 const create = async (name, email, password) => {
-  const hashedPassword = hash(password);
+  const hashedPassword = await hash(password);
 
   const existEmail = await User.findOne({ where: { email } });
 
@@ -25,13 +25,7 @@ const create = async (name, email, password) => {
 const login = async (email, password) => {
   const user = await User.findOne({ where: { email } });
 
-  if (!user) {
-    const error = new Error("Email ou senha inválida");
-    error.statusCode = 404;
-    throw error;
-  }
-
-  if (!verify(password, user.password)) {
+  if (!user || !(await verify(password, user.password))) {
     const error = new Error("Email ou senha inválida");
     error.statusCode = 404;
     throw error;
