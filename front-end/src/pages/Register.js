@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Header from "../components/Header";
@@ -19,11 +19,12 @@ const Register = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [error, setError] = useState("");
+
+  const passwordRef = useRef(null);
+  const confirmPasswordRef = useRef(null);
 
   useEffect(() => {
     const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
@@ -34,7 +35,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     const nameError = validateName(name);
-    const passwordError = validatePassword(password);
+    const passwordError = validatePassword(passwordRef.current.value);
     const emailError = validateEmail(email);
     const existingUser = await axios.post(
       "http://localhost:3001/profile/validate/email",
@@ -49,7 +50,7 @@ const Register = () => {
       setError("Este email já está registrado");
     } else if (passwordError) {
       setError(passwordError);
-    } else if (confirmPassword != password) {
+    } else if (confirmPasswordRef.current.value !== passwordRef.current.value) {
       setError("As senhas não são iguais.");
     } else if (!recaptchaValue) {
       setError("Captcha inválido");
@@ -60,7 +61,7 @@ const Register = () => {
         await axios.post("http://localhost:3001/register", {
           name,
           email,
-          password,
+          password: passwordRef.current.value,
           recaptchaValue,
         });
 
@@ -134,14 +135,13 @@ const Register = () => {
                 </span>
                 <div className="form-floating">
                   <input
+                    ref={passwordRef}
                     type="password"
                     className="form-control form-input text-white border-0 p-0"
                     id="password"
                     name="password"
                     placeholder="Digite sua senha"
                     autoComplete="new-password"
-                    value={password}
-                    onChange={(event) => handleInputChange(event, setPassword)}
                     required
                   />
                 </div>
@@ -155,16 +155,13 @@ const Register = () => {
                 </span>
                 <div className="form-floating">
                   <input
+                    ref={confirmPasswordRef}
                     type="password"
                     className="form-control form-input text-white border-0 p-0"
                     id="confirm-password"
                     name="confirm-password"
                     placeholder="Confirme sua senha"
                     autoComplete="new-password"
-                    value={confirmPassword}
-                    onChange={(event) =>
-                      handleInputChange(event, setConfirmPassword)
-                    }
                     required
                   />
                 </div>
