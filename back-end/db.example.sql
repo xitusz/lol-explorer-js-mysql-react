@@ -19,9 +19,3 @@ CREATE TABLE IF NOT EXISTS favorites (
 	PRIMARY KEY (id),
 	FOREIGN KEY fk_user (userId) REFERENCES users(id) ON DELETE CASCADE
 );
-
-INSERT INTO users (id, name, email, password) VALUES
-  (1, 'user', 'user@email.com', 'e10adc3949ba59abbe56e057f20f883e'); -- senha: md5('123456')
-
-INSERT INTO favorites (userId, favorite) VALUES
-	(1, JSON_ARRAY('Aatrox', 'Ahri', 'Akali'));
