@@ -25,6 +25,7 @@ const Register = () => {
 
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
+  const recaptchaRef = useRef();
 
   useEffect(() => {
     const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
@@ -68,6 +69,10 @@ const Register = () => {
         navigate("/login");
       } catch (error) {
         setError("Erro no registro.");
+        setRecaptchaValue(null);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
       }
     }
   };
@@ -169,6 +174,7 @@ const Register = () => {
               <div className="form-text mb-3">Digite sua senha novamente.</div>
               <div className="mb-2 d-flex justify-content-center">
                 <ReCAPTCHA
+                  ref={recaptchaRef}
                   sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                   onChange={(value) => setRecaptchaValue(value)}
                 />
