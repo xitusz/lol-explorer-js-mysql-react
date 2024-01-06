@@ -36,11 +36,17 @@ const Register = () => {
     const nameError = validateName(name);
     const passwordError = validatePassword(password);
     const emailError = validateEmail(email);
+    const existingUser = await axios.post(
+      "http://localhost:3001/profile/validate/email",
+      { newEmail: email }
+    );
 
     if (nameError) {
       setError(nameError);
     } else if (emailError) {
       setError(emailError);
+    } else if (existingUser.data) {
+      setError("Este email já está registrado");
     } else if (passwordError) {
       setError(passwordError);
     } else if (confirmPassword != password) {
