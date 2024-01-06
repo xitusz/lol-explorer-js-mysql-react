@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Header from "../components/Header";
@@ -19,9 +19,10 @@ const Login = () => {
   const { setUserToken } = useAuth();
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [error, setError] = useState("");
+
+  const passwordRef = useRef(null);
 
   useEffect(() => {
     const isLoggedIn = getItemFromLocalStorage("isLoggedIn");
@@ -51,7 +52,7 @@ const Login = () => {
       try {
         const response = await axios.post("http://localhost:3001/login", {
           email,
-          password,
+          password: passwordRef.current.value,
           recaptchaValue,
         });
 
@@ -66,10 +67,6 @@ const Login = () => {
         setError("Email ou senha inválida");
       }
     }
-  };
-
-  const handleInputChange = (event, setValue) => {
-    setValue(event.target.value);
   };
 
   return (
@@ -93,7 +90,7 @@ const Login = () => {
                     placeholder="email@example.com"
                     autoComplete="username"
                     value={email}
-                    onChange={(event) => handleInputChange(event, setEmail)}
+                    onChange={(event) => setEmail(event.target.value)}
                     required
                   />
                 </div>
@@ -104,14 +101,13 @@ const Login = () => {
                 </span>
                 <div className="form-floating">
                   <input
+                    ref={passwordRef}
                     type="password"
                     className="form-control form-input text-white border-0 p-0"
                     id="password"
                     name="password"
                     placeholder="*********"
                     autoComplete="current-password"
-                    value={password}
-                    onChange={(event) => handleInputChange(event, setPassword)}
                     required
                   />
                 </div>
