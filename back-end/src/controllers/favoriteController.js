@@ -4,9 +4,9 @@ const createFavorites = async (req, res, next) => {
   const { id } = req.user;
 
   try {
-    await favoriteService.createFavorites(id);
+    const message = await favoriteService.createFavorites(id);
 
-    return res.status(200).json({ message: "Favorito criado com sucesso" });
+    return res.status(200).json({ message });
   } catch (err) {
     next(err);
   }
@@ -29,9 +29,9 @@ const addFavorite = async (req, res, next) => {
   const { favoriteName } = req.body;
 
   try {
-    await favoriteService.addFavorite(id, favoriteName);
+    const message = await favoriteService.addFavorite(id, favoriteName);
 
-    return res.status(201).json({ message: "Favorito adicionado com sucesso" });
+    return res.status(201).json({ message });
   } catch (err) {
     next(err);
   }
@@ -42,23 +42,21 @@ const removeFavorite = async (req, res, next) => {
   const { favoriteName } = req.body;
 
   try {
-    await favoriteService.removeFavorite(id, favoriteName);
+    const message = await favoriteService.removeFavorite(id, favoriteName);
 
-    return res.status(200).json({ message: "Favorito removido com sucesso" });
+    return res.status(200).json({ message });
   } catch (err) {
     next(err);
   }
 };
 
-const clearFavorite = async (req, res, next) => {
+const clearFavorites = async (req, res, next) => {
   const { id } = req.user;
 
   try {
-    await favoriteService.clearFavorites(id);
+    const message = await favoriteService.clearFavorites(id);
 
-    return res
-      .status(200)
-      .json({ message: "Todos os favoritos foram removidos com sucesso" });
+    return res.status(200).json({ message });
   } catch (err) {
     next(err);
   }
@@ -69,5 +67,5 @@ module.exports = {
   listFavorites,
   addFavorite,
   removeFavorite,
-  clearFavorite,
+  clearFavorites,
 };
