@@ -1,106 +1,160 @@
 const { sign } = require("../utils/jwtConfig");
 const { User } = require("../database/models");
 const { hash, verify } = require("../utils/hash");
+const axios = require("axios");
 
-const create = async (name, email, password) => {
-  const hashedPassword = await hash(password);
-
-  const existEmail = await User.findOne({ where: { email } });
-
-  if (existEmail) {
-    const error = new Error("Email já registrado");
-    error.statusCode = 409;
+const verifyRecaptcha = async (recaptchaValue) => {
+  if (!recaptchaValue) {
+    const error = new Error("reCAPTCHA ausente");
+    error.statusCode = 400;
     throw error;
   }
 
-  await User.create({
-    name,
-    email,
-    password: hashedPassword,
-  });
+  const googleResponse = await axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaValue}`
+  );
 
-  return "Usuário criado";
+  if (!googleResponse.data.success) {
+    const error = new Error("reCAPTCHA inválido");
+    error.statusCode = 400;
+    throw error;
+  }
 };
 
-const login = async (email, password) => {
-  const user = await User.findOne({ where: { email } });
+const create = async (name, email, password, recaptchaValue) => {
+  try {
+    await verifyRecaptcha(recaptchaValue);
 
-  if (!user || !(await verify(password, user.password))) {
-    const error = new Error("Email ou senha inválida");
-    error.statusCode = 404;
-    throw error;
+    const hashedPassword = await hash(password);
+    const existEmail = await User.findOne({ where: { email } });
+
+    if (existEmail) {
+      const error = new Error("Email já registrado");
+      error.statusCode = 409;
+      throw error;
+    }
+
+    await User.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    return "Usuário criado";
+  } catch (err) {
+    throw new Error(`Erro ao criar usuário: ${err}`);
   }
+};
 
-  const {
-    dataValues: { id },
-  } = user;
+const login = async (email, password, recaptchaValue) => {
+  try {
+    await verifyRecaptcha(recaptchaValue);
 
-  const token = sign({ id });
+    const user = await User.findOne({ where: { email } });
 
-  delete user.dataValues.password;
+    if (!user || !(await verify(password, user.password))) {
+      const error = new Error("Email ou senha inválida");
+      error.statusCode = 404;
+      throw error;
+    }
 
-  return {
-    ...user.dataValues,
-    token,
-  };
+    const {
+      dataValues: { id },
+    } = user;
+
+    const token = sign({ id });
+
+    delete user.dataValues.password;
+
+    return {
+      ...user.dataValues,
+      token,
+    };
+  } catch (err) {
+    throw new Error(`Erro ao realizar login do usuário: ${err}`);
+  }
 };
 
 const getProfileInfo = async (userId) => {
-  const user = await User.findOne({
-    where: { id: userId },
-    attributes: ["name", "email"],
-  });
+  try {
+    const user = await User.findOne({
+      where: { id: userId },
+      attributes: ["name", "email"],
+    });
 
-  if (!user) {
-    const error = new Error("Usuário não encontrado");
-    error.statusCode = 404;
-    throw error;
+    if (!user) {
+      const error = new Error("Usuário não encontrado");
+      error.statusCode = 404;
+      throw error;
+    }
+
+    return {
+      name: user.name,
+      email: user.email,
+    };
+  } catch (err) {
+    throw new Error(`Erro ao buscar usuário: ${err}`);
   }
-
-  return {
-    name: user.name,
-    email: user.email,
-  };
 };
 
 const updateName = async (userId, newName) => {
-  await User.update({ name: newName }, { where: { id: userId } });
+  try {
+    await User.update({ name: newName }, { where: { id: userId } });
 
-  return "Nome atualizado com sucesso!";
+    return "Nome atualizado com sucesso!";
+  } catch (err) {
+    throw new Error(`Erro ao atualizar nome: ${err}`);
+  }
 };
 
 const updateEmail = async (userId, newEmail) => {
-  await User.update({ email: newEmail }, { where: { id: userId } });
+  try {
+    await User.update({ email: newEmail }, { where: { id: userId } });
 
-  return "Email atualizado com sucesso!";
+    return "Email atualizado com sucesso!";
+  } catch (err) {
+    throw new Error(`Erro ao atualizar email: ${err}`);
+  }
 };
 
 const updatePassword = async (userId, newPassword) => {
-  const hashedPassword = hash(newPassword);
+  try {
+    const hashedPassword = await hash(newPassword);
 
-  await User.update({ password: hashedPassword }, { where: { id: userId } });
+    await User.update({ password: hashedPassword }, { where: { id: userId } });
 
-  return "Senha atualizada com sucesso!";
+    return "Senha atualizada com sucesso!";
+  } catch (err) {
+    throw new Error(`Erro ao atualizar senha: ${err}`);
+  }
 };
 
 const deleteUser = async (userId) => {
-  const user = await User.findOne({ where: { id: userId } });
+  try {
+    const user = await User.findOne({ where: { id: userId } });
 
-  if (!user) {
-    const error = new Error("Usuário não encontrado");
-    error.statusCode = 404;
-    throw error;
+    if (!user) {
+      const error = new Error("Usuário não encontrado");
+      error.statusCode = 404;
+      throw error;
+    }
+
+    await User.destroy({ where: { id: userId } });
+
+    return "Usuário excluído com sucesso!";
+  } catch (err) {
+    throw new Error(`Erro ao deletar usuário: ${err}`);
   }
-
-  await User.destroy({ where: { id: userId } });
-
-  return "Usuário excluído com sucesso!";
 };
 
 const validateEmail = async (newEmail) => {
-  const existingUser = await User.findOne({ where: { email: newEmail } });
+  try {
+    const existingUser = await User.findOne({ where: { email: newEmail } });
 
-  return !!existingUser;
+    return !!existingUser;
+  } catch (err) {
+    throw new Error(`Erro ao validar email: ${err}`);
+  }
 };
 
 module.exports = {
