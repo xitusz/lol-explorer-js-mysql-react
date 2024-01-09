@@ -1,16 +1,24 @@
 const bcrypt = require("bcrypt");
 
 const hash = async (str) => {
-  const saltRounds = 10;
-  const hashedPassword = await bcrypt.hash(str, saltRounds);
+  try {
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(str, saltRounds);
 
-  return hashedPassword;
+    return hashedPassword;
+  } catch (err) {
+    throw new Error(`Erro ao fazer o hashing da senha: ${err}`);
+  }
 };
 
 const verify = async (str, hashedPassword) => {
-  const isMatch = await bcrypt.compare(str, hashedPassword);
+  try {
+    const isMatch = await bcrypt.compare(str, hashedPassword);
 
-  return isMatch;
+    return isMatch;
+  } catch (err) {
+    throw new Error(`Erro ao verificar a senha: ${err}`);
+  }
 };
 
 module.exports = {
