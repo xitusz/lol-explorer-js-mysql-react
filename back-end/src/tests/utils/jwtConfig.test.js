@@ -23,7 +23,7 @@ describe("JWT Util", () => {
     });
 
     it("should handle error sign token", () => {
-      sinon.stub(jwt, "sign").throws(new Error());
+      sinon.stub(jwt, "sign").rejects(new Error());
 
       try {
         sign(payload);
@@ -45,7 +45,7 @@ describe("JWT Util", () => {
     });
 
     it("should handle error verify token", () => {
-      sinon.stub(jwt, "verify").throws(new Error());
+      sinon.stub(jwt, "verify").rejects(new Error());
 
       try {
         verifyToken("token");
