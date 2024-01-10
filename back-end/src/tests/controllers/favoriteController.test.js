@@ -7,54 +7,45 @@ const favoriteService = require("../../services/favoriteService");
 describe("Favorite Controller", () => {
   const req = { user: { id: 1 } };
   const res = {};
-  const next = () => {};
+  const next = sinon.spy();
 
   res.status = sinon.stub().returns(res);
   res.json = sinon.stub().returns();
 
-  describe("listFavorites", () => {
-    it("should list the favorites", async () => {
-      const favorites = [{ favorite: ["Aatrox", "Ahri", "Akali"] }];
-
-      sinon.stub(favoriteService, "listFavorites").resolves(favorites);
-
-      await favoriteController.listFavorites(req, res, next);
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith(favorites.favorite)).to.be.true;
-    });
+  afterEach(() => {
+    sinon.restore();
   });
 
-  describe("addFavorite", () => {
-    it("should add a favorite", async () => {
-      const favoriteName = "Aatrox";
+  describe("createFavorite", () => {
+    it("should create favorites array", async () => {
+      const createFavoritesStub = sinon
+        .stub(favoriteService, "createFavorites")
+        .resolves("Favorito criado com sucesso");
 
-      sinon.stub(favoriteService, "addFavorite").resolves();
+      await favoriteController.createFavorites(req, res, next);
 
-      req.body = { favoriteName };
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Favorito criado com sucesso" })).to
+        .be.true;
+      expect(next.notCalled).to.be.true;
+      expect(createFavoritesStub.calledOnce).to.be.true;
+    });
 
-      await favoriteController.addFavorite(req, res, next);
+    it("should handle error create favorites array", async () => {
+      sinon
+        .stub(favoriteService, "createFavorites")
+        .rejects(new Error("Erro ao criar favorito"));
 
-      expect(res.status.calledWith(201)).to.be.true;
+      await favoriteController.createFavorites(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
       expect(
-        res.json.calledWith({ message: "Favorito adicionado com sucesso" })
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao criar favorito"))
+        )
       ).to.be.true;
-    });
-  });
-
-  describe("removeFavorite", () => {
-    it("should remove a favorite", async () => {
-      const favoriteName = "Aatrox";
-
-      sinon.stub(favoriteService, "removeFavorite").resolves();
-
-      req.body = { favoriteName };
-
-      await favoriteController.removeFavorite(req, res, next);
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith({ message: "Favorito removido com sucesso" }))
-        .to.be.true;
     });
   });
 });
