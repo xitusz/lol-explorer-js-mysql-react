@@ -359,6 +359,7 @@ describe("User Controller", () => {
       expect(res.json.calledWith(true)).to.be.true;
       expect(next.notCalled).to.be.true;
       expect(validateEmailStub.calledOnce).to.be.true;
+      expect(validateEmailStub.calledWith(req.body.newEmail)).to.be.true;
     });
 
     it("should handle error validate user email", async () => {
