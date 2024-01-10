@@ -35,6 +35,7 @@ describe("Favorite Controller", () => {
         .be.true;
       expect(next.notCalled).to.be.true;
       expect(createFavoritesStub.calledOnce).to.be.true;
+      expect(createFavoritesStub.calledWith(req.user.id)).to.be.true;
     });
 
     it("should handle error create favorites array", async () => {
