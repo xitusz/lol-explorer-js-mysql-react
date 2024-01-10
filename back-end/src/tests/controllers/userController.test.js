@@ -275,6 +275,8 @@ describe("User Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(updatePasswordStub.calledWith(req.user.id, req.body.newPassword))
+        .to.be.true;
     });
 
     it("should handle error update user password", async () => {
