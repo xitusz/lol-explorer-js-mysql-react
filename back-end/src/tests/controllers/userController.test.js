@@ -181,6 +181,8 @@ describe("User Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(updateNameStub.calledOnce).to.be.true;
+      expect(updateNameStub.calledWith(req.user.id, req.body.newName)).to.be
+        .true;
     });
 
     it("should handle error update user name", async () => {
