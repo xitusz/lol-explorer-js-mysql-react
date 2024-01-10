@@ -126,4 +126,36 @@ describe("Favorite Service", () => {
       }
     });
   });
+
+  describe("clearFavorites", () => {
+    it("should clear all favorites", async () => {
+      const favorites = {
+        favorite: ["Aatrox", "Ahri", "Akali", "Yasuo"],
+        save: sinon.stub(),
+      };
+
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves(favorites);
+
+      const userId = 1;
+
+      const result = await favoriteService.clearFavorites(userId);
+
+      expect(result).to.deep.equal(
+        "Todos os favoritos foram removidos com sucesso"
+      );
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
+      expect(favorites.favorite).to.deep.equal([]);
+    });
+
+    it("should handle error clear all favorites", async () => {
+      sinon.stub(Favorite, "findOne").rejects(new Error());
+
+      try {
+        await favoriteService.clearFavorites(1);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao limpar favoritos: Error");
+      }
+    });
+  });
 });
