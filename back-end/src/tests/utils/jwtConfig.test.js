@@ -2,7 +2,7 @@
 const { expect } = require("chai");
 const sinon = require("sinon");
 const jwt = require("jsonwebtoken");
-const { sign } = require("../../utils/jwtConfig");
+const { sign, verifyToken } = require("../../utils/jwtConfig");
 
 describe("JWT Util", () => {
   const payload = { id: 1, name: "user", email: "user@example.com" };
@@ -29,6 +29,28 @@ describe("JWT Util", () => {
         sign(payload);
       } catch (err) {
         expect(err.message).to.equal(`Erro ao assinar o token JWT: Error`);
+      }
+    });
+  });
+
+  describe("verifyToken", () => {
+    it("should verify a token", () => {
+      const verifyStub = sinon.stub(jwt, "verify").returns(payload);
+
+      const token = sign(payload);
+      const decoded = verifyToken(token);
+
+      expect(verifyStub.calledWith(token, sinon.match.any)).to.be.true;
+      expect(decoded).to.deep.equal(payload);
+    });
+
+    it("should handle error verify token", () => {
+      sinon.stub(jwt, "verify").throws(new Error());
+
+      try {
+        verifyToken("token");
+      } catch (err) {
+        expect(err.message).to.equal(`Erro ao verificar o token JWT: Error`);
       }
     });
   });
