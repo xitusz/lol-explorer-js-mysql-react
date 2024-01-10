@@ -36,4 +36,32 @@ describe("Favorite Service", () => {
       }
     });
   });
+
+  describe("listFavorites", () => {
+    it("should list the favorites", async () => {
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves({
+        favorite: ["Aatrox", "Ahri", "Akali"],
+      });
+
+      const userId = 1;
+
+      const result = await favoriteService.listFavorites(userId);
+
+      expect(result).to.deep.equal({
+        favorite: ["Aatrox", "Ahri", "Akali"],
+      });
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
+    });
+
+    it("should handle error list the favorites", async () => {
+      sinon.stub(Favorite, "findOne").rejects(new Error());
+
+      try {
+        await favoriteService.listFavorites(1);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao listar favoritos: Error");
+      }
+    });
+  });
 });
