@@ -140,4 +140,49 @@ describe("Favorite Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("removeFavorite", () => {
+    it("should remove a favorite", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const favoriteName = "Aatrox";
+
+      const removeFavoriteStub = sinon
+        .stub(favoriteService, "removeFavorite")
+        .resolves("Favorito removido com sucesso");
+
+      req.body = { favoriteName };
+
+      await favoriteController.removeFavorite(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Favorito removido com sucesso" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(removeFavoriteStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error remove a favorite", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const favoriteName = "Aatrox";
+
+      sinon
+        .stub(favoriteService, "removeFavorite")
+        .rejects(new Error("Erro ao remover favorito"));
+
+      req.body = { favoriteName };
+
+      await favoriteController.removeFavorite(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao remover favorito"))
+        )
+      ).to.be.true;
+    });
+  });
 });
