@@ -64,4 +64,35 @@ describe("Favorite Service", () => {
       }
     });
   });
+
+  describe("addFavorite", () => {
+    it("should add a favorite", async () => {
+      const favorites = {
+        favorite: ["Aatrox", "Ahri", "Akali"],
+        save: sinon.stub(),
+      };
+
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves(favorites);
+
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
+      const result = await favoriteService.addFavorite(userId, favoriteName);
+
+      expect(result).to.deep.equal("Favorito adicionado com sucesso");
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
+      expect(favorites.favorite).to.be.include(favoriteName);
+    });
+
+    it("should handle error add a favorite", async () => {
+      sinon.stub(Favorite, "findOne").rejects(new Error());
+
+      try {
+        await favoriteService.addFavorite(1, "Yasuo");
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao adicionar favorito: Error");
+      }
+    });
+  });
 });
