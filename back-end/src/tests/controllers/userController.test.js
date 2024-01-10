@@ -5,72 +5,65 @@ const userController = require("../../controllers/userController");
 const userService = require("../../services/userService");
 
 describe("User Controller", () => {
-  const req = {};
-  const res = {};
-  const next = () => {};
+  createReqResNext = () => {
+    const req = { user: { id: 1 } };
+    const res = {};
+    const next = sinon.spy();
 
-  res.status = sinon.stub().returns(res);
-  res.json = sinon.stub().returns();
+    res.status = sinon.stub().returns(res);
+    res.json = sinon.stub().returns();
 
-  describe("create", () => {
-    const user = {
-      name: "user",
-      email: "user@example.com",
-      password: "123456",
-    };
+    return { req, res, next };
+  };
 
-    beforeEach(async () => {
-      sinon.stub(userService, "create").resolves(user);
-    });
-
-    afterEach(async () => {
-      sinon.restore();
-    });
-
-    it("should create a new user", async () => {
-      req.body = {
-        name: user.name,
-        email: user.email,
-        password: user.password,
-      };
-
-      await userController.create(req, res, next);
-
-      expect(res.status.calledWith(201)).to.be.true;
-      expect(res.json.calledWith({ message: user })).to.be.true;
-    });
+  afterEach(() => {
+    sinon.restore();
   });
 
-  describe("login", () => {
-    beforeEach(async () => {
-      sinon.stub(userService, "login").resolves({
-        id: 1,
-        name: "user",
-        email: "user@example.com",
-        token: "token",
-      });
-    });
+  describe("create", () => {
+    it("should create a new user", async () => {
+      const { req, res, next } = createReqResNext();
 
-    afterEach(async () => {
-      sinon.restore();
-    });
-
-    it("should log in a user and return the user and token when valid credentials", async () => {
       req.body = {
+        name: "user",
         email: "user@example.com",
         password: "123456",
       };
 
-      await userController.login(req, res, next);
+      const createStub = sinon
+        .stub(userService, "create")
+        .resolves("Usuário criado");
 
-      expect(res.status.calledWith(200)).to.be.true;
+      await userController.create(req, res, next);
+
+      expect(res.status.calledWith(201)).to.be.true;
+      expect(res.json.calledWith({ message: "Usuário criado" })).to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(createStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error create a new user", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        name: "user",
+        email: "user@example.com",
+        password: "123456",
+      };
+
+      sinon
+        .stub(userService, "create")
+        .rejects(new Error("Erro ao criar usuário"));
+
+      await userController.create(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
       expect(
-        res.json.calledWith({
-          id: 1,
-          name: "user",
-          email: "user@example.com",
-          token: "token",
-        })
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao criar usuário"))
+        )
       ).to.be.true;
     });
   });
