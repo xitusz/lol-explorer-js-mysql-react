@@ -154,4 +154,49 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("updateName", () => {
+    it("should update user name", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newName: "New User",
+      };
+
+      const updateNameStub = sinon
+        .stub(userService, "updateName")
+        .resolves("Nome atualizado com sucesso!");
+
+      await userController.updateName(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Nome atualizado com sucesso!" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(updateNameStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error update user name", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newName: "New User",
+      };
+
+      sinon
+        .stub(userService, "updateName")
+        .rejects(new Error("Erro ao atualizar nome"));
+
+      await userController.updateName(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao atualizar nome"))
+        )
+      ).to.be.true;
+    });
+  });
 });
