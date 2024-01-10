@@ -244,4 +244,49 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("updatePassword", () => {
+    it("should update user password", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newPassword: "654321",
+      };
+
+      const updatePasswordStub = sinon
+        .stub(userService, "updatePassword")
+        .resolves("Senha atualizada com sucesso!");
+
+      await userController.updatePassword(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Senha atualizada com sucesso!" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(updatePasswordStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error update user password", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newPassword: "654321",
+      };
+
+      sinon
+        .stub(userService, "updatePassword")
+        .rejects(new Error("Erro ao atualizar senha"));
+
+      await userController.updatePassword(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao atualizar senha"))
+        )
+      ).to.be.true;
+    });
+  });
 });
