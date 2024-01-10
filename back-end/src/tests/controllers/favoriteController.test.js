@@ -185,4 +185,44 @@ describe("Favorite Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("clearFavorites", () => {
+    it("should clear favorites", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const clearFavoritesStub = sinon
+        .stub(favoriteService, "clearFavorites")
+        .resolves("Todos os favoritos foram removidos com sucesso");
+
+      await favoriteController.clearFavorites(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(
+        res.json.calledWith({
+          message: "Todos os favoritos foram removidos com sucesso",
+        })
+      ).to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(clearFavoritesStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error clear favorites", async () => {
+      const { req, res, next } = createReqResNext();
+
+      sinon
+        .stub(favoriteService, "clearFavorites")
+        .rejects(new Error("Erro ao limpar favoritos"));
+
+      await favoriteController.clearFavorites(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao limpar favoritos"))
+        )
+      ).to.be.true;
+    });
+  });
 });
