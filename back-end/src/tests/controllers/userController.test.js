@@ -318,6 +318,7 @@ describe("User Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(deleteUserStub.calledOnce).to.be.true;
+      expect(deleteUserStub.calledWith(req.user.id)).to.be.true;
     });
 
     it("should handle error delete a user", async () => {
