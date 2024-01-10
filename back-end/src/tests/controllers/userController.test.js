@@ -36,10 +36,13 @@ describe("User Controller", () => {
 
       await userController.create(req, res, next);
 
+      const { name, email, password } = req.body;
+
       expect(res.status.calledWith(201)).to.be.true;
       expect(res.json.calledWith({ message: "Usuário criado" })).to.be.true;
       expect(next.notCalled).to.be.true;
       expect(createStub.calledOnce).to.be.true;
+      expect(createStub.calledWith(name, email, password)).to.be.true;
     });
 
     it("should handle error create a new user", async () => {
