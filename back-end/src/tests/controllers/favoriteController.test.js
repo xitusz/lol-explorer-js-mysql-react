@@ -163,6 +163,8 @@ describe("Favorite Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(removeFavoriteStub.calledOnce).to.be.true;
+      expect(removeFavoriteStub.calledWith(req.user.id, favoriteName)).to.be
+        .true;
     });
 
     it("should handle error remove a favorite", async () => {
