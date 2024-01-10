@@ -9,69 +9,31 @@ describe("Favorite Service", () => {
     sinon.restore();
   });
 
-  describe("listFavorites", () => {
-    it("should list the favorites", async () => {
-      sinon.stub(Favorite, "findOne").resolves({
-        favorite: ["Aatrox", "Ahri", "Akali"],
-      });
+  describe("createFavorites", () => {
+    it("should create favorites array", async () => {
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves(null);
+      const createFavoritesStub = sinon.stub(Favorite, "create").resolves();
 
       const userId = 1;
 
-      const favorites = await favoriteService.listFavorites(userId);
+      const result = await favoriteService.createFavorites(userId);
 
-      expect(Favorite.findOne.called).to.be.true;
-      expect(Favorite.findOne.firstCall.args[0]).to.deep.equal({
-        where: { userId },
-      });
-      expect(favorites).to.deep.equal({
-        favorite: ["Aatrox", "Ahri", "Akali"],
-      });
+      expect(result).to.deep.equal("Favorito criado com sucesso");
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(createFavoritesStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
+      expect(createFavoritesStub.calledWith({ userId, favorite: [] })).to.be
+        .true;
     });
-  });
 
-  describe("addFavorite", () => {
-    it("should add a favorite", async () => {
-      const userId = 1;
-      const favoriteName = "Yasuo";
+    it("should handle error create favorites array", async () => {
+      sinon.stub(Favorite, "findOne").rejects(new Error());
 
-      const favorites = {
-        favorite: ["Aatrox", "Ahri", "Akali"],
-        save: sinon.stub(),
-      };
-
-      sinon.stub(Favorite, "findOne").resolves(favorites);
-
-      const result = await favoriteService.addFavorite(userId, favoriteName);
-
-      expect(Favorite.findOne.called).to.be.true;
-      expect(Favorite.findOne.firstCall.args[0]).to.deep.equal({
-        where: { userId },
-      });
-      expect(favorites.favorite).to.be.include(favoriteName);
-      expect(result).to.be.undefined;
-    });
-  });
-
-  describe("removeFavorite", () => {
-    it("should remove a favorite", async () => {
-      const userId = 1;
-      const favoriteName = "Yasuo";
-
-      const favorites = {
-        favorite: ["Aatrox", "Ahri", "Akali", "Yasuo"],
-        save: sinon.stub(),
-      };
-
-      sinon.stub(Favorite, "findOne").resolves(favorites);
-
-      const result = await favoriteService.removeFavorite(userId, favoriteName);
-
-      expect(Favorite.findOne.called).to.be.true;
-      expect(Favorite.findOne.firstCall.args[0]).to.deep.equal({
-        where: { userId },
-      });
-      expect(favorites.favorite).to.not.include(favoriteName);
-      expect(result).to.be.undefined;
+      try {
+        await favoriteService.createFavorites(1);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao criar favorito: Error");
+      }
     });
   });
 });
