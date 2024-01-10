@@ -289,4 +289,41 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("deleteUser", () => {
+    it("should delete a user", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const deleteUserStub = sinon
+        .stub(userService, "deleteUser")
+        .resolves("Usuário excluído com sucesso!");
+
+      await userController.deleteUser(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Usuário excluído com sucesso!" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(deleteUserStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error delete a user", async () => {
+      const { req, res, next } = createReqResNext();
+
+      sinon
+        .stub(userService, "deleteUser")
+        .rejects(new Error("Erro ao deletar usuário"));
+
+      await userController.deleteUser(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao deletar usuário"))
+        )
+      ).to.be.true;
+    });
+  });
 });
