@@ -20,7 +20,7 @@ describe("Favorite Controller", () => {
     sinon.restore();
   });
 
-  describe("createFavorite", () => {
+  describe("createFavorites", () => {
     it("should create favorites array", async () => {
       const { req, res, next } = createReqResNext();
 
@@ -90,6 +90,52 @@ describe("Favorite Controller", () => {
           sinon.match
             .instanceOf(Error)
             .and(sinon.match.has("message", "Erro ao listar favoritos"))
+        )
+      ).to.be.true;
+    });
+  });
+
+  describe("addFavorite", () => {
+    it("should add a favorite", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const favoriteName = "Aatrox";
+
+      const addFavoriteStub = sinon
+        .stub(favoriteService, "addFavorite")
+        .resolves("Favorito adicionado com sucesso");
+
+      req.body = { favoriteName };
+
+      await favoriteController.addFavorite(req, res, next);
+
+      expect(res.status.calledWith(201)).to.be.true;
+      expect(
+        res.json.calledWith({ message: "Favorito adicionado com sucesso" })
+      ).to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(addFavoriteStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error add a favorite", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const favoriteName = "Aatrox";
+
+      sinon
+        .stub(favoriteService, "addFavorite")
+        .rejects(new Error("Erro ao adicionar favorito"));
+
+      req.body = { favoriteName };
+
+      await favoriteController.addFavorite(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao adicionar favorito"))
         )
       ).to.be.true;
     });
