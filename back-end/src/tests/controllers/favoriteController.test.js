@@ -209,6 +209,7 @@ describe("Favorite Controller", () => {
       ).to.be.true;
       expect(next.notCalled).to.be.true;
       expect(clearFavoritesStub.calledOnce).to.be.true;
+      expect(clearFavoritesStub.calledWith(req.user.id)).to.be.true;
     });
 
     it("should handle error clear favorites", async () => {
