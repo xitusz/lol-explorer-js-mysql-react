@@ -86,11 +86,14 @@ describe("User Controller", () => {
 
       await userController.login(req, res, next);
 
+      const { email, password } = req.body;
+
       expect(res.status.calledWith(200)).to.be.true;
       expect(res.json.calledWith({ user: "userData", token: "token" })).to.be
         .true;
       expect(next.notCalled).to.be.true;
       expect(loginStub.calledOnce).to.be.true;
+      expect(loginStub.calledWith(email, password)).to.be.true;
     });
 
     it("should handle error log in a user", async () => {
