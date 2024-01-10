@@ -139,6 +139,7 @@ describe("User Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(getProfileInfoStub.calledWith(req.user.id)).to.be.true;
     });
 
     it("should handle error get profile info", async () => {
