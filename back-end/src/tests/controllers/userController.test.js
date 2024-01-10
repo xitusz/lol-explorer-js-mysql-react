@@ -228,6 +228,8 @@ describe("User Controller", () => {
         .to.be.true;
       expect(next.notCalled).to.be.true;
       expect(updateEmailStub.calledOnce).to.be.true;
+      expect(updateEmailStub.calledWith(req.user.id, req.body.newEmail)).to.be
+        .true;
     });
 
     it("should handle error update user email", async () => {
