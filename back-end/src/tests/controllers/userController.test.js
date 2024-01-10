@@ -67,4 +67,54 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("login", () => {
+    it("should log in a user", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        email: "user@example.com",
+        password: "123456",
+      };
+
+      const loginStub = sinon
+        .stub(userService, "login")
+        .resolves({ user: "userData", token: "token" });
+
+      await userController.login(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ user: "userData", token: "token" })).to.be
+        .true;
+      expect(next.notCalled).to.be.true;
+      expect(loginStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error log in a user", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        name: "user",
+        email: "user@example.com",
+        password: "123456",
+      };
+
+      sinon
+        .stub(userService, "login")
+        .rejects(new Error("Erro ao realizar login do usuário"));
+
+      await userController.login(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(
+              sinon.match.has("message", "Erro ao realizar login do usuário")
+            )
+        )
+      ).to.be.true;
+    });
+  });
 });
