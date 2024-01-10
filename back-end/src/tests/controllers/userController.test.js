@@ -117,4 +117,41 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("getProfileInfo", () => {
+    it("should get profile info", async () => {
+      const { req, res, next } = createReqResNext();
+
+      const getProfileInfoStub = sinon
+        .stub(userService, "getProfileInfo")
+        .resolves({ name: "User", email: "user@example.com" });
+
+      await userController.getProfileInfo(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ name: "User", email: "user@example.com" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(getProfileInfoStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error get profile info", async () => {
+      const { req, res, next } = createReqResNext();
+
+      sinon
+        .stub(userService, "getProfileInfo")
+        .rejects(new Error("Erro ao buscar usuário"));
+
+      await userController.getProfileInfo(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao buscar usuário"))
+        )
+      ).to.be.true;
+    });
+  });
 });
