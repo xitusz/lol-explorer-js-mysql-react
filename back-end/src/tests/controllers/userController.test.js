@@ -199,4 +199,49 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("updateEmail", () => {
+    it("should update user email", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newEmail: "newuser@example.com",
+      };
+
+      const updateEmailStub = sinon
+        .stub(userService, "updateEmail")
+        .resolves("Email atualizado com sucesso!");
+
+      await userController.updateEmail(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ message: "Email atualizado com sucesso!" }))
+        .to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(updateEmailStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error update user email", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newEmail: "newuser@example.com",
+      };
+
+      sinon
+        .stub(userService, "updateEmail")
+        .rejects(new Error("Erro ao atualizar email"));
+
+      await userController.updateEmail(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao atualizar email"))
+        )
+      ).to.be.true;
+    });
+  });
 });
