@@ -326,4 +326,48 @@ describe("User Controller", () => {
       ).to.be.true;
     });
   });
+
+  describe("validateEmail", () => {
+    it("should validate user email", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newEmail: "user@example.com",
+      };
+
+      const validateEmailStub = sinon
+        .stub(userService, "validateEmail")
+        .resolves(true);
+
+      await userController.validateEmail(req, res, next);
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith(true)).to.be.true;
+      expect(next.notCalled).to.be.true;
+      expect(validateEmailStub.calledOnce).to.be.true;
+    });
+
+    it("should handle error validate user email", async () => {
+      const { req, res, next } = createReqResNext();
+
+      req.body = {
+        newEmail: "user@example.com",
+      };
+
+      sinon
+        .stub(userService, "validateEmail")
+        .rejects(new Error("Erro ao validar email"));
+
+      await userController.validateEmail(req, res, next);
+
+      expect(next.calledOnce).to.be.true;
+      expect(
+        next.calledWithMatch(
+          sinon.match
+            .instanceOf(Error)
+            .and(sinon.match.has("message", "Erro ao validar email"))
+        )
+      ).to.be.true;
+    });
+  });
 });
