@@ -74,6 +74,7 @@ describe("Favorite Controller", () => {
       expect(res.json.calledWith(favorites.favorite)).to.be.true;
       expect(next.notCalled).to.be.true;
       expect(listFavoritesStub.calledOnce).to.be.true;
+      expect(listFavoritesStub.calledWith(req.user.id)).to.be.true;
     });
 
     it("should handle error list the favorites", async () => {
