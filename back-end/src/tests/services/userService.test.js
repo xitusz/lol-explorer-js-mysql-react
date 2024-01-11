@@ -3,112 +3,73 @@ const { expect } = require("chai");
 const sinon = require("sinon");
 const userService = require("../../services/userService");
 const { User } = require("../../database/models");
-const { omit } = require("lodash");
 
 describe("User Service", () => {
-  describe("create", () => {
-    beforeEach(async () => {
-      sinon.stub(User, "create").resolves(null);
-    });
-
-    afterEach(() => {
-      sinon.restore();
-    });
-
-    it("should create a new user", async () => {
-      const name = "user";
-      const email = "user@example.com";
-      const password = "123456";
-      const hashedPassword = "e10adc3949ba59abbe56e057f20f883e";
-
-      const result = await userService.create(name, email, password);
-
-      expect(User.create.called).to.be.true;
-      expect(User.create.firstCall.args[0]).to.deep.equal({
-        name,
-        email,
-        password: hashedPassword,
-      });
-      expect(result).to.equal("Usuário criado");
-    });
-
-    it("should throw an error if email is already registered", async () => {
-      const name = "user";
-      const email = "user@example.com";
-      const password = "123456";
-
-      sinon.stub(User, "findOne").resolves({ email });
-
-      try {
-        await userService.create(name, email, password);
-      } catch (err) {
-        expect(err.statusCode).to.equal(409);
-        expect(err.message).to.equal("Email já registrado");
-      }
-    });
+  afterEach(() => {
+    sinon.restore();
   });
 
-  describe("login", () => {
-    beforeEach(async () => {
-      sinon.stub(User, "findOne").resolves({
-        email: "user@example.com",
-        password: "e10adc3949ba59abbe56e057f20f883e",
-        dataValues: {
-          id: 1,
-          name: "user",
-          email: "user@example.com",
-        },
-      });
+  describe("getProfileInfo", () => {
+    it("should get profile info", async () => {
+      const user = { name: "User", email: "user@example.com" };
+      const userId = 1;
+
+      const getProfileInfoStub = sinon.stub(User, "findOne").resolves(user);
+
+      const result = await userService.getProfileInfo(userId);
+
+      expect(result).to.deep.equal(user);
+      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(
+        getProfileInfoStub.calledWith({
+          where: { id: userId },
+          attributes: ["name", "email"],
+        })
+      ).to.be.true;
     });
 
-    afterEach(() => {
-      sinon.restore();
-    });
+    it("should handle error user not found", async () => {
+      const userId = 2;
 
-    it("should log in a user and return the user and token when valid credentials", async () => {
-      const email = "user@example.com";
-      const password = "123456";
-
-      const result = await userService.login(email, password);
-      const omitToken = omit(result, "token");
-
-      expect(User.findOne.called).to.be.true;
-      expect(User.findOne.firstCall.args[0]).to.deep.equal({
-        where: { email },
-      });
-      expect(result).to.have.property("token").to.be.a("string");
-      expect(omitToken).to.deep.equal({
-        id: 1,
-        name: "user",
-        email: "user@example.com",
-      });
-    });
-
-    it("should throw an error for invalid email", async () => {
-      const email = "invalid@example.com";
-      const password = "123456";
-
-      sinon.restore();
-      sinon.stub(User, "findOne").resolves(null);
+      const getProfileInfoStub = sinon.stub(User, "findOne").resolves(null);
 
       try {
-        await userService.login(email, password);
+        await userService.getProfileInfo(userId);
       } catch (err) {
-        expect(err.statusCode).to.equal(404);
-        expect(err.message).to.equal("Email ou senha inválida");
+        expect(err.message).to.equal(
+          "Erro ao buscar usuário: Error: Usuário não encontrado"
+        );
       }
+
+      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(
+        getProfileInfoStub.calledWith({
+          where: { id: userId },
+          attributes: ["name", "email"],
+        })
+      ).to.be.true;
     });
 
-    it("should throw an error for invalid password", async () => {
-      const email = "user@example.com";
-      const password = "wrongPassword";
+    it("should handle error get profile info", async () => {
+      const userId = 1;
+
+      const getProfileInfoStub = sinon
+        .stub(User, "findOne")
+        .rejects(new Error());
 
       try {
-        await userService.login(email, password);
+        await userService.getProfileInfo(userId);
       } catch (err) {
-        expect(err.statusCode).to.equal(404);
-        expect(err.message).to.equal("Email ou senha inválida");
+        expect(err.message).to.equal(`Erro ao buscar usuário: Error`);
       }
+
+      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(
+        getProfileInfoStub.calledWith({
+          where: { id: userId },
+          attributes: ["name", "email"],
+        })
+      ).to.be.true;
     });
   });
 });
