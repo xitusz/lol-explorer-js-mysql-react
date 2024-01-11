@@ -110,4 +110,42 @@ describe("User Service", () => {
       ).to.be.true;
     });
   });
+
+  describe("updateEmail", () => {
+    it("should update user email", async () => {
+      const updateEmailStub = sinon.stub(User, "update").resolves();
+      const userId = 1;
+
+      const result = await userService.updateEmail(userId, "user2@example.com");
+
+      expect(result).to.equal("Email atualizado com sucesso!");
+      expect(updateEmailStub.calledOnce).to.be.true;
+      expect(
+        updateEmailStub.calledWith(
+          { email: "user2@example.com" },
+          { where: { id: userId } }
+        )
+      ).to.be.true;
+    });
+
+    it("should handle error update user email", async () => {
+      const userId = 1;
+
+      const updateEmailStub = sinon.stub(User, "update").rejects(new Error());
+
+      try {
+        await userService.updateEmail(userId, "user2@example.com");
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao atualizar email: Error");
+      }
+
+      expect(updateEmailStub.calledOnce).to.be.true;
+      expect(
+        updateEmailStub.calledWith(
+          { email: "user2@example.com" },
+          { where: { id: userId } }
+        )
+      ).to.be.true;
+    });
+  });
 });
