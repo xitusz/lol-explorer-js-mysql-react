@@ -60,7 +60,7 @@ describe("User Service", () => {
       try {
         await userService.getProfileInfo(userId);
       } catch (err) {
-        expect(err.message).to.equal(`Erro ao buscar usuário: Error`);
+        expect(err.message).to.equal("Erro ao buscar usuário: Error");
       }
 
       expect(getProfileInfoStub.calledOnce).to.be.true;
@@ -69,6 +69,44 @@ describe("User Service", () => {
           where: { id: userId },
           attributes: ["name", "email"],
         })
+      ).to.be.true;
+    });
+  });
+
+  describe("updateName", () => {
+    it("should update user name", async () => {
+      const updateNameStub = sinon.stub(User, "update").resolves();
+      const userId = 1;
+
+      const result = await userService.updateName(userId, "New Name");
+
+      expect(result).to.equal("Nome atualizado com sucesso!");
+      expect(updateNameStub.calledOnce).to.be.true;
+      expect(
+        updateNameStub.calledWith(
+          { name: "New Name" },
+          { where: { id: userId } }
+        )
+      ).to.be.true;
+    });
+
+    it("should handle error update user name", async () => {
+      const userId = 1;
+
+      const updateNameStub = sinon.stub(User, "update").rejects(new Error());
+
+      try {
+        await userService.updateName(userId, "New Name");
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao atualizar nome: Error");
+      }
+
+      expect(updateNameStub.calledOnce).to.be.true;
+      expect(
+        updateNameStub.calledWith(
+          { name: "New Name" },
+          { where: { id: userId } }
+        )
       ).to.be.true;
     });
   });
