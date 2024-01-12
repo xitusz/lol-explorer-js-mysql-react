@@ -61,6 +61,81 @@ describe("User Service", () => {
     });
   });
 
+  describe("create", () => {
+    it("should create a new user", async () => {
+      const name = "user";
+      const email = "user@example.com";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const findOneStub = sinon.stub(User, "findOne").resolves(null);
+      const createStub = sinon.stub(User, "create").resolves();
+
+      const hashedPassword = await hash(password);
+      const result = await userService.create(
+        name,
+        email,
+        password,
+        recaptchaValue
+      );
+
+      expect(result).to.equal("Usuário criado");
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+      expect(createStub.calledOnce).to.be.true;
+      expect(
+        createStub.calledOnceWith({ name, email, password: hashedPassword })
+      ).to.be.true;
+    });
+
+    it("should handle error user email already registered", async () => {
+      const name = "user";
+      const email = "user@example.com";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const findOneStub = sinon.stub(User, "findOne").resolves({});
+
+      try {
+        await userService.create(name, email, password, recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal(
+          "Erro ao criar usuário: Error: Email já registrado"
+        );
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+
+    it("should handle error create a new user", async () => {
+      const name = "user";
+      const email = "user@example.com";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const findOneStub = sinon.stub(User, "findOne").rejects(new Error());
+
+      try {
+        await userService.create(name, email, password, recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao criar usuário: Error");
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+  });
+
   describe("getProfileInfo", () => {
     it("should get profile info", async () => {
       const userId = 1;
