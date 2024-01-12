@@ -6,6 +6,7 @@ const { User } = require("../../database/models");
 const { hash } = require("../../utils/hash");
 const bcrypt = require("bcrypt");
 const axios = require("axios");
+const jwt = require("jsonwebtoken");
 
 describe("User Service", () => {
   afterEach(() => {
@@ -129,6 +130,116 @@ describe("User Service", () => {
         await userService.create(name, email, password, recaptchaValue);
       } catch (err) {
         expect(err.message).to.equal("Erro ao criar usuário: Error");
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+  });
+
+  describe("login", () => {
+    it("should log in a user", async () => {
+      const email = "user@example.com";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+      const user = {
+        dataValues: {
+          id: 1,
+          name: "user",
+          email: "user@example.com",
+          password: "hashedPassword",
+        },
+      };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "compare").resolves(true);
+      sinon.stub(jwt, "sign").returns("token");
+      const findOneStub = sinon.stub(User, "findOne").resolves(user);
+
+      const result = await userService.login(email, password, recaptchaValue);
+
+      expect(result).to.deep.equal({
+        id: 1,
+        name: "user",
+        email: "user@example.com",
+        token: "token",
+      });
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+
+    it("should handle error invalid password", async () => {
+      const email = "user@example.com";
+      const password = "invalid";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+      const user = {
+        dataValues: {
+          id: 1,
+          name: "user",
+          email: "user@example.com",
+          password: "hashedPassword",
+        },
+      };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "compare").resolves(false);
+      sinon.stub(jwt, "sign").returns("token");
+      const findOneStub = sinon.stub(User, "findOne").resolves(user);
+
+      try {
+        await userService.login(email, password, recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal(
+          "Erro ao realizar login do usuário: Error: Email ou senha inválida"
+        );
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+
+    it("should handle error invalid email", async () => {
+      const email = "invalid";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "compare").resolves(true);
+      sinon.stub(jwt, "sign").returns("token");
+      const findOneStub = sinon.stub(User, "findOne").resolves(null);
+
+      try {
+        await userService.login(email, password, recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal(
+          "Erro ao realizar login do usuário: Error: Email ou senha inválida"
+        );
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { email } })).to.be.true;
+    });
+
+    it("should handle error log in a user", async () => {
+      const email = "user@example.com";
+      const password = "123456";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+      sinon.stub(bcrypt, "compare").resolves(true);
+      sinon.stub(jwt, "sign").returns("token");
+      const findOneStub = sinon.stub(User, "findOne").rejects(new Error());
+
+      try {
+        await userService.login(email, password, recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal(
+          "Erro ao realizar login do usuário: Error"
+        );
       }
 
       expect(findOneStub.calledOnce).to.be.true;
