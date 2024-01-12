@@ -5,10 +5,60 @@ const userService = require("../../services/userService");
 const { User } = require("../../database/models");
 const { hash } = require("../../utils/hash");
 const bcrypt = require("bcrypt");
+const axios = require("axios");
 
 describe("User Service", () => {
   afterEach(() => {
     sinon.restore();
+  });
+
+  describe("verifyRecaptcha", () => {
+    it("should verify reCAPTCHA", async () => {
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      const axiosPostStub = sinon.stub(axios, "post").resolves(googleResponse);
+
+      await userService.verifyRecaptcha(recaptchaValue);
+
+      expect(axiosPostStub.calledOnce).to.be.true;
+      expect(
+        axiosPostStub.calledWith(
+          `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaValue}`
+        )
+      ).to.be.true;
+    });
+
+    it("should handle error reCAPTCHA absent", async () => {
+      const recaptchaValue = null;
+
+      try {
+        await userService.verifyRecaptcha(recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal("reCAPTCHA ausente");
+      }
+    });
+
+    it("should handle error reCAPTCHA invalid", async () => {
+      const recaptchaValue = "invalidRecaptcha";
+      const googleResponse = { data: { success: false } };
+
+      const axiosPostStub = sinon.stub(axios, "post").resolves(googleResponse);
+
+      try {
+        await userService.verifyRecaptcha(recaptchaValue);
+      } catch (err) {
+        expect(err.message).to.equal("reCAPTCHA inválido");
+        expect(err.statusCode).to.equal(400);
+      }
+
+      expect(axiosPostStub.calledOnce).to.be.true;
+      expect(
+        axiosPostStub.calledWith(
+          `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaValue}`
+        )
+      ).to.be.true;
+    });
   });
 
   describe("getProfileInfo", () => {
