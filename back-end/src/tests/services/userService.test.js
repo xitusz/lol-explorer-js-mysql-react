@@ -198,4 +198,76 @@ describe("User Service", () => {
       ).to.be.true;
     });
   });
+
+  describe("deleteUser", () => {
+    it("should delete a user", async () => {
+      const userId = 1;
+
+      const findOneStub = sinon.stub(User, "findOne").resolves({ id: userId });
+      const destroyStub = sinon.stub(User, "destroy").resolves();
+
+      const result = await userService.deleteUser(userId);
+
+      expect(result).to.equal("Usuário excluído com sucesso!");
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { id: userId },
+        })
+      ).to.be.true;
+      expect(destroyStub.calledOnce).to.be.true;
+      expect(
+        destroyStub.calledWith({
+          where: { id: userId },
+        })
+      ).to.be.true;
+    });
+
+    it("should handle error user not found", async () => {
+      const userId = 2;
+
+      const findOneStub = sinon.stub(User, "findOne").resolves(null);
+
+      try {
+        await userService.deleteUser(userId);
+      } catch (err) {
+        expect(err.message).to.equal(
+          "Erro ao deletar usuário: Error: Usuário não encontrado"
+        );
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { id: userId },
+        })
+      ).to.be.true;
+    });
+
+    it("should handle error delete a user", async () => {
+      const userId = 1;
+
+      const findOneStub = sinon.stub(User, "findOne").resolves({ id: userId });
+      const destroyStub = sinon.stub(User, "destroy").resolves();
+
+      try {
+        await userService.deleteUser(userId);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao deletar usuário: Error");
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { id: userId },
+        })
+      ).to.be.true;
+      expect(destroyStub.calledOnce).to.be.true;
+      expect(
+        destroyStub.calledWith({
+          where: { id: userId },
+        })
+      ).to.be.true;
+    });
+  });
 });
