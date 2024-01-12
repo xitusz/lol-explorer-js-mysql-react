@@ -13,17 +13,17 @@ describe("User Service", () => {
 
   describe("getProfileInfo", () => {
     it("should get profile info", async () => {
-      const user = { name: "User", email: "user@example.com" };
       const userId = 1;
+      const user = { name: "User", email: "user@example.com" };
 
-      const getProfileInfoStub = sinon.stub(User, "findOne").resolves(user);
+      const findOneStub = sinon.stub(User, "findOne").resolves(user);
 
       const result = await userService.getProfileInfo(userId);
 
       expect(result).to.deep.equal(user);
-      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnce).to.be.true;
       expect(
-        getProfileInfoStub.calledWith({
+        findOneStub.calledWith({
           where: { id: userId },
           attributes: ["name", "email"],
         })
@@ -33,7 +33,7 @@ describe("User Service", () => {
     it("should handle error user not found", async () => {
       const userId = 2;
 
-      const getProfileInfoStub = sinon.stub(User, "findOne").resolves(null);
+      const findOneStub = sinon.stub(User, "findOne").resolves(null);
 
       try {
         await userService.getProfileInfo(userId);
@@ -43,9 +43,9 @@ describe("User Service", () => {
         );
       }
 
-      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnce).to.be.true;
       expect(
-        getProfileInfoStub.calledWith({
+        findOneStub.calledWith({
           where: { id: userId },
           attributes: ["name", "email"],
         })
@@ -55,9 +55,7 @@ describe("User Service", () => {
     it("should handle error get profile info", async () => {
       const userId = 1;
 
-      const getProfileInfoStub = sinon
-        .stub(User, "findOne")
-        .rejects(new Error());
+      const findOneStub = sinon.stub(User, "findOne").rejects(new Error());
 
       try {
         await userService.getProfileInfo(userId);
@@ -65,9 +63,9 @@ describe("User Service", () => {
         expect(err.message).to.equal("Erro ao buscar usuário: Error");
       }
 
-      expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(findOneStub.calledOnce).to.be.true;
       expect(
-        getProfileInfoStub.calledWith({
+        findOneStub.calledWith({
           where: { id: userId },
           attributes: ["name", "email"],
         })
@@ -77,25 +75,23 @@ describe("User Service", () => {
 
   describe("updateName", () => {
     it("should update user name", async () => {
-      const updateNameStub = sinon.stub(User, "update").resolves();
       const userId = 1;
+
+      const updateStub = sinon.stub(User, "update").resolves();
 
       const result = await userService.updateName(userId, "New Name");
 
       expect(result).to.equal("Nome atualizado com sucesso!");
-      expect(updateNameStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateNameStub.calledWith(
-          { name: "New Name" },
-          { where: { id: userId } }
-        )
+        updateStub.calledWith({ name: "New Name" }, { where: { id: userId } })
       ).to.be.true;
     });
 
     it("should handle error update user name", async () => {
       const userId = 1;
 
-      const updateNameStub = sinon.stub(User, "update").rejects(new Error());
+      const updateStub = sinon.stub(User, "update").rejects(new Error());
 
       try {
         await userService.updateName(userId, "New Name");
@@ -103,27 +99,25 @@ describe("User Service", () => {
         expect(err.message).to.equal("Erro ao atualizar nome: Error");
       }
 
-      expect(updateNameStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateNameStub.calledWith(
-          { name: "New Name" },
-          { where: { id: userId } }
-        )
+        updateStub.calledWith({ name: "New Name" }, { where: { id: userId } })
       ).to.be.true;
     });
   });
 
   describe("updateEmail", () => {
     it("should update user email", async () => {
-      const updateEmailStub = sinon.stub(User, "update").resolves();
       const userId = 1;
+
+      const updateStub = sinon.stub(User, "update").resolves();
 
       const result = await userService.updateEmail(userId, "user2@example.com");
 
       expect(result).to.equal("Email atualizado com sucesso!");
-      expect(updateEmailStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateEmailStub.calledWith(
+        updateStub.calledWith(
           { email: "user2@example.com" },
           { where: { id: userId } }
         )
@@ -133,7 +127,7 @@ describe("User Service", () => {
     it("should handle error update user email", async () => {
       const userId = 1;
 
-      const updateEmailStub = sinon.stub(User, "update").rejects(new Error());
+      const updateStub = sinon.stub(User, "update").rejects(new Error());
 
       try {
         await userService.updateEmail(userId, "user2@example.com");
@@ -141,9 +135,9 @@ describe("User Service", () => {
         expect(err.message).to.equal("Erro ao atualizar email: Error");
       }
 
-      expect(updateEmailStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateEmailStub.calledWith(
+        updateStub.calledWith(
           { email: "user2@example.com" },
           { where: { id: userId } }
         )
@@ -153,19 +147,19 @@ describe("User Service", () => {
 
   describe("updatePassword", () => {
     it("should update user password", async () => {
-      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
-      const updatePasswordStub = sinon.stub(User, "update").resolves();
-
       const userId = 1;
       const newPassword = "123456";
+
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const updateStub = sinon.stub(User, "update").resolves();
 
       const hashedPassword = await hash(newPassword);
       const result = await userService.updatePassword(userId, newPassword);
 
       expect(result).to.equal("Senha atualizada com sucesso!");
-      expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updatePasswordStub.calledWith(
+        updateStub.calledWith(
           { password: hashedPassword },
           { where: { id: userId } }
         )
@@ -173,13 +167,11 @@ describe("User Service", () => {
     });
 
     it("should handle error update user password", async () => {
-      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
-      const updatePasswordStub = sinon
-        .stub(User, "update")
-        .rejects(new Error());
-
       const userId = 1;
       const newPassword = "123456";
+
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const updateStub = sinon.stub(User, "update").rejects(new Error());
 
       const hashedPassword = await hash(newPassword);
 
@@ -189,9 +181,9 @@ describe("User Service", () => {
         expect(err.message).to.equal("Erro ao atualizar senha: Error");
       }
 
-      expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(updateStub.calledOnce).to.be.true;
       expect(
-        updatePasswordStub.calledWith(
+        updateStub.calledWith(
           { password: hashedPassword },
           { where: { id: userId } }
         )
