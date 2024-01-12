@@ -158,6 +158,7 @@ const validateEmail = async (newEmail) => {
 };
 
 module.exports = {
+  verifyRecaptcha,
   create,
   login,
   getProfileInfo,
