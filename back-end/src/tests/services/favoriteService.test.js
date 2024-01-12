@@ -11,39 +11,43 @@ describe("Favorite Service", () => {
 
   describe("createFavorites", () => {
     it("should create favorites array", async () => {
-      const findOneStub = sinon.stub(Favorite, "findOne").resolves(null);
-      const createFavoritesStub = sinon.stub(Favorite, "create").resolves();
-
       const userId = 1;
+
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves(null);
+      const createStub = sinon.stub(Favorite, "create").resolves();
 
       const result = await favoriteService.createFavorites(userId);
 
       expect(result).to.deep.equal("Favorito criado com sucesso");
       expect(findOneStub.calledOnce).to.be.true;
-      expect(createFavoritesStub.calledOnce).to.be.true;
       expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
-      expect(createFavoritesStub.calledWith({ userId, favorite: [] })).to.be
-        .true;
+      expect(createStub.calledOnce).to.be.true;
+      expect(createStub.calledWith({ userId, favorite: [] })).to.be.true;
     });
 
     it("should handle error create favorites array", async () => {
-      sinon.stub(Favorite, "findOne").rejects(new Error());
+      const userId = 1;
+
+      const findOneStub = sinon.stub(Favorite, "findOne").rejects(new Error());
 
       try {
-        await favoriteService.createFavorites(1);
+        await favoriteService.createFavorites(userId);
       } catch (err) {
         expect(err.message).to.equal("Erro ao criar favorito: Error");
       }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
     });
   });
 
   describe("listFavorites", () => {
     it("should list the favorites", async () => {
+      const userId = 1;
+
       const findOneStub = sinon.stub(Favorite, "findOne").resolves({
         favorite: ["Aatrox", "Ahri", "Akali"],
       });
-
-      const userId = 1;
 
       const result = await favoriteService.listFavorites(userId);
 
@@ -55,27 +59,31 @@ describe("Favorite Service", () => {
     });
 
     it("should handle error list the favorites", async () => {
-      sinon.stub(Favorite, "findOne").rejects(new Error());
+      const userId = 1;
+
+      const findOneStub = sinon.stub(Favorite, "findOne").rejects(new Error());
 
       try {
-        await favoriteService.listFavorites(1);
+        await favoriteService.listFavorites(userId);
       } catch (err) {
         expect(err.message).to.equal("Erro ao listar favoritos: Error");
       }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
     });
   });
 
   describe("addFavorite", () => {
     it("should add a favorite", async () => {
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
       const favorites = {
         favorite: ["Aatrox", "Ahri", "Akali"],
         save: sinon.stub(),
       };
-
       const findOneStub = sinon.stub(Favorite, "findOne").resolves(favorites);
-
-      const userId = 1;
-      const favoriteName = "Yasuo";
 
       const result = await favoriteService.addFavorite(userId, favoriteName);
 
@@ -86,27 +94,32 @@ describe("Favorite Service", () => {
     });
 
     it("should handle error add a favorite", async () => {
-      sinon.stub(Favorite, "findOne").rejects(new Error());
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
+      const findOneStub = sinon.stub(Favorite, "findOne").rejects(new Error());
 
       try {
-        await favoriteService.addFavorite(1, "Yasuo");
+        await favoriteService.addFavorite(userId, favoriteName);
       } catch (err) {
         expect(err.message).to.equal("Erro ao adicionar favorito: Error");
       }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
     });
   });
 
   describe("removeFavorite", () => {
     it("should remove a favorite", async () => {
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
       const favorites = {
         favorite: ["Aatrox", "Ahri", "Akali", "Yasuo"],
         save: sinon.stub(),
       };
-
       const findOneStub = sinon.stub(Favorite, "findOne").resolves(favorites);
-
-      const userId = 1;
-      const favoriteName = "Yasuo";
 
       const result = await favoriteService.removeFavorite(userId, favoriteName);
 
@@ -117,26 +130,31 @@ describe("Favorite Service", () => {
     });
 
     it("should handle error remove a favorite", async () => {
-      sinon.stub(Favorite, "findOne").rejects(new Error());
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
+      const findOneStub = sinon.stub(Favorite, "findOne").rejects(new Error());
 
       try {
-        await favoriteService.removeFavorite(1, "Yasuo");
+        await favoriteService.removeFavorite(userId, favoriteName);
       } catch (err) {
         expect(err.message).to.equal("Erro ao remover favorito: Error");
       }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
     });
   });
 
   describe("clearFavorites", () => {
     it("should clear all favorites", async () => {
+      const userId = 1;
+
       const favorites = {
         favorite: ["Aatrox", "Ahri", "Akali", "Yasuo"],
         save: sinon.stub(),
       };
-
       const findOneStub = sinon.stub(Favorite, "findOne").resolves(favorites);
-
-      const userId = 1;
 
       const result = await favoriteService.clearFavorites(userId);
 
@@ -149,13 +167,18 @@ describe("Favorite Service", () => {
     });
 
     it("should handle error clear all favorites", async () => {
-      sinon.stub(Favorite, "findOne").rejects(new Error());
+      const userId = 1;
+
+      const findOneStub = sinon.stub(Favorite, "findOne").rejects(new Error());
 
       try {
-        await favoriteService.clearFavorites(1);
+        await favoriteService.clearFavorites(userId);
       } catch (err) {
         expect(err.message).to.equal("Erro ao limpar favoritos: Error");
       }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
     });
   });
 });
