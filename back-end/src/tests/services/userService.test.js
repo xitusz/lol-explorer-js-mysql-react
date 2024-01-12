@@ -3,6 +3,8 @@ const { expect } = require("chai");
 const sinon = require("sinon");
 const userService = require("../../services/userService");
 const { User } = require("../../database/models");
+const { hash } = require("../../utils/hash");
+const bcrypt = require("bcrypt");
 
 describe("User Service", () => {
   afterEach(() => {
@@ -143,6 +145,54 @@ describe("User Service", () => {
       expect(
         updateEmailStub.calledWith(
           { email: "user2@example.com" },
+          { where: { id: userId } }
+        )
+      ).to.be.true;
+    });
+  });
+
+  describe("updatePassword", () => {
+    it("should update user password", async () => {
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const updatePasswordStub = sinon.stub(User, "update").resolves();
+
+      const userId = 1;
+      const newPassword = "123456";
+
+      const hashedPassword = await hash(newPassword);
+      const result = await userService.updatePassword(userId, newPassword);
+
+      expect(result).to.equal("Senha atualizada com sucesso!");
+      expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(
+        updatePasswordStub.calledWith(
+          { password: hashedPassword },
+          { where: { id: userId } }
+        )
+      ).to.be.true;
+    });
+
+    it("should handle error update user password", async () => {
+      sinon.stub(bcrypt, "hash").resolves("hashedPassword");
+      const updatePasswordStub = sinon
+        .stub(User, "update")
+        .rejects(new Error());
+
+      const userId = 1;
+      const newPassword = "123456";
+
+      const hashedPassword = await hash(newPassword);
+
+      try {
+        await userService.updatePassword(userId, newPassword);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao atualizar senha: Error");
+      }
+
+      expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(
+        updatePasswordStub.calledWith(
+          { password: hashedPassword },
           { where: { id: userId } }
         )
       ).to.be.true;
