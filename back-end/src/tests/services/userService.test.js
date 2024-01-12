@@ -260,4 +260,57 @@ describe("User Service", () => {
       ).to.be.true;
     });
   });
+
+  describe("validateEmail", () => {
+    it("should validate user email true", async () => {
+      const newEmail = "user2@example.com";
+
+      const findOneStub = sinon.stub(User, "findOne").resolves(true);
+
+      const result = await userService.validateEmail(newEmail);
+
+      expect(result).to.equal(true);
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { email: newEmail },
+        })
+      ).to.be.true;
+    });
+
+    it("should validate user email false", async () => {
+      const newEmail = "user2@example.com";
+
+      const findOneStub = sinon.stub(User, "findOne").resolves(false);
+
+      const result = await userService.validateEmail(newEmail);
+
+      expect(result).to.equal(false);
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { email: newEmail },
+        })
+      ).to.be.true;
+    });
+
+    it("should handle error validate user email", async () => {
+      const newEmail = "user2@example.com";
+
+      const findOneStub = sinon.stub(User, "findOne").rejects(new Error());
+
+      try {
+        await userService.validateEmail(newEmail);
+      } catch (err) {
+        expect(err.message).to.equal("Erro ao validar email: Error");
+      }
+
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(
+        findOneStub.calledWith({
+          where: { email: newEmail },
+        })
+      ).to.be.true;
+    });
+  });
 });
