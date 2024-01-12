@@ -76,32 +76,34 @@ describe("User Service", () => {
   describe("updateName", () => {
     it("should update user name", async () => {
       const userId = 1;
+      const newName = "New Name";
 
       const updateStub = sinon.stub(User, "update").resolves();
 
-      const result = await userService.updateName(userId, "New Name");
+      const result = await userService.updateName(userId, newName);
 
       expect(result).to.equal("Nome atualizado com sucesso!");
       expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateStub.calledWith({ name: "New Name" }, { where: { id: userId } })
+        updateStub.calledWith({ name: newName }, { where: { id: userId } })
       ).to.be.true;
     });
 
     it("should handle error update user name", async () => {
       const userId = 1;
+      const newName = "New Name";
 
       const updateStub = sinon.stub(User, "update").rejects(new Error());
 
       try {
-        await userService.updateName(userId, "New Name");
+        await userService.updateName(userId, newName);
       } catch (err) {
         expect(err.message).to.equal("Erro ao atualizar nome: Error");
       }
 
       expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateStub.calledWith({ name: "New Name" }, { where: { id: userId } })
+        updateStub.calledWith({ name: newName }, { where: { id: userId } })
       ).to.be.true;
     });
   });
@@ -109,38 +111,34 @@ describe("User Service", () => {
   describe("updateEmail", () => {
     it("should update user email", async () => {
       const userId = 1;
+      const newEmail = "user2@example.com";
 
       const updateStub = sinon.stub(User, "update").resolves();
 
-      const result = await userService.updateEmail(userId, "user2@example.com");
+      const result = await userService.updateEmail(userId, newEmail);
 
       expect(result).to.equal("Email atualizado com sucesso!");
       expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateStub.calledWith(
-          { email: "user2@example.com" },
-          { where: { id: userId } }
-        )
+        updateStub.calledWith({ email: newEmail }, { where: { id: userId } })
       ).to.be.true;
     });
 
     it("should handle error update user email", async () => {
       const userId = 1;
+      const newEmail = "user2@example.com";
 
       const updateStub = sinon.stub(User, "update").rejects(new Error());
 
       try {
-        await userService.updateEmail(userId, "user2@example.com");
+        await userService.updateEmail(userId, newEmail);
       } catch (err) {
         expect(err.message).to.equal("Erro ao atualizar email: Error");
       }
 
       expect(updateStub.calledOnce).to.be.true;
       expect(
-        updateStub.calledWith(
-          { email: "user2@example.com" },
-          { where: { id: userId } }
-        )
+        updateStub.calledWith({ email: newEmail }, { where: { id: userId } })
       ).to.be.true;
     });
   });
