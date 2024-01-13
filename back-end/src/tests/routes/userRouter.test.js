@@ -35,4 +35,28 @@ describe("User Router", () => {
       expect(getProfileInfoStub.calledOnce).to.be.true;
     });
   });
+
+  describe("PUT /edit/name", () => {
+    it("should update user name", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const newName = "New Name";
+      const token = "token";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const updateNameStub = sinon
+        .stub(userService, "updateName")
+        .resolves("Nome atualizado com sucesso!");
+
+      const response = await chai
+        .request(app)
+        .put("/profile/edit/name")
+        .set("Authorization", `Bearer ${token}`)
+        .send(newName);
+
+      expect(response).to.have.status(200);
+      expect(response.body.message).to.equal("Nome atualizado com sucesso!");
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(updateNameStub.calledOnce).to.be.true;
+    });
+  });
 });
