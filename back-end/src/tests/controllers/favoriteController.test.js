@@ -30,7 +30,7 @@ describe("Favorite Controller", () => {
 
       await favoriteController.createFavorites(req, res, next);
 
-      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.status.calledWith(201)).to.be.true;
       expect(res.json.calledWith({ message: "Favorito criado com sucesso" })).to
         .be.true;
       expect(next.notCalled).to.be.true;
