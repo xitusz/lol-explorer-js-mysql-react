@@ -34,4 +34,29 @@ describe("Favorite Router", () => {
       expect(createFavoritesStub.calledOnce).to.be.true;
     });
   });
+
+  describe("get /", () => {
+    it("should list the favorites", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const token = "token";
+      const favorites = {
+        favorite: ["Aatrox", "Ahri", "Akali"],
+      };
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const listFavoritesStub = sinon
+        .stub(favoriteService, "listFavorites")
+        .resolves(favorites);
+
+      const response = await chai
+        .request(app)
+        .get("/favorites")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(response).to.have.status(200);
+      expect(response.body).to.deep.equal(favorites.favorite);
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(listFavoritesStub.calledOnce).to.be.true;
+    });
+  });
 });
