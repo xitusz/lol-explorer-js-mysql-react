@@ -32,3 +32,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.bg-dark-blue {
+  background-color: #1A242D;
+}
