@@ -6,7 +6,7 @@ const createFavorites = async (req, res, next) => {
   try {
     const message = await favoriteService.createFavorites(id);
 
-    return res.status(200).json({ message });
+    return res.status(201).json({ message });
   } catch (err) {
     next(err);
   }
