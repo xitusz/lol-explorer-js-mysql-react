@@ -35,7 +35,7 @@ describe("Favorite Router", () => {
     });
   });
 
-  describe("get /", () => {
+  describe("GET /", () => {
     it("should list the favorites", async () => {
       const user = { id: 1, name: "User", email: "user@example.com" };
       const token = "token";
@@ -57,6 +57,32 @@ describe("Favorite Router", () => {
       expect(response.body).to.deep.equal(favorites.favorite);
       expect(verifyStub.calledOnce).to.be.true;
       expect(listFavoritesStub.calledOnce).to.be.true;
+    });
+  });
+
+  describe("POST /", () => {
+    it("should add a favorite", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const token = "token";
+      const favoriteName = "Yasuo";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const addFavoriteStub = sinon
+        .stub(favoriteService, "addFavorite")
+        .resolves("Favorito adicionado com sucesso");
+
+      const response = await chai
+        .request(app)
+        .post("/favorites")
+        .set("Authorization", `Bearer ${token}`)
+        .send({ favoriteName });
+
+      expect(response).to.have.status(201);
+      expect(response.body.message).to.deep.equal(
+        "Favorito adicionado com sucesso"
+      );
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(addFavoriteStub.calledOnce).to.be.true;
     });
   });
 });
