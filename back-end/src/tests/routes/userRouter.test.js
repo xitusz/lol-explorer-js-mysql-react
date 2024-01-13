@@ -33,6 +33,7 @@ describe("User Router", () => {
       expect(response.body).to.deep.equal(user);
       expect(verifyStub.calledOnce).to.be.true;
       expect(getProfileInfoStub.calledOnce).to.be.true;
+      expect(getProfileInfoStub.firstCall.args[0]).to.equal(user.id);
     });
   });
 
@@ -57,6 +58,7 @@ describe("User Router", () => {
       expect(response.body.message).to.equal("Nome atualizado com sucesso!");
       expect(verifyStub.calledOnce).to.be.true;
       expect(updateNameStub.calledOnce).to.be.true;
+      expect(updateNameStub.firstCall.args[0]).to.equal(user.id, name);
     });
   });
 
@@ -81,6 +83,7 @@ describe("User Router", () => {
       expect(response.body.message).to.equal("Email atualizado com sucesso!");
       expect(verifyStub.calledOnce).to.be.true;
       expect(updateEmailStub.calledOnce).to.be.true;
+      expect(updateEmailStub.firstCall.args[0]).to.equal(user.id, email);
     });
   });
 
@@ -105,6 +108,7 @@ describe("User Router", () => {
       expect(response.body.message).to.equal("Senha atualizada com sucesso!");
       expect(verifyStub.calledOnce).to.be.true;
       expect(updatePasswordStub.calledOnce).to.be.true;
+      expect(updatePasswordStub.firstCall.args[0]).to.equal(user.id, password);
     });
   });
 
@@ -127,6 +131,7 @@ describe("User Router", () => {
       expect(response.body.message).to.equal("Usuário excluído com sucesso!");
       expect(verifyStub.calledOnce).to.be.true;
       expect(deleteUserStub.calledOnce).to.be.true;
+      expect(deleteUserStub.firstCall.args[0]).to.equal(user.id);
     });
   });
 
@@ -141,11 +146,12 @@ describe("User Router", () => {
       const response = await chai
         .request(app)
         .post("/profile/validate/email")
-        .send(newEmail);
+        .send({ newEmail });
 
       expect(response).to.have.status(200);
       expect(response.body).to.equal(true);
       expect(validateEmailStub.calledOnce).to.be.true;
+      expect(validateEmailStub.firstCall.args[0]).to.equal(newEmail);
     });
   });
 });
