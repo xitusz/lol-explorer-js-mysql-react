@@ -39,7 +39,7 @@ describe("User Router", () => {
   describe("PUT /edit/name", () => {
     it("should update user name", async () => {
       const user = { id: 1, name: "User", email: "user@example.com" };
-      const newName = "New Name";
+      const name = "New Name";
       const token = "token";
 
       const verifyStub = sinon.stub(jwt, "verify").returns(user);
@@ -51,7 +51,7 @@ describe("User Router", () => {
         .request(app)
         .put("/profile/edit/name")
         .set("Authorization", `Bearer ${token}`)
-        .send(newName);
+        .send({ name });
 
       expect(response).to.have.status(200);
       expect(response.body.message).to.equal("Nome atualizado com sucesso!");
@@ -63,7 +63,7 @@ describe("User Router", () => {
   describe("PUT /edit/email", () => {
     it("should update user email", async () => {
       const user = { id: 1, name: "User", email: "user@example.com" };
-      const newEmail = "user2@example.com";
+      const email = "user2@example.com";
       const token = "token";
 
       const verifyStub = sinon.stub(jwt, "verify").returns(user);
@@ -75,7 +75,7 @@ describe("User Router", () => {
         .request(app)
         .put("/profile/edit/email")
         .set("Authorization", `Bearer ${token}`)
-        .send(newEmail);
+        .send({ email });
 
       expect(response).to.have.status(200);
       expect(response.body.message).to.equal("Email atualizado com sucesso!");
@@ -87,7 +87,7 @@ describe("User Router", () => {
   describe("PUT /edit/password", () => {
     it("should update user password", async () => {
       const user = { id: 1, name: "User", email: "user@example.com" };
-      const newPassword = "123456";
+      const password = "123456";
       const token = "token";
 
       const verifyStub = sinon.stub(jwt, "verify").returns(user);
@@ -99,7 +99,7 @@ describe("User Router", () => {
         .request(app)
         .put("/profile/edit/password")
         .set("Authorization", `Bearer ${token}`)
-        .send(newPassword);
+        .send({ password });
 
       expect(response).to.have.status(200);
       expect(response.body.message).to.equal("Senha atualizada com sucesso!");
