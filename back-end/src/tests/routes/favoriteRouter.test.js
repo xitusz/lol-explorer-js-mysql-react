@@ -111,4 +111,28 @@ describe("Favorite Router", () => {
       expect(removeFavoriteStub.calledOnce).to.be.true;
     });
   });
+
+  describe("DELETE /clear", () => {
+    it("should clear favorites", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const token = "token";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const clearFavoritesStub = sinon
+        .stub(favoriteService, "clearFavorites")
+        .resolves("Todos os favoritos foram removidos com sucesso");
+
+      const response = await chai
+        .request(app)
+        .delete("/favorites/clear")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(response).to.have.status(200);
+      expect(response.body.message).to.deep.equal(
+        "Todos os favoritos foram removidos com sucesso"
+      );
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(clearFavoritesStub.calledOnce).to.be.true;
+    });
+  });
 });
