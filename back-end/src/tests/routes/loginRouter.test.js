@@ -42,6 +42,7 @@ describe("Login Router", () => {
       expect(loginStub.calledOnce).to.be.true;
       expect(loginStub.firstCall.args[0]).to.equal(email);
       expect(loginStub.firstCall.args[1]).to.equal(password);
+      expect(loginStub.firstCall.args[2]).to.equal(recaptchaValue);
     });
   });
 });
