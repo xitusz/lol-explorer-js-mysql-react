@@ -83,4 +83,28 @@ describe("User Router", () => {
       expect(updateEmailStub.calledOnce).to.be.true;
     });
   });
+
+  describe("PUT /edit/password", () => {
+    it("should update user password", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const newPassword = "123456";
+      const token = "token";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const updatePasswordStub = sinon
+        .stub(userService, "updatePassword")
+        .resolves("Senha atualizada com sucesso!");
+
+      const response = await chai
+        .request(app)
+        .put("/profile/edit/password")
+        .set("Authorization", `Bearer ${token}`)
+        .send(newPassword);
+
+      expect(response).to.have.status(200);
+      expect(response.body.message).to.equal("Senha atualizada com sucesso!");
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(updatePasswordStub.calledOnce).to.be.true;
+    });
+  });
 });
