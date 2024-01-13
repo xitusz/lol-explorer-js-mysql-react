@@ -85,4 +85,30 @@ describe("Favorite Router", () => {
       expect(addFavoriteStub.calledOnce).to.be.true;
     });
   });
+
+  describe("DELETE /", () => {
+    it("should remove a favorite", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const token = "token";
+      const favoriteName = "Yasuo";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const removeFavoriteStub = sinon
+        .stub(favoriteService, "removeFavorite")
+        .resolves("Favorito removido com sucesso");
+
+      const response = await chai
+        .request(app)
+        .delete("/favorites")
+        .set("Authorization", `Bearer ${token}`)
+        .send({ favoriteName });
+
+      expect(response).to.have.status(200);
+      expect(response.body.message).to.deep.equal(
+        "Favorito removido com sucesso"
+      );
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(removeFavoriteStub.calledOnce).to.be.true;
+    });
+  });
 });
