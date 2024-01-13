@@ -40,6 +40,8 @@ describe("Login Router", () => {
       expect(response.body.email).to.equal(user.email);
       expect(response.body.token).to.equal(user.token);
       expect(loginStub.calledOnce).to.be.true;
+      expect(loginStub.firstCall.args[0]).to.equal(email);
+      expect(loginStub.firstCall.args[1]).to.equal(password);
     });
   });
 });
