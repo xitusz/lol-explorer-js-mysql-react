@@ -75,4 +75,26 @@ describe("Create Middleware", () => {
       expect(response.body.message).to.equal("Insira um email válido");
     });
   });
+
+  describe("validPassword", () => {
+    it("should handle error invalid password", async () => {
+      const name = "User";
+      const email = "user@example.com";
+      const password = "123";
+      const recaptchaValue = "validRecaptchaValue";
+      const googleResponse = { data: { success: true } };
+
+      sinon.stub(axios, "post").resolves(googleResponse);
+
+      const response = await chai
+        .request(app)
+        .post("/register")
+        .send({ name, email, password, recaptchaValue });
+
+      expect(response).to.have.status(401);
+      expect(response.body.message).to.equal(
+        "A senha deve ter de 6 a 12 caracteres"
+      );
+    });
+  });
 });
