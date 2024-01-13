@@ -93,6 +93,28 @@ describe("Favorite Service", () => {
       expect(favorites.favorite).to.be.include(favoriteName);
     });
 
+    it("should create favorites array when not exist favorites", async () => {
+      const userId = 1;
+      const favoriteName = "Yasuo";
+
+      const favorites = {
+        favorite: ["Aatrox", "Ahri", "Akali"],
+        save: sinon.stub(),
+      };
+
+      const findOneStub = sinon.stub(Favorite, "findOne").resolves(null);
+      const createStub = sinon.stub(Favorite, "create").resolves(favorites);
+
+      const result = await favoriteService.addFavorite(userId, favoriteName);
+
+      expect(result).to.deep.equal("Favorito adicionado com sucesso");
+      expect(findOneStub.calledOnce).to.be.true;
+      expect(findOneStub.calledWith({ where: { userId } })).to.be.true;
+      expect(createStub.calledOnce).to.be.true;
+      expect(createStub.calledWith({ userId, favorite: [favoriteName] })).to.be
+        .true;
+    });
+
     it("should handle error add a favorite", async () => {
       const userId = 1;
       const favoriteName = "Yasuo";
