@@ -43,7 +43,7 @@ const CharacterDetails = () => {
 
   const renderLore = () => {
     return (
-      <div className="border p-4">
+      <div className="border p-4 bg-dark-blue">
         <span>{lore}</span>
       </div>
     );
@@ -53,7 +53,7 @@ const CharacterDetails = () => {
     return (
       <div className="p-2">
         <Button
-          className={`border-0 p-0 mx-2 img-button ${
+          className={`border-0 p-0 mx-2 img-button bg-dark-blue ${
             skillState === "P" ? "active" : ""
           }`}
           dataTestId={"passive-skill"}
@@ -67,7 +67,7 @@ const CharacterDetails = () => {
         </Button>
         {spells.map((spell, index) => (
           <Button
-            className={`border-0 p-0 m-2 img-button ${
+            className={`border-0 p-0 m-2 img-button bg-dark-blue ${
               skillState === skillOrder[index] ? "active" : ""
             }`}
             key={spell.id}
@@ -144,7 +144,7 @@ const CharacterDetails = () => {
             muted
             autoPlay
             loop
-            width="100%"
+            width="60%"
             height="auto"
             onError={() => handleVideoError()}
           >
@@ -175,7 +175,7 @@ const CharacterDetails = () => {
       <div className="p-2">
         {skins.map((skin) => (
           <Button
-            className={`border-0 p-0 m-2 img-button ${
+            className={`border-0 p-0 m-2 img-button bg-dark-blue ${
               skinState === skin.name ? "active" : ""
             }`}
             key={skin.id}
@@ -244,7 +244,7 @@ const CharacterDetails = () => {
             <hr className="w-25 mx-auto my-5" />
             <div className="w-75 mx-auto">
               <h3>Habilidades</h3>
-              <div className="border">
+              <div className="border bg-dark-blue">
                 {renderSkillButtons()}
                 <hr className="m-0" />
                 {renderSkillVideo()}
@@ -255,7 +255,7 @@ const CharacterDetails = () => {
             <hr className="w-25 mx-auto my-5" />
             <div className="w-75 mx-auto">
               <h3>Skins</h3>
-              <div className="border">
+              <div className="border bg-dark-blue">
                 {renderSkinButtons()}
                 <hr className="m-0" />
                 {renderSkinDetails()}
