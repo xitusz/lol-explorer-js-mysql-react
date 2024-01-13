@@ -14,6 +14,27 @@ describe("User Router", () => {
     sinon.restore();
   });
 
+  describe("validToken", () => {
+    it("should handle error invalid token", async () => {
+      const invalidToken = "invalidToken";
+
+      const response = await chai
+        .request(app)
+        .get("/profile")
+        .set("Authorization", `Bearer ${invalidToken}`);
+
+      expect(response).to.have.status(401);
+      expect(response.body.message).to.be.equal("Token expirado ou inválido");
+    });
+
+    it("should handle error missing token", async () => {
+      const response = await chai.request(app).get("/profile");
+
+      expect(response).to.have.status(401);
+      expect(response.body.message).to.be.equal("Token não encontrado");
+    });
+  });
+
   describe("GET /", () => {
     it("should get profile info", async () => {
       const user = { id: 1, name: "User", email: "user@example.com" };
