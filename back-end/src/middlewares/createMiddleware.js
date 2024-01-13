@@ -38,19 +38,19 @@ const validName = (req, res, next) => {
 
 const validToken = (req, res, next) => {
   const { authorization } = req.headers;
-  const token = verifyToken(authorization);
 
-  if (!authorization) {
-    return res.status(401).json({ message: "Token não encontrado" });
-  }
+  try {
+    if (!authorization) {
+      return res.status(401).json({ message: "Token não encontrado" });
+    }
 
-  if (!token) {
+    const token = verifyToken(authorization);
+    req.user = token;
+
+    next();
+  } catch (err) {
     res.status(401).json({ message: "Token expirado ou inválido" });
   }
-
-  req.user = token;
-
-  next();
 };
 
 module.exports = { validEmail, validPassword, validName, validToken };
