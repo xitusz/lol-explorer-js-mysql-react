@@ -129,4 +129,23 @@ describe("User Router", () => {
       expect(deleteUserStub.calledOnce).to.be.true;
     });
   });
+
+  describe("POST /validate/email", () => {
+    it("should validate user email true", async () => {
+      const newEmail = "user1@example.com";
+
+      const validateEmailStub = sinon
+        .stub(userService, "validateEmail")
+        .resolves(true);
+
+      const response = await chai
+        .request(app)
+        .post("/profile/validate/email")
+        .send(newEmail);
+
+      expect(response).to.have.status(200);
+      expect(response.body).to.equal(true);
+      expect(validateEmailStub.calledOnce).to.be.true;
+    });
+  });
 });
