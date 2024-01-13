@@ -107,4 +107,26 @@ describe("User Router", () => {
       expect(updatePasswordStub.calledOnce).to.be.true;
     });
   });
+
+  describe("DELETE /", () => {
+    it("should delete a user", async () => {
+      const user = { id: 1, name: "User", email: "user@example.com" };
+      const token = "token";
+
+      const verifyStub = sinon.stub(jwt, "verify").returns(user);
+      const deleteUserStub = sinon
+        .stub(userService, "deleteUser")
+        .resolves("Usuário excluído com sucesso!");
+
+      const response = await chai
+        .request(app)
+        .delete("/profile")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(response).to.have.status(200);
+      expect(response.body.message).to.equal("Usuário excluído com sucesso!");
+      expect(verifyStub.calledOnce).to.be.true;
+      expect(deleteUserStub.calledOnce).to.be.true;
+    });
+  });
 });
