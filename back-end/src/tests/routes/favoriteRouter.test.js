@@ -32,6 +32,7 @@ describe("Favorite Router", () => {
       expect(response).to.have.status(201);
       expect(verifyStub.calledOnce).to.be.true;
       expect(createFavoritesStub.calledOnce).to.be.true;
+      expect(createFavoritesStub.firstCall.args[0]).to.equal(user.id);
     });
   });
 
@@ -83,6 +84,8 @@ describe("Favorite Router", () => {
       );
       expect(verifyStub.calledOnce).to.be.true;
       expect(addFavoriteStub.calledOnce).to.be.true;
+      expect(addFavoriteStub.firstCall.args[0]).to.equal(user.id);
+      expect(addFavoriteStub.firstCall.args[1]).to.equal(favoriteName);
     });
   });
 
@@ -109,6 +112,8 @@ describe("Favorite Router", () => {
       );
       expect(verifyStub.calledOnce).to.be.true;
       expect(removeFavoriteStub.calledOnce).to.be.true;
+      expect(removeFavoriteStub.firstCall.args[0]).to.equal(user.id);
+      expect(removeFavoriteStub.firstCall.args[1]).to.equal(favoriteName);
     });
   });
 
@@ -133,6 +138,7 @@ describe("Favorite Router", () => {
       );
       expect(verifyStub.calledOnce).to.be.true;
       expect(clearFavoritesStub.calledOnce).to.be.true;
+      expect(clearFavoritesStub.firstCall.args[0]).to.equal(user.id);
     });
   });
 });
