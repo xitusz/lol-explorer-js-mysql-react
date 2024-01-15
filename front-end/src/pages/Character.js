@@ -5,8 +5,9 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
+import SearchInput from "../components/SearchInput";
 import { getItemFromLocalStorage } from "../services/localStorage";
-import { AiOutlineSearch, AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
@@ -204,18 +205,12 @@ const Character = () => {
       <div className="py-5">
         <h1 className="text-center text-white pt-5 p-4">Personagens</h1>
         <div className="d-flex justify-content-center w-50 m-auto">
-          <div className="input-group mb-4 rounded-1">
-            <span className="input-group-text search-input border-0 text-white p-2 px-3">
-              <AiOutlineSearch size={23} />
-            </span>
-            <input
-              type="text"
-              className="form-control search-input text-white border-0 p-0"
-              placeholder="Buscar campeão"
-              value={searchChampion}
-              onChange={handleSearch}
-            />
-          </div>
+          <SearchInput
+            iconSize={23}
+            placeholder="Buscar campeão"
+            value={searchChampion}
+            onChange={handleSearch}
+          />
         </div>
         <div className="d-flex justify-content-center flex-wrap w-50 m-auto">
           {championTypes.map((type) => (
