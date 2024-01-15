@@ -1,0 +1,93 @@
+{
+  "BandleCity": {
+    "name": "BandleCity",
+    "nameEN": "Bandle City",
+    "nameBR": "Bandópolis",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt57ea8bb74f8733f3/60ee0b95bc44fe5b48ba2a02/bandle-city_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/bandle_city_crest_icon.png"
+  },
+  "Bilgewater": {
+    "name": "Bilgewater",
+    "nameEN": "Bilgewater",
+    "nameBR": "Águas de Sentina",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8efd86a20a7fc6ca/60ee0bd126ed9249f5484b8c/bilgewater_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/bilgewater_crest_icon.png"
+  },
+  "Demacia": {
+    "name": "Demacia",
+    "nameEN": "Demacia",
+    "nameBR": "Demacia",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd170f10ccce6ba7e/614cc12077d06a0c9835f862/demacia_splash.jpeg",
+    "icon": "https://universe.leagueoflegends.com/images/demacia_crest_icon.png"
+  },
+  "Ionia": {
+    "name": "Ionia",
+    "nameEN": "Ionia",
+    "nameBR": "Ionia",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltcea170f820e544c5/60ee0e19a471a34acb2c1f66/ionia-01.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/iona_crest_icon.png"
+  },
+  "Ixtal": {
+    "name": "Ixtal",
+    "nameEN": "Ixtal",
+    "nameBR": "Ixtal",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9a01601bbdff5c4a/60ee0e385fbfcb5e848229a5/ixtal_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/ixtal_crest_icon.png"
+  },
+  "Noxus": {
+    "name": "Noxus",
+    "nameEN": "Noxus",
+    "nameBR": "Noxus",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9d0c487b98ba6b42/60ee0ffb975ffd4ff25ec2f5/noxus_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/noxus_crest_icon.png"
+  },
+  "Piltover": {
+    "name": "Piltover",
+    "nameEN": "Piltover",
+    "nameBR": "Piltover",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5c307209ccbe2470/60ee10d06610ed4d42bc222e/piltover_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/piltover_crest_icon.png"
+  },
+  "ShadowIsles": {
+    "name": "ShadowIsles",
+    "nameEN": "Shadow Isles",
+    "nameBR": "Ilhas das Sombras",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd9cec6dc7ca0fc48/60ee11d22f7fa122fd574a11/shadow-isles_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/shadow_isles_crest_icon.png"
+  },
+  "Shurima": {
+    "name": "Shurima",
+    "nameEN": "Shurima",
+    "nameBR": "Shurima",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5924e500520eabd9/60ee11fb94d70a1ef3123825/shurima_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/shurima_crest_icon.png"
+  },
+  "Targon": {
+    "name": "Targon",
+    "nameEN": "Targon",
+    "nameBR": "Targon",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1ab39bfee4a3057d/60ee0f894fba2021cde587f6/mount-targon_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/mt_targon_crest_icon.png"
+  },
+  "TheFreljord": {
+    "name": "TheFreljord",
+    "nameEN": "The Freljord",
+    "nameBR": "Freljord",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc15ba510f02e7e45/60ee0d9185b042284396138b/freljord_splash.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/freljord_crest_icon.png"
+  },
+  "TheVoid": {
+    "name": "TheVoid",
+    "nameEN": "The Void",
+    "nameBR": "O Vazio",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4754fc6a91233824/60ee139d5397524ead38918f/void-an-unknowable-power.jpg",
+    "icon": "https://universe.leagueoflegends.com/images/void_crest_icon.png"
+  },
+  "Zaun": {
+    "name": "Zaun",
+    "nameEN": "Zaun",
+    "nameBR": "Zaun",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3d038a51072c6d5a/614cc18164c8007a9bdec0e2/zaun_splash.jpeg",
+    "icon": "https://universe.leagueoflegends.com/images/zaun_crest_icon.png"
+  }
+}
