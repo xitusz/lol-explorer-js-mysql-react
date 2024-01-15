@@ -1,0 +1,52 @@
+.card-region-div {
+  position: relative;
+  height: 20rem;
+  width: 30rem;
+  background-color: #1A242D;
+  transition: transform 0.3s ease-out, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s ease-out;
+  overflow: hidden;
+}
+
+.card-region-div:hover {
+  transform: scale(1.05);
+  background-color: rgb(39 111 141);
+  box-shadow: 0 0 5px 1px white;
+  cursor: pointer;
+}
+
+.card-region-div:hover .image-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card-region-image {
+  object-fit: cover;
+  height: 89%;
+  object-position: center top;
+  transition: transform 0.3s ease-out;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.card-region-div:hover .icon-overlay {
+  display: block;
+}
+
+.centered-icon {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 89%;
+  transition: background 0.3s ease-out;
+}
