@@ -9,6 +9,7 @@ import "./css/CharacterDetails.css";
 import "./css/Login.css";
 import "./css/Profile.css";
 import "./css/ProfileEdit.css";
+import "./css/Region.css";
 import "./css/Register.css";
 import "./css/SearchInput.css";
 
