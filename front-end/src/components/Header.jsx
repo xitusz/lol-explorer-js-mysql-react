@@ -6,6 +6,7 @@ import {
   removeItemFromLocalStorage,
 } from "../services/localStorage";
 import Button from "./Button";
+import "../css/Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
