@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import CardRegion from "../components/CardRegion";
 import SearchInput from "../components/SearchInput";
 import regionsData from "../data/regions.json";
+import "../css/Region.css";
 
 const Region = () => {
   const navigate = useNavigate();
