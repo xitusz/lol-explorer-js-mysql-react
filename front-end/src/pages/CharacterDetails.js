@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
 import skillVideos from "../data/skillVideos.json";
+import "../css/CharacterDetails.css";
 
 const CharacterDetails = () => {
   const [championDetail, setChampionDetail] = useState({});
