@@ -16,6 +16,7 @@ import {
 } from "../services/localStorage";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
+import "../css/ProfileEdit.css";
 
 const ProfileEdit = () => {
   const navigate = useNavigate();
