@@ -36,3 +36,10 @@
 .favorite-div {
   background-color: #1A242D;
 }
+
+.champion-container {
+  background-image: url(../images/champions2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
