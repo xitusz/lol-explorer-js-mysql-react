@@ -53,7 +53,7 @@ const Region = () => {
   return (
     <div>
       <Header />
-      <div className="py-5">
+      <div className="py-5 region-container">
         <h1 className="text-center text-white pt-5 p-4">Regiões</h1>
         <div className="d-flex justify-content-center w-50 m-auto mb-3">
           <SearchInput
