@@ -75,7 +75,7 @@ const Profile = () => {
     return (
       <div className="d-flex justify-content-center row mx-5">
         {favorites.map((id) => {
-          const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`;
+          const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`;
 
           return (
             <div key={id} className="mb-4 character-card">
