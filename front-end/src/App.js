@@ -5,7 +5,6 @@ import "./css/CharacterDetails.css";
 import "./css/Profile.css";
 import "./css/ProfileEdit.css";
 import "./css/Region.css";
-import "./css/Register.css";
 
 const App = () => {
   return <Routes />;
