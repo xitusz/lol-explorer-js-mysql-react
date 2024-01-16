@@ -8,6 +8,7 @@ import CharacterDetails from "../pages/CharacterDetails";
 import Profile from "../pages/Profile";
 import ProfileEdit from "../pages/ProfileEdit";
 import Region from "../pages/Region";
+import RegionDetails from "../pages/RegionDetails";
 
 const Router = () => (
   <Routes>
@@ -19,6 +20,7 @@ const Router = () => (
     <Route path="/profile" element={<Profile />} />
     <Route path="/profile/edit" element={<ProfileEdit />} />
     <Route path="/region" element={<Region />} />
+    <Route path="/region/:regionName" element={<RegionDetails />} />
   </Routes>
 );
 
