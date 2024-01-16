@@ -13,6 +13,7 @@ import { BsFillKeyFill } from "react-icons/bs";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useAuth } from "../context/AuthContext";
+import "../css/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
