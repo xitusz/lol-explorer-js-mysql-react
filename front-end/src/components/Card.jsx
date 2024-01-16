@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../css/Card.css";
 
 const Card = ({ name, image }) => {
   return (
