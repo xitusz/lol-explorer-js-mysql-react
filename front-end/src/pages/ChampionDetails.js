@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Button from "../components/Button";
 import skillVideos from "../data/skillVideos.json";
-import "../css/CharacterDetails.css";
+import "../css/ChampionDetails.css";
 
-const CharacterDetails = () => {
+const ChampionDetails = () => {
   const [championDetail, setChampionDetail] = useState({});
   const [loading, setLoading] = useState(true);
   const [skillState, setSkillState] = useState("P");
@@ -270,4 +270,4 @@ const CharacterDetails = () => {
   );
 };
 
-export default CharacterDetails;
+export default ChampionDetails;
