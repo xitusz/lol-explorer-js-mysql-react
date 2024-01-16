@@ -10,6 +10,7 @@ import { getItemFromLocalStorage } from "../services/localStorage";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
+import "../css/Character.css";
 
 const Character = () => {
   const navigate = useNavigate();
