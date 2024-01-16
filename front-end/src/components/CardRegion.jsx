@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../css/CardRegion.css";
 
 const CardRegion = ({ name, image, icon }) => {
   return (
