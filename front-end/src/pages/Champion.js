@@ -203,7 +203,7 @@ const Champion = () => {
   return (
     <div>
       <Header />
-      <div className="py-5">
+      <div className="py-5 champion-container">
         <h1 className="text-center text-white pt-5 p-4">Personagens</h1>
         <div className="d-flex justify-content-center w-50 m-auto">
           <SearchInput
