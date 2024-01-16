@@ -79,11 +79,11 @@ const Profile = () => {
           const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`;
 
           return (
-            <div key={id} className="mb-4 character-card">
+            <div key={id} className="mb-4 champion-card">
               <div className="favorite-div rounded">
                 <div
                   className="text-decoration-none"
-                  onClick={() => navigate(`/character/${id}`)}
+                  onClick={() => navigate(`/champion/${id}`)}
                 >
                   <Card name={id} image={imageURL} />
                 </div>
