@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { BsArrowUp } from "react-icons/bs";
 import PropTypes from "prop-types";
+import "../css/Footer.css";
 
 const Footer = ({ className }) => {
   return (
