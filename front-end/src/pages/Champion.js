@@ -10,9 +10,9 @@ import { getItemFromLocalStorage } from "../services/localStorage";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import "../css/Character.css";
+import "../css/Champion.css";
 
-const Character = () => {
+const Champion = () => {
   const navigate = useNavigate();
   const [champions, setChampions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -161,7 +161,7 @@ const Character = () => {
         const isFavorite = favorites.includes(id);
 
         return (
-          <div key={id} className="mb-4 character-card">
+          <div key={id} className="mb-4 champion-card">
             <div className="favorite-div rounded">
               <div
                 className="favorite-icon pb-2 pt-1"
@@ -183,7 +183,7 @@ const Character = () => {
               </div>
               <div
                 className="text-decoration-none"
-                onClick={() => navigate(`/character/${id}`)}
+                onClick={() => navigate(`/champion/${id}`)}
               >
                 <Card name={name} image={imageURL} />
               </div>
@@ -261,4 +261,4 @@ const Character = () => {
   );
 };
 
-export default Character;
+export default Champion;
