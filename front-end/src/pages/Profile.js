@@ -17,7 +17,7 @@ const Profile = () => {
   const { userToken } = useAuth();
 
   const [favorites, setFavorites] = useState([]);
-  const [showFavorites, setShowFavorites] = useState(false);
+  const [showFavorites, setShowFavorites] = useState(true);
   const [profileInfo, setProfileInfo] = useState({
     name: "",
     email: "",
