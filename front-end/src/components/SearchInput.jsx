@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { AiOutlineSearch } from "react-icons/ai";
+import "../css/SearchInput.css";
 
 const SearchInput = ({ iconSize, placeholder, value, onChange }) => {
   return (
