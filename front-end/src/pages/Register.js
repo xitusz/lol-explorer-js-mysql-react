@@ -14,6 +14,7 @@ import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BsFillKeyFill } from "react-icons/bs";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import "../css/Register.css";
 
 const Register = () => {
   const navigate = useNavigate();
