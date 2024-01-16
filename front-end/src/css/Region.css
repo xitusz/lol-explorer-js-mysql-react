@@ -1,3 +1,10 @@
 .region-card {
   width: max-content;
 }
+
+.region-container {
+  background-image: url('../images/regions2.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
