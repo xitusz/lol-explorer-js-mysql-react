@@ -10,6 +10,7 @@ import { FiMail } from "react-icons/fi";
 import { AiOutlineSetting } from "react-icons/ai";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
+import "../css/Profile.css";
 
 const Profile = () => {
   const navigate = useNavigate();
