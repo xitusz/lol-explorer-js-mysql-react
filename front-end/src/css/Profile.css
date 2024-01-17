@@ -14,3 +14,7 @@
   background-attachment: fixed;
   background-position: center;
 }
+
+.profile-container-height {
+  height: 100vh;
+}
