@@ -98,7 +98,7 @@ const Profile = () => {
   return (
     <div>
       <Header />
-      <div className="py-5">
+      <div className="py-5 profile-container">
         <h1 className="text-center text-white py-5">Perfil</h1>
         <div className="d-flex mb-5 w-50 justify-content-between m-auto border rounded py-3 profile-div">
           <div className="px-3">
