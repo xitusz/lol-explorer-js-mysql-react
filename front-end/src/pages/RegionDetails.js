@@ -12,7 +12,8 @@ const RegionDetails = () => {
 
   const regionDetail = regionsData[regionName];
 
-  const { nameBR, img, icon, description, champions } = regionDetail;
+  const { nameBR, img, regionVideo, icon, description, champions } =
+    regionDetail;
 
   const renderChampionCards = () => {
     return champions.map((champion) => (
@@ -44,6 +45,21 @@ const RegionDetails = () => {
     );
   };
 
+  const renderRegionVideo = () => {
+    if (!regionVideo) {
+      return renderImage(img);
+    }
+
+    return (
+      <div>
+        <video key={nameBR} muted autoPlay loop width="100%" height="auto">
+          <source src={regionVideo} type="video/webm" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
+    );
+  };
+
   return (
     <div>
       <Header />
@@ -54,7 +70,9 @@ const RegionDetails = () => {
               {renderImage(icon)}
             </div>
             <h1>{nameBR}</h1>
-            <div className="region-details-img m-auto">{renderImage(img)}</div>
+            <div className="region-details-video m-auto">
+              {renderRegionVideo()}
+            </div>
           </div>
           <hr className="w-25 mx-auto my-5" />
           <div className="w-75 mx-auto">
