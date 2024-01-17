@@ -17,3 +17,10 @@
   color: rgb(39 111 141) !important;
   transition: color 0.2s ease-out;
 }
+
+.profile-edit-container {
+  background-image: url('../images/img.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
