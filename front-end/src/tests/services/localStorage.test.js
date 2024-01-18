@@ -62,7 +62,7 @@ describe("localStorage service", () => {
     });
   });
 
-  describe("getItemToLocalStorage", () => {
+  describe("getItemFromLocalStorage", () => {
     it("should get an item correctly", () => {
       const key = "key";
       const element = { email: "email@example.com", password: "example" };
@@ -82,6 +82,7 @@ describe("localStorage service", () => {
       expect(retrieved).toBeNull();
     });
   });
+
   describe("removeItemFromLocalStorage", () => {
     beforeEach(() => {
       setItemToLocalStorage("user", "name");
