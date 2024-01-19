@@ -38,8 +38,15 @@ const ChampionDetails = () => {
     ));
   };
 
-  const renderImage = (src, alt) => {
-    return <img src={src} alt={alt} className="img-fluid mt-2" />;
+  const renderImage = (src, alt, testid) => {
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className="img-fluid mt-2"
+        data-testid={testid}
+      />
+    );
   };
 
   const renderLore = () => {
@@ -149,7 +156,11 @@ const ChampionDetails = () => {
             height="auto"
             onError={() => handleVideoError()}
           >
-            <source src={skillVideoUrl} type="video/webm" />
+            <source
+              src={skillVideoUrl}
+              data-testid={skillState}
+              type="video/webm"
+            />
             Seu navegador não suporta o elemento de vídeo.
           </video>
         ) : (
@@ -212,6 +223,7 @@ const ChampionDetails = () => {
                   className="img-fluid rounded"
                   src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${skin.num}.jpg`}
                   alt={skin.name}
+                  data-testid={`${skin.name}-image`}
                 />
               </div>
             )
@@ -234,7 +246,8 @@ const ChampionDetails = () => {
               <div>{renderTags()}</div>
               {renderImage(
                 `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`,
-                id
+                id,
+                "champion-image"
               )}
             </div>
             <hr className="w-25 mx-auto my-5" />
