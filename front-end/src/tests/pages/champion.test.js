@@ -2,13 +2,19 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import Character from "../../pages/Character";
+import Champion from "../../pages/Champion";
 
-describe("Character page", () => {
+jest.mock("../../context/AuthContext", () => ({
+  useAuth: () => ({
+    setUserToken: jest.fn(),
+  }),
+}));
+
+describe("Champion page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Character />
+        <Champion />
       </BrowserRouter>
     );
   });
@@ -71,20 +77,14 @@ describe("Character page", () => {
 
       fireEvent.click(cardAatrox);
 
-      expect(window.location.pathname).toBe("/character/Aatrox");
+      expect(window.location.pathname).toBe("/champion/Aatrox");
 
       global.fetch.mockRestore();
     });
   });
 
-  it("should favorite when clicking on the star icon if it is unfavorited and unfavorite if it is favorited", async () => {
+  it("should favorite when clicking on the star icon if it is unfavorited and unfavorite if it is favorited while user logged in", async () => {
     localStorage.setItem("isLoggedIn", true);
-    localStorage.setItem(
-      "user",
-      JSON.stringify([
-        { name: "gabriel", email: "gabriel@email.com", favorites: ["Ahri"] },
-      ])
-    );
 
     await waitFor(() => {
       const mock = {
@@ -102,7 +102,6 @@ describe("Character page", () => {
         const outlineStarIconAatrox = screen.getByTestId(
           "outline-star-icon-Aatrox"
         );
-
         const fillStarIconAatrox = screen.getByTestId("fill-star-icon-Aatrox");
         const fillStarIconAhri = screen.getByTestId("fill-star-icon-Ahri");
         const outlineStarIconAhri = screen.getByTestId(
@@ -127,6 +126,36 @@ describe("Character page", () => {
     });
 
     localStorage.clear();
+  });
+
+  it("should show an alert when attempting to favorite a champion while user not logged in, and the champion remains unfavorited", async () => {
+    await waitFor(() => {
+      const mock = {
+        Aatrox: { id: "Aatrox" },
+        Ahri: { id: "Ahri" },
+      };
+
+      jest.spyOn(global, "fetch").mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve({ data: mock }),
+        })
+      );
+
+      waitFor(() => {
+        const outlineStarIconAatrox = screen.getByTestId(
+          "outline-star-icon-Aatrox"
+        );
+        const fillStarIconAatrox = screen.getByTestId("fill-star-icon-Aatrox");
+
+        expect(outlineStarIconAatrox).toBeInTheDocument();
+
+        fireEvent.click(outlineStarIconAatrox);
+
+        expect(fillStarIconAatrox).not.toBeInTheDocument();
+      });
+
+      global.fetch.mockRestore();
+    });
   });
 
   describe("Filter champions", () => {
@@ -669,16 +698,6 @@ describe("Character page", () => {
 
         it("button 'Favoritos'", async () => {
           localStorage.setItem("isLoggedIn", true);
-          localStorage.setItem(
-            "user",
-            JSON.stringify([
-              {
-                name: "gabriel",
-                email: "gabriel@email.com",
-                favorites: [],
-              },
-            ])
-          );
 
           await waitFor(() => {
             const mock = {
@@ -733,16 +752,6 @@ describe("Character page", () => {
 
         it("button 'Limpar Favoritos'", async () => {
           localStorage.setItem("isLoggedIn", true);
-          localStorage.setItem(
-            "user",
-            JSON.stringify([
-              {
-                name: "gabriel",
-                email: "gabriel@email.com",
-                favorites: [],
-              },
-            ])
-          );
 
           await waitFor(() => {
             const mock = {
