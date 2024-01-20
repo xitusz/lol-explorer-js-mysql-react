@@ -34,6 +34,14 @@ const Region = () => {
   );
 
   const renderRegions = () => {
+    if (sortedRegions.length === 0) {
+      return (
+        <span className="text-center text-white py-5">
+          Nenhuma região encontrada.
+        </span>
+      );
+    }
+
     return sortedRegions.map((region) => (
       <div key={region.name} className="mb-4 region-card">
         <div
