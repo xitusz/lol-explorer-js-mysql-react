@@ -23,6 +23,10 @@ describe("ChampionDetails page", () => {
     );
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render the loading message correctly", () => {
     const mock = {};
 
