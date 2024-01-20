@@ -33,8 +33,15 @@ const RegionDetails = () => {
     ));
   };
 
-  const renderImage = (src) => {
-    return <img src={src} alt={nameBR} className="img-fluid mt-2" />;
+  const renderImage = (src, alt, testid) => {
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className="img-fluid mt-2"
+        data-testid={testid}
+      />
+    );
   };
 
   const renderDescription = () => {
@@ -53,7 +60,11 @@ const RegionDetails = () => {
     return (
       <div>
         <video key={nameBR} muted autoPlay loop width="100%" height="auto">
-          <source src={regionVideo} type="video/webm" />
+          <source
+            data-testid={`${nameBR}-video`}
+            src={regionVideo}
+            type="video/webm"
+          />
           Seu navegador não suporta o elemento de vídeo.
         </video>
       </div>
@@ -67,7 +78,7 @@ const RegionDetails = () => {
         <div className="p-5 text-white text-center mx-5">
           <div>
             <div className="region-details-icon m-auto">
-              {renderImage(icon)}
+              {renderImage(icon, nameBR, "region-icon")}
             </div>
             <h1>{nameBR}</h1>
             <div className="region-details-video m-auto">
