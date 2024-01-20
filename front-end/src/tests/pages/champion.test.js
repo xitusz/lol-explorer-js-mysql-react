@@ -19,6 +19,10 @@ describe("Champion page", () => {
     );
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render the title correctly", async () => {
     await waitFor(() => {
       const title = screen.getByRole("heading", { name: /personagens/i });
