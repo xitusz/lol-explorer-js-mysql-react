@@ -18,9 +18,12 @@ const Home = () => {
                 src={championsIMG}
                 alt="Personagens"
                 className="image-home"
+                data-testid="champion-img"
               />
               <div className="centered-text">
-                <h1 className="text-white">Personagens</h1>
+                <h1 className="text-white" data-testid="champion-heading">
+                  Personagens
+                </h1>
               </div>
             </Link>
           </div>
@@ -29,9 +32,16 @@ const Home = () => {
           <div className="split-content">
             <Link to="/region">
               <div className="image-overlay-home" />
-              <img src={regionsIMG} alt="Regiões" className="image-home" />
+              <img
+                src={regionsIMG}
+                alt="Regiões"
+                className="image-home"
+                data-testid="region-img"
+              />
               <div className="centered-text">
-                <h1 className="text-white">Regiões</h1>
+                <h1 className="text-white" data-testid="region-heading">
+                  Regiões
+                </h1>
               </div>
             </Link>
           </div>
