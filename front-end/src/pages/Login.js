@@ -124,6 +124,7 @@ const Login = () => {
                     ref={recaptchaRef}
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                     onChange={(value) => setRecaptchaValue(value)}
+                    data-testid={"recaptcha-login"}
                   />
                 </div>
                 <Button
