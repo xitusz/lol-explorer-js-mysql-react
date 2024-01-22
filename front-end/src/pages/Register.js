@@ -181,6 +181,7 @@ const Register = () => {
                     ref={recaptchaRef}
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                     onChange={(value) => setRecaptchaValue(value)}
+                    data-testid={"recaptcha-register"}
                   />
                 </div>
                 <div className="form-check mb-3 d-flex align-items-center">
