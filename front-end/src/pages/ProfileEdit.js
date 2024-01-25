@@ -221,6 +221,7 @@ const ProfileEdit = () => {
                           name="name"
                           value={profileInfo.name}
                           readOnly
+                          data-testid="input-name"
                         />
                       </div>
                     </div>
@@ -231,6 +232,7 @@ const ProfileEdit = () => {
                           showEditName ? "active-icon" : ""
                         }`}
                         onClick={() => setShowEditName(!showEditName)}
+                        data-testid="setting-icon-name"
                       />
                     </div>
                   </div>
@@ -263,6 +265,7 @@ const ProfileEdit = () => {
                           <Button
                             className="btn btn-primary text-white mb-2"
                             onClick={handleSaveName}
+                            dataTestId="save-name-button"
                           >
                             Salvar
                           </Button>
@@ -298,6 +301,7 @@ const ProfileEdit = () => {
                           name="email"
                           value={profileInfo.email}
                           readOnly
+                          data-testid="input-email"
                         />
                       </div>
                     </div>
@@ -308,6 +312,7 @@ const ProfileEdit = () => {
                           showEditEmail ? "active-icon" : ""
                         }`}
                         onClick={() => setShowEditEmail(!showEditEmail)}
+                        data-testid="setting-icon-email"
                       />
                     </div>
                   </div>
@@ -340,6 +345,7 @@ const ProfileEdit = () => {
                           <Button
                             className="btn btn-primary text-white mb-2"
                             onClick={handleSaveEmail}
+                            dataTestId="save-email-button"
                           >
                             Salvar
                           </Button>
@@ -375,6 +381,7 @@ const ProfileEdit = () => {
                           name="password"
                           value="*********"
                           readOnly
+                          data-testid="input-password"
                         />
                       </div>
                     </div>
@@ -385,6 +392,7 @@ const ProfileEdit = () => {
                           showEditPassword ? "active-icon" : ""
                         }`}
                         onClick={() => setShowEditPassword(!showEditPassword)}
+                        data-testid="setting-icon-password"
                       />
                     </div>
                   </div>
@@ -439,12 +447,16 @@ const ProfileEdit = () => {
                           <Button
                             className="btn btn-primary text-white mb-2"
                             onClick={handleSavePassword}
+                            dataTestId="save-password-button"
                           >
                             Salvar
                           </Button>
                         </div>
                         {errorPassword && (
-                          <div className="mb-3 alert alert-danger text-center">
+                          <div
+                            className="mb-3 alert alert-danger text-center"
+                            data-testid="error-password"
+                          >
                             {errorPassword}
                           </div>
                         )}
@@ -457,6 +469,7 @@ const ProfileEdit = () => {
                     <Button
                       className="btn btn-primary text-white mt-5"
                       onClick={handleDeleteButtonClick}
+                      dataTestId="delete-button"
                     >
                       Excluir Conta
                     </Button>
@@ -465,6 +478,7 @@ const ProfileEdit = () => {
                     <Button
                       className="btn btn-primary text-white mt-5"
                       onClick={handleSaveButtonClick}
+                      dataTestId="save-button"
                     >
                       Salvar
                     </Button>
