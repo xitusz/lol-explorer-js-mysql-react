@@ -210,7 +210,10 @@ const Register = () => {
                   <Button className="btn btn-secondary w-100">Entrar</Button>
                 </Link>
                 {error && (
-                  <div className="my-3 alert alert-danger text-center">
+                  <div
+                    className="my-3 alert alert-danger text-center"
+                    data-testid="error-validation"
+                  >
                     {error}
                   </div>
                 )}
