@@ -122,7 +122,11 @@ const Profile = () => {
           </div>
           <div className="px-3">
             <Link to="/profile/edit">
-              <AiOutlineSetting size={30} className="text-white icon" />
+              <AiOutlineSetting
+                size={30}
+                className="text-white icon"
+                data-testid="setting-icon"
+              />
             </Link>
           </div>
         </div>
