@@ -1,0 +1,45 @@
+.champion-card {
+  width: max-content;
+}
+
+.filter-button {
+  background-color: #1A242D;
+  transition: background-color 0.2s ease-out, box-shadow 0,2s ease-out;
+}
+
+.filter-button:hover, .filter-button.active:hover  {
+  background-color: rgb(32, 90, 116);
+}
+
+.filter-button:active, .filter-button.active:active  {
+  background-color: rgb(20, 60, 80);
+}
+
+.filter-button.active {
+  background-color: rgb(39 111 141);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.favorite-icon {
+  margin: auto;
+  width: max-content;
+  transition: transform 0.3s ease-out;
+}
+
+.fav-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.favorite-div {
+  background-color: #1A242D;
+}
+
+.champion-container {
+  background-image: url(../images/champions2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}

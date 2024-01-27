@@ -1,0 +1,15 @@
+.region-details-icon {
+  width: 4rem;
+}
+
+.region-details-video {
+  width: 80%;
+}
+
+.champion-cards {
+  width: max-content;
+}
+
+.bg-dark-blue {
+  background-color: #1A242D;
+}

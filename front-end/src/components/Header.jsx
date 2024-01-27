@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import {
   getItemFromLocalStorage,
   removeItemFromLocalStorage,
 } from "../services/localStorage";
 import Button from "./Button";
+import "../css/Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(true);
+  const { setUserToken } = useAuth();
 
   const handleExiting = () => {
-    removeItemFromLocalStorage("user");
+    setUserToken("");
+    removeItemFromLocalStorage("token");
     removeItemFromLocalStorage("isLoggedIn");
     navigate("/login");
   };
 
   const navigationLinks = [
     { to: "/", text: "Início" },
-    { to: "/character", text: "Personagens" },
+    { to: "/champion", text: "Personagens" },
+    { to: "/region", text: "Regiões" },
   ];
 
   const renderAuthenticatedLinks = () => {
@@ -108,7 +113,7 @@ const Header = () => {
               ))}
             </ul>
             <hr className="hr-header" />
-            {getItemFromLocalStorage("user")
+            {getItemFromLocalStorage("isLoggedIn")
               ? renderAuthenticatedLinks()
               : renderGuestLinks()}
           </div>

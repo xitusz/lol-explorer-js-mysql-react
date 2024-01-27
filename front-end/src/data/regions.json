@@ -1,0 +1,120 @@
+{
+  "BandleCity": {
+    "name": "BandleCity",
+    "nameBR": "Bandópolis",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt57ea8bb74f8733f3/60ee0b95bc44fe5b48ba2a02/bandle-city_splash.jpg",
+    "regionVideo":"https://assets.contentstack.io/v3/assets/blt187521ff0727be24/bltf967832218cc82da/60ee0b96191da52267d909b6/bandle-city-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/bandle_city_crest_icon.png",
+    "description": "Há muita controvérsia sobre onde exatamente fica o lar dos yordles, embora vários mortais afirmem ter atravessado portais invisíveis para uma terra de estranho encantamento além do reino material. Falam de um lugar com magia ilimitada, onde os incautos, atraídos por uma infinidade de elementos fantásticos, podem acabar perdidos em um sonho sem volta. Em Bandópolis, dizem que todas as sensações são amplificadas para os não yordles. As cores são mais vívidas. A comida e a bebida embriagam os sentidos por anos e, uma vez provadas, jamais podem ser esquecidas. A luz do sol é eternamente dourada, as águas são completamente cristalinas e toda colheita é extremamente frutífera. Talvez alguns desses relatos sejam verdadeiros, mas talvez nenhum seja, pois não há duas pessoas neste mundo que concordem sobre o que realmente viram. Só uma coisa é certa: Bandópolis e seus habitantes carregam um poder atemporal. Isso deve explicar por que muitos mortais que encontram seu caminho de volta parecem ter envelhecido bruscamente, embora a maioria sequer retorne.",
+    "champions": ["Corki", "Lulu", "Rumble", "Teemo", "Tristana", "Veigar", "Yuumi"]
+  },
+  "Bilgewater": {
+    "name": "Bilgewater",
+    "nameBR": "Águas de Sentina",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8efd86a20a7fc6ca/60ee0bd126ed9249f5484b8c/bilgewater_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt3fc71202462d4990/60ee0bd2975ffd4ff25ec27c/bilgewater-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/bilgewater_crest_icon.png",
+    "description": "Situada no arquipélago das Ilhas da Chama Azul, Águas de Sentina é uma cidade portuária sem igual, cheia de mercenários, gangues das docas e contrabandistas do mundo inteiro. Aqui, fortunas crescem e ambições desmoronam em um piscar de olhos. É uma cidade de recomeços para quem está fugindo da justiça, de dívidas ou de perseguições, já que nestas ruas tortuosas ninguém se importa com o seu passado. Mesmo assim, a cada manhã, corpos de viajantes descuidados são encontrados flutuando no mar perto das docas, com os bolsos vazios e suas gargantas cortadas... Embora seja perigosíssima, Águas de Sentina fervilha com novas oportunidades, já que não é limitada pelas amarras de um governo formal e regulações de mercado. Quem tem dinheiro pode comprar quase tudo aqui, desde itens hextec proibidos até a lealdade de um senhor do crime. Com a destituição do último 'rei dos ladrões', Águas de Sentina entrou em um período de transição enquanto os capitães mais proeminentes tentam chegar a um acordo sobre o futuro da cidade. Mas, havendo navios em condições de navegar e homens dispostos a tripulá-los, Águas de Sentina continuará sendo um dos lugares mais peculiares e bem relacionados de Runeterra.",
+    "champions": ["Fizz", "Gangplank", "Graves", "Illaoi", "MissFortune", "Nautilus", "Pyke", "TahmKench", "TwistedFate"]
+  },
+  "Demacia": {
+    "name": "Demacia",
+    "nameBR": "Demacia",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd170f10ccce6ba7e/614cc12077d06a0c9835f862/demacia_splash.jpeg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/bltbefac53ac6315c7c/60ee0ca19a3f4a5c9e68b21e/demacia-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/demacia_crest_icon.png",
+    "description": "Em um reino imponente e legítimo com uma prestigiosa história militar, os habitantes de Demacia sempre colocaram os ideais de justiça, honra e dever acima de tudo, orgulhando-se intensamente de sua herança cultural. No entanto, apesar desses nobres princípios, essa grande nação autossuficiente foi se tornando cada vez mais fechada e isolacionista nos últimos séculos. Hoje, Demacia é uma nação em crise. Sua capital, a Grande Cidade de Demacia, nasceu como um refúgio contra a feitiçaria após as Guerras Rúnicas, construída sobre a enigmática petricita uma pedra branca peculiar que anula qualquer energia mágica. É de lá que a família real, desde muito tempo atrás, defende as cidades e vilas mais afastadas, as fazendas, as florestas e as montanhas ricas em recursos minerais. No entanto, após a morte súbita do rei Jarvan III, as outras famílias nobres ainda não aprovaram a sucessão de seu único herdeiro ao trono, o jovem príncipe Jarvan. Aqueles que vivem para além das fronteiras fortemente protegidas são cada vez mais vistos com desconfiança e, em uma época de tantas incertezas, muitos antigos aliados começaram a procurar proteção em outros lugares. Dizem por aí que a era dourada de Demacia já passou e, a menos que seu povo esteja disposto a se adaptar a um mundo em constante mudança o que muitos julgam impossível, a queda do reino será inevitável. Nem toda a petricita da região será capaz de proteger Demacia de si mesma.",
+    "champions": ["Fiora", "Galio", "Garen", "JarvanIV", "Kayle", "Lucian", "Lux", "Morgana", "Poppy", "Quinn", "Shyvana", "Sona", "Sylas", "Vayne", "XinZhao"]
+
+  },
+  "Ionia": {
+    "name": "Ionia",
+    "nameBR": "Ionia",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltcea170f820e544c5/60ee0e19a471a34acb2c1f66/ionia-01.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5a79db95e88d2ea5/60ee0e1a496a232835c1ff73/ionia-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/iona_crest_icon.png",
+    "description": "Rodeada por águas traiçoeiras, Ionia é composta por várias províncias aliadas dispersas ao longo do arquipélago gigantesco conhecido por muitos como as Primeiras Terras. Como a cultura ioniana vem sendo moldada há muito tempo com base na busca pelo equilíbrio em todas as coisas, a fronteira entre os reinos material e espiritual tende a ser mais flexível por aqui, principalmente nas florestas e montanhas selvagens. Embora os encantamentos deste lugar sejam instáveis e suas criaturas sejam mágicas e perigosas, a maioria dos ionianos conseguiu levar uma vida próspera aqui durante séculos. Os monastérios cheios de guerreiros, as milícias provinciais e até mesmo o próprio continente foram o suficiente para mantê-los protegidos. Mas essa calmaria terminou há doze anos, quando Noxus atacou as Primeiras Terras. As tropas do império, as quais pareciam não ter fim, invadiram Ionia e só foram derrotadas muitos anos depois, e com grandes custos. Agora, uma paz frágil paira sobre Ionia. Reações distintas à guerra acabaram dividindo a região – alguns grupos, como os monges Shojin e os Kinkou, procuram retornar ao isolamento pacífico e às tradições antigas. Já outras facções mais radicais, como a Irmandade Navori e a Ordem das Sombras, exigem a militarização da magia destas terras, a fim de criar uma nação unificada capaz de se vingar de Noxus. O destino de Ionia se sustenta sobre um equilíbrio delicado que alguns estão dispostos a desfazer, mas todos, sem exceção, estão irrequietos, sentindo a energia da mudança sob seus pés.",
+    "champions": ["Ahri", "Akali", "Irelia", "Ivern", "Jhin", "Karma", "Kayn", "Kennen", "LeeSin", "Lillia", "MasterYi", "MonkeyKing", "Rakan", "Sett", "Shen", "Syndra", "Varus", "Xayah", "Yasuo", "Yone", "Zed"]
+  },
+  "Ixtal": {
+    "name": "Ixtal",
+    "nameBR": "Ixtal",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9a01601bbdff5c4a/60ee0e385fbfcb5e848229a5/ixtal_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5f7a804b46cf3e4e/60ee0e39eebf8245e1b490a7/ixtal_splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/ixtal_crest_icon.png",
+    "description": "Reconhecida por seu domínio da magia elemental, Ixtal foi uma das primeiras nações independentes que se uniram ao império shurimane. Na verdade, a cultura ixtalense é muito mais antiga, parte da grande diáspora ocidental que deu origem a civilizações como Buhru, a magnífica Helia e os ascetas de Targon. Além disso, é provável que tenham desempenhado um papel significativo na criação do primeiro Ascendente. Os magos de Ixtal sobreviveram ao Vazio, e mais tarde aos Darkin, distanciando-se dos reinos vizinhos, servindo-se da vida selvagem ao redor como se fosse um escudo. Apesar de muito ter sido perdido, eles se comprometeram em preservar o pouco que restou... Agora, isolada na selva há milhares de anos, a sofisticada cidade arcológica de Ixaocan permanece praticamente livre de influências externas. Tendo testemunhado de longe a ruína das Ilhas das Bênçãos e as Guerras Rúnicas logo depois, os ixtalenses veem todas as outras facções de Runeterra como novatas e impostoras, e usam sua poderosa magia para manter qualquer intruso bem longe.",
+    "champions": ["Malphite", "Milio", "Neeko", "Nidalee", "Qiyana", "Rengar", "Zyra"]
+  },
+  "Noxus": {
+    "name": "Noxus",
+    "nameBR": "Noxus",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9d0c487b98ba6b42/60ee0ffb975ffd4ff25ec2f5/noxus_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/bltc289dd5f678ea09a/60ee0ffdf5c69126a364f95e/noxus-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/noxus_crest_icon.png",
+    "description": "Noxus é um império poderoso com uma reputação temível. É visto como uma ameaça brutal e expansionista pelos estrangeiros, mas, por trás do exterior bélico, há uma sociedade surpreendentemente inclusiva que respeita e encoraja os talentos e as aptidões de cada indivíduo. Os Noxii já foram uma tribo bárbara e violenta, até o momento em que invadiram a cidade antiga que, hoje em dia, fica no coração de seu domínio. Mesmo sob ameaças vindas de todos os lados, eles avançaram contra seus inimigos sem temor, expandindo o território ano a ano. A luta pela sobrevivência definiu o caráter dos noxianos modernos, um povo orgulhoso que valoriza a força acima de tudo — mas que sabe reconhecer que ela se manifesta de diversas formas. Qualquer um pode conquistar uma posição de poder e respeito dentro de Noxus se demonstrar a aptidão necessária, independentemente de classe social, antecedentes ou riquezas. Os indivíduos que sabem usar magia são muito respeitados, e costumam ser recrutados para que seus talentos especiais sejam aprimorados e postos a serviço do império. Entretanto, apesar dos ideais meritocráticos, as antigas famílias nobres ainda detêm grande poder... e há quem diga que a maior ameaça a Noxus não vem de fora, mas de dentro.",
+    "champions": ["Briar", "Cassiopeia", "Darius", "Draven", "Katarina", "Kled", "Leblanc", "Mordekaiser", "Rell", "Riven", "Samira", "Sion", "Swain", "Talon", "Vladimir"]
+  },
+  "Piltover": {
+    "name": "Piltover",
+    "nameBR": "Piltover",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5c307209ccbe2470/60ee10d06610ed4d42bc222e/piltover_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt90362a8d89dff757/60ee10d1c019ad2aaa39a53a/piltover-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/piltover_crest_icon.png",
+    "description": "Piltover é uma cidade próspera e progressiva cujo poder e influência estão em crescimento. Ela é o centro cultural de Valoran, onde a arte, o artesanato, o comércio e a inovação andam de mãos dadas. Seu poder não vem de soberania militar, mas através dos motores do comércio e do pensamento de vanguarda. Situada no despenhadeiro acima do distrito de Zaun e de frente para o oceano, frotas de navios passam por seus portões do mar gigantescos, trazendo iguarias do mundo todo. A riqueza que isso gera deu lugar a um aumento sem precedentes no crescimento da cidade. Piltover se reinventou - e continua se reinventando - como uma cidade onde fortunas podem ser feitas e sonhos podem ser realizados. Os crescentes clãs de mercadores investiram no desenvolvimento dos empreendimentos mais incríveis: grandes loucuras artísticas, pesquisa hextec esotérica e monumentos arquitetônicos em seu poder. Como cada vez mais inventores estão se envolvendo com a história de hextec, Piltover se tornou um ímã para os artesãos mais habilidosos do mundo.",
+    "champions": ["Caitlyn", "Camille", "Ezreal", "Heimerdinger", "Jayce", "Orianna", "Seraphine", "Vi"]
+  },
+  "ShadowIsles": {
+    "name": "ShadowIsles",
+    "nameBR": "Ilhas das Sombras",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd9cec6dc7ca0fc48/60ee11d22f7fa122fd574a11/shadow-isles_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/bltcf52291b647d41bf/60ee11d3e941174d3c8ea93d/shadow-isles-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/shadow_isles_crest_icon.png",
+    "description": "Esta terra amaldiçoada já foi lar de uma civilização nobre e evoluída, sendo conhecida entre seus aliados como as Ilhas das Bênçãos. No entanto, mais de mil anos atrás, um cataclisma mágico sem precedentes estilhaçou a barreira entre os mundos material e espiritual, fundindo ambos... e aniquilando toda e qualquer forma de vida em um instante. Agora, uma Névoa Negra maligna cobre as Ilhas permanentemente, e a própria terra do lugar encontra-se corrompida por uma magia sombria. Qualquer mortal que se aventure por esses litorais nefastos terá sua força vital lentamente drenada, o que, por sua vez, atrai os espíritos insaciáveis e atormentados dos mortos. Perecer dentro da névoa é estar condenado a assombrar este lugar medonho por toda a eternidade. Para piorar, o poder das Ilhas das Sombras parece se fortalecer a cada ano, permitindo que os espectros mais poderosos vagueiem cada vez mais longe por Runeterra.",
+    "champions": ["Elise", "Gwen", "Hecarim", "Kalista", "Karthus", "Maokai", "Thresh", "Vex", "Viego", "Yorick"]
+  },
+  "Shurima": {
+    "name": "Shurima",
+    "nameBR": "Shurima",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5924e500520eabd9/60ee11fb94d70a1ef3123825/shurima_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt68540b0027fb3e33/60ee11fc1998302436df34cd/shurima-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/shurima_crest_icon.png",
+    "description": "O império de Shurima já foi uma civilização próspera que ocupava um continente inteiro. Forjado pelos poderosos deuses-guerreiros do Batalhão de Ascendentes em uma era perdida, ele uniu todos os povos díspares do sul e consolidou uma paz duradoura entre eles. Poucos ousavam se rebelar – e aqueles que o faziam, como a nação amaldiçoada de Icathia, eram esmagados sem misericórdia. Entretanto, após milhares de anos de crescimento e prosperidade, a Ascensão fracassada do último imperador de Shurima deixou a capital em ruínas, e as histórias da antiga glória do império se tornaram pouco mais do que mitos. Agora, a maioria dos habitantes nômades dos desertos de Shurima lutam para conseguir se sustentar nesta terra impiedosa. Alguns grupos construíram pequenos postos para defender os raros oásis, enquanto outros mergulham em catacumbas há muito perdidas em busca das incontáveis fortunas que dizem estar aguardando lá embaixo. Também há quem leve uma vida de mercenário, trocando serviços por moedas antes de desaparecer de novo na vastidão sem lei. Mesmo assim, alguns ainda ousam sonhar com o retorno dos tempos antigos. Recentemente, as tribos andaram se agitando, fomentadas pelos sussurros vindos do coração do deserto sobre o retorno do imperador Azir, que os levará a uma nova era de maravilhas.",
+    "champions": ["Akshan", "Amumu", "Azir", "KSante", "Naafiri", "Nasus", "Rammus", "Renekton", "Sivir", "Skarner", "Taliyah", "Xerath"]
+  },
+  "Targon": {
+    "name": "Targon",
+    "nameBR": "Targon",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1ab39bfee4a3057d/60ee0f894fba2021cde587f6/mount-targon_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt0b11cdc5ce60c6ce/60ee0f8ba471a34acb2c1fbc/mount-targon-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/mt_targon_crest_icon.png",
+    "description": "O Monte Targon é a mais imponente montanha de Runeterra; uma torre gigantesca de rochas endurecidas pelo sol em meio a uma variedade de cumes. Nada igual em escala em qualquer lugar do mundo. Localizado longe da civilização, o Monte Targon é deveras remoto e impossível de alcançar, exceto pelos exploradores mais determinados. Muitas lendas estão ligadas ao Monte Targon e, assim como qualquer lugar que pertence a um mito, é um farol para sonhadores, loucos e exploradores em busca de aventura. Algumas almas corajosas tentam escalar a montanha impossível, talvez em busca de conhecimento ou iluminação, ou talvez atrás de glória ou para atender outro desejo da alma ao ver seu auge. A subida é quase impossível, e até mesmo para aqueles poucos que, de alguma forma, sobrevivem a chegada ao topo jamais falam sobre o que viram lá. Alguns voltam com uma assombração de olhares vazios em seus olhos, outros mudam completamente, imbuídos de um Aspecto de poder sobrenatural e que vai além da humanidade, com um destino que poucos mortais podem compreender.",
+    "champions": ["Aphelios", "AurelionSol", "Diana", "Leona", "Pantheon", "Soraka", "Taric", "Zoe"]
+  },
+  "TheFreljord": {
+    "name": "TheFreljord",
+    "nameBR": "Freljord",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc15ba510f02e7e45/60ee0d9185b042284396138b/freljord_splash.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt690aa6aad1072d7f/60ee0d92c019ad2aaa39a4b8/freljord-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/freljord_crest_icon.png",
+    "description": "Freljord é uma terra hostil e impiedosa, onde todos já nascem guerreiros para não perecer diante das adversidades. Orgulhosas e muito independentes, as tribos locais são, muitas vezes, consideradas selvagens, rústicas e 'nada civilizadas' por seus vizinhos de Valoran, que não conhecem as tradições milenares que as moldam. Há muitos milhares de anos, a aliança formada pelas irmãs Avarosa, Serylda e Lissandra foi rompida em uma guerra que ameaçou toda a região de Runeterra, lançando as terras nortenhas ao caos de um inverno quase constante. Agora, os únicos destinados (ou capacitados) a liderar são os mortais realmente excepcionais, resistentes aos estragos do fogo e do gelo. Apesar dos esforços dos Praeglacius, mitos e lendas sobre deuses antigos, yetis enigmáticos e irrequietos andarilhos espirituais ainda persistem. Os saqueadores dos Garra do Inverno avançam mais e mais a cada ano que passa, causando problemas ao sul de Demacia e às fronteiras de Noxus ao leste. Por fim, em busca de um futuro mais pacífico, tribos e clãs independentes começaram a oferecer vassalagem a Ashe, a jovem rainha dos avarosianos. Mesmo assim, há maus presságios à espreita. A guerra está voltando a Freljord, e ninguém tem esperança de escapar.",
+    "champions": ["Anivia", "Ashe", "Braum", "Gnar", "Gragas", "Lissandra", "Nunu", "Olaf", "Ornn", "Sejuani", "Trundle", "Tryndamere", "Udyr", "Volibear"]
+  },
+  "TheVoid": {
+    "name": "TheVoid",
+    "nameBR": "O Vazio",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4754fc6a91233824/60ee139d5397524ead38918f/void-an-unknowable-power.jpg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/bltd673c00d72a9f412/60ee139f66d52e63b8eb6c05/void-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/void_crest_icon.png",
+    "description": "Ruidosamente lançado à existência com o surgimento do universo, o Vazio é uma manifestação da vastidão inatingível daquilo que jaz além. É uma força de apetite insaciável, que espera uma eternidade até que seus mestres, os misteriosos Observadores, marquem o momento final da destruição. Quando um mortal é tocado por esse poder, ele vislumbra uma agonizante irrealidade eterna, que é o suficiente para estilhaçar até mesmo as mentes mais fortes. Os próprios habitantes do reino do Vazio são criaturas geradas, muitas vezes com pouquíssima consciência, mas incumbidas de um propósito peculiar: levar toda Runeterra ao oblívio.",
+    "champions": ["Belveth", "Chogath", "Kaisa", "Kassadin", "Khazix", "KogMaw", "Malzahar", "RekSai", "Velkoz"]
+  },
+  "Zaun": {
+    "name": "Zaun",
+    "nameBR": "Zaun",
+    "img": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3d038a51072c6d5a/614cc18164c8007a9bdec0e2/zaun_splash.jpeg",
+    "regionVideo": "https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt4c967eb145447887/60ee1420c326e45e15154d83/zaun-splashvideo.webm",
+    "icon": "https://universe.leagueoflegends.com/images/zaun_crest_icon.png",
+    "description": "Zaun é um grande distrito subterrâneo, aos pés de cânions profundos e vales que cortam Piltover. A pouca luz que chega lá é filtrada pelas fumaças que saem dos emaranhados de canos corroídos e refletem do vidro manchado de sua arquitetura industrial. Zaun e Piltover já foram unidas, mas agora são sociedades simbióticas, mas separadas. Apesar de existir no crepúsculo perpétuo da poluição, Zaun prospera com seu povo vibrante e sua rica cultura. A riqueza de Piltover permitiu que Zaun se desenvolvesse em paralelo; um espelho escuro da cidade acima. Muitas das mercadorias que chegam a Piltover acabam entrando no mercado clandestino de Zaun, e os inventores hextec que consideram que as restrições impostas na cidade acima são muito rígidas descobrem que suas pesquisas perigosas são bem-vindas em Zaun. O desenvolvimento desenfreado de tecnologias voláteis e da indústria imprudente fez com que as extensões de Zaun ficassem poluídas e perigosas. Correntes de derramamento tóxico estagnaram nas partes mais baixas da cidade, mas mesmo aqui as pessoas encontram maneiras de existir e prosperar.",
+    "champions": ["Blitzcrank", "DrMundo", "Ekko", "Janna", "Jinx", "Renata", "Singed", "Twitch", "Urgot", "Viktor", "Warwick", "Zac", "Ziggs", "Zeri"]
+  }
+}

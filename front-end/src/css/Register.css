@@ -46,3 +46,10 @@
   border-color: rgb(20, 60, 80) !important;
   background-color: rgb(20, 60, 80) !important;
 }
+
+.register-container {
+  background-image: url('../images/img.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}

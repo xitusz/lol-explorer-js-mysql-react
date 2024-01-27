@@ -1,0 +1,1168 @@
+{
+  "NoSkillVideo": {
+    "IMG": "https://www.leagueoflegends.com/static/no-ability-background-b82287ba3e7f3b6af9cde0a994af0829.jpg",
+    "IMG2": "https://www.leagueoflegends.com/static/no-ability-icon-3a12d11f77a64872a4800722e1a63844.png"
+  },
+  "Aatrox": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm"
+  },
+  "Ahri": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_R1.webm"
+  },
+  "Akali": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_R1.webm"
+  },
+  "Akshan": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_R1.webm"
+  },
+  "Alistar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0012/ability_0012_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0012/ability_0012_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0012/ability_0012_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0012/ability_0012_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0012/ability_0012_R1.webm"
+  },
+  "Amumu": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0032/ability_0032_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0032/ability_0032_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0032/ability_0032_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0032/ability_0032_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0032/ability_0032_R1.webm"
+  },
+  "Anivia": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_R1.webm"
+  },
+  "Annie": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0001/ability_0001_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0001/ability_0001_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0001/ability_0001_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0001/ability_0001_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0001/ability_0001_R1.webm"
+  },
+  "Aphelios": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_R1.webm"
+  },
+  "Ashe": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0022/ability_0022_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0022/ability_0022_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0022/ability_0022_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0022/ability_0022_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0022/ability_0022_R1.webm"
+  },
+  "AurelionSol": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0136/ability_0136_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0136/ability_0136_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0136/ability_0136_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0136/ability_0136_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0136/ability_0136_R1.webm"
+  },
+  "Azir": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_R1.webm"
+  },
+  "Bard": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0432/ability_0432_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0432/ability_0432_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0432/ability_0432_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0432/ability_0432_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0432/ability_0432_R1.webm"
+  },
+  "Belveth": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0200/ability_0200_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0200/ability_0200_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0200/ability_0200_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0200/ability_0200_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0200/ability_0200_R1.webm"
+  },
+  "Blitzcrank": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0053/ability_0053_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0053/ability_0053_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0053/ability_0053_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0053/ability_0053_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0053/ability_0053_R1.webm"
+  },
+  "Brand": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_R1.webm"
+  },
+  "Braum": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0201/ability_0201_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0201/ability_0201_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0201/ability_0201_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0201/ability_0201_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0201/ability_0201_R1.webm"
+  },
+  "Briar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0233/ability_0233_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0233/ability_0233_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0233/ability_0233_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0233/ability_0233_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0233/ability_0233_R1.webm"
+  },
+  "Caitlyn": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_R1.webm"
+  },
+  "Camille": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0164/ability_0164_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0164/ability_0164_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0164/ability_0164_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0164/ability_0164_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0164/ability_0164_R1.webm"
+  },
+  "Cassiopeia": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0069/ability_0069_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0069/ability_0069_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0069/ability_0069_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0069/ability_0069_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0069/ability_0069_R1.webm"
+  },
+  "Chogath": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0031/ability_0031_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0031/ability_0031_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0031/ability_0031_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0031/ability_0031_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0031/ability_0031_R1.webm"
+  },
+  "Corki": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_R1.webm"
+  },
+  "Darius": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0122/ability_0122_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0122/ability_0122_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0122/ability_0122_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0122/ability_0122_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0122/ability_0122_R1.webm"
+  },
+  "Diana": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0131/ability_0131_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0131/ability_0131_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0131/ability_0131_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0131/ability_0131_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0131/ability_0131_R1.webm"
+  },
+  "DrMundo": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_R1.webm"
+  },
+  "Draven": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0119/ability_0119_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0119/ability_0119_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0119/ability_0119_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0119/ability_0119_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0119/ability_0119_R1.webm"
+  },
+  "Ekko": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_R1.webm"
+  },
+  "Elise": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0060/ability_0060_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0060/ability_0060_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0060/ability_0060_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0060/ability_0060_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0060/ability_0060_R1.webm"
+  },
+  "Evelynn": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0028/ability_0028_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0028/ability_0028_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0028/ability_0028_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0028/ability_0028_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0028/ability_0028_R1.webm"
+  },
+  "Ezreal": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_R1.webm"
+  },
+  "Fiddlesticks": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0009/ability_0009_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0009/ability_0009_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0009/ability_0009_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0009/ability_0009_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0009/ability_0009_R1.webm"
+  },
+  "Fiora": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0114/ability_0114_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0114/ability_0114_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0114/ability_0114_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0114/ability_0114_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0114/ability_0114_R1.webm"
+  },
+  "Fizz": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_R1.webm"
+  },
+  "Galio": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_R1.webm"
+  },
+  "Gangplank": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0041/ability_0041_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0041/ability_0041_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0041/ability_0041_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0041/ability_0041_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0041/ability_0041_R1.webm"
+  },
+  "Garen": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0086/ability_0086_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0086/ability_0086_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0086/ability_0086_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0086/ability_0086_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0086/ability_0086_R1.webm"
+  },
+  "Gnar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0150/ability_0150_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0150/ability_0150_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0150/ability_0150_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0150/ability_0150_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0150/ability_0150_R1.webm"
+  },
+  "Gragas": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_R1.webm"
+  },
+  "Graves": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0104/ability_0104_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0104/ability_0104_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0104/ability_0104_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0104/ability_0104_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0104/ability_0104_R1.webm"
+  },
+  "Gwen": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_R1.webm"
+  },
+  "Hecarim": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_R1.webm"
+  },
+  "Heimerdinger": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_R1.webm"
+  },
+  "Hwei": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0910/ability_0910_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0910/ability_0910_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0910/ability_0910_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0910/ability_0910_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0910/ability_0910_R1.webm"
+  },
+  "Illaoi": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0420/ability_0420_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0420/ability_0420_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0420/ability_0420_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0420/ability_0420_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0420/ability_0420_R1.webm"
+  },
+  "Irelia": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0039/ability_0039_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0039/ability_0039_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0039/ability_0039_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0039/ability_0039_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0039/ability_0039_R1.webm"
+  },
+  "Ivern": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0427/ability_0427_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0427/ability_0427_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0427/ability_0427_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0427/ability_0427_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0427/ability_0427_R1.webm"
+  },
+  "Janna": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0040/ability_0040_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0040/ability_0040_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0040/ability_0040_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0040/ability_0040_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0040/ability_0040_R1.webm"
+  },
+  "JarvanIV": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0059/ability_0059_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0059/ability_0059_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0059/ability_0059_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0059/ability_0059_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0059/ability_0059_R1.webm"
+  },
+  "Jax": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_R1.webm"
+  },
+  "Jayce": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0126/ability_0126_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0126/ability_0126_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0126/ability_0126_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0126/ability_0126_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0126/ability_0126_R1.webm"
+  },
+  "Jhin": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_R1.webm"
+  },
+  "Jinx": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_R1.webm"
+  },
+  "KSante": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0897/ability_0897_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0897/ability_0897_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0897/ability_0897_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0897/ability_0897_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0897/ability_0897_R1.webm"
+  },
+  "Kaisa": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0145/ability_0145_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0145/ability_0145_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0145/ability_0145_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0145/ability_0145_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0145/ability_0145_R1.webm"
+  },
+  "Kalista": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0429/ability_0429_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0429/ability_0429_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0429/ability_0429_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0429/ability_0429_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0429/ability_0429_R1.webm"
+  },
+  "Karma": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0043/ability_0043_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0043/ability_0043_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0043/ability_0043_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0043/ability_0043_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0043/ability_0043_R1.webm"
+  },
+  "Karthus": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_R1.webm"
+  },
+  "Kassadin": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0038/ability_0038_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0038/ability_0038_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0038/ability_0038_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0038/ability_0038_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0038/ability_0038_R1.webm"
+  },
+  "Katarina": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0055/ability_0055_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0055/ability_0055_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0055/ability_0055_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0055/ability_0055_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0055/ability_0055_R1.webm"
+  },
+  "Kayle": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_R1.webm"
+  },
+  "Kayn": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0141/ability_0141_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0141/ability_0141_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0141/ability_0141_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0141/ability_0141_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0141/ability_0141_R1.webm"
+  },
+  "Kennen": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0085/ability_0085_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0085/ability_0085_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0085/ability_0085_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0085/ability_0085_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0085/ability_0085_R1.webm"
+  },
+  "Khazix": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_R1.webm"
+  },
+  "Kindred": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0203/ability_0203_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0203/ability_0203_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0203/ability_0203_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0203/ability_0203_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0203/ability_0203_R1.webm"
+  },
+  "Kled": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0240/ability_0240_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0240/ability_0240_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0240/ability_0240_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0240/ability_0240_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0240/ability_0240_R1.webm"
+  },
+  "KogMaw": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0096/ability_0096_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0096/ability_0096_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0096/ability_0096_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0096/ability_0096_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0096/ability_0096_R1.webm"
+  },
+  "Leblanc": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_R1.webm"
+  },
+  "LeeSin": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_R1.webm"
+  },
+  "Leona": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0089/ability_0089_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0089/ability_0089_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0089/ability_0089_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0089/ability_0089_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0089/ability_0089_R1.webm"
+  },
+  "Lillia": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0876/ability_0876_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0876/ability_0876_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0876/ability_0876_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0876/ability_0876_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0876/ability_0876_R1.webm"
+  },
+  "Lissandra": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_R1.webm"
+  },
+  "Lucian": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_R1.webm"
+  },
+  "Lulu": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0117/ability_0117_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0117/ability_0117_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0117/ability_0117_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0117/ability_0117_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0117/ability_0117_R1.webm"
+  },
+  "Lux": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_R1.webm"
+  },
+  "Malphite": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_R1.webm"
+  },
+  "Malzahar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_R1.webm"
+  },
+  "Maokai": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0057/ability_0057_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0057/ability_0057_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0057/ability_0057_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0057/ability_0057_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0057/ability_0057_R1.webm"
+  },
+  "MasterYi": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0011/ability_0011_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0011/ability_0011_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0011/ability_0011_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0011/ability_0011_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0011/ability_0011_R1.webm"
+  },
+  "Milio": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0902/ability_0902_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0902/ability_0902_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0902/ability_0902_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0902/ability_0902_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0902/ability_0902_R1.webm"
+  },
+  "MissFortune": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0021/ability_0021_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0021/ability_0021_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0021/ability_0021_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0021/ability_0021_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0021/ability_0021_R1.webm"
+  },
+  "Mordekaiser": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0082/ability_0082_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0082/ability_0082_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0082/ability_0082_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0082/ability_0082_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0082/ability_0082_R1.webm"
+  },
+  "Morgana": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0025/ability_0025_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0025/ability_0025_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0025/ability_0025_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0025/ability_0025_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0025/ability_0025_R1.webm"
+  },
+  "Naafiri": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0950/ability_0950_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0950/ability_0950_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0950/ability_0950_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0950/ability_0950_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0950/ability_0950_R1.webm"
+  },
+  "Nami": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_R1.webm"
+  },
+  "Nasus": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0075/ability_0075_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0075/ability_0075_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0075/ability_0075_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0075/ability_0075_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0075/ability_0075_R1.webm"
+  },
+  "Nautilus": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0111/ability_0111_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0111/ability_0111_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0111/ability_0111_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0111/ability_0111_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0111/ability_0111_R1.webm"
+  },
+  "Neeko": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0518/ability_0518_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0518/ability_0518_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0518/ability_0518_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0518/ability_0518_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0518/ability_0518_R1.webm"
+  },
+  "Nidalee": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0076/ability_0076_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0076/ability_0076_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0076/ability_0076_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0076/ability_0076_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0076/ability_0076_R1.webm"
+  },
+  "Nilah": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0895/ability_0895_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0895/ability_0895_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0895/ability_0895_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0895/ability_0895_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0895/ability_0895_R1.webm"
+  },
+  "Nocturne": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_R1.webm"
+  },
+  "Nunu": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0020/ability_0020_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0020/ability_0020_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0020/ability_0020_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0020/ability_0020_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0020/ability_0020_R1.webm"
+  },
+  "Olaf": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_R1.webm"
+  },
+  "Orianna": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_R1.webm"
+  },
+  "Ornn": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0516/ability_0516_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0516/ability_0516_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0516/ability_0516_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0516/ability_0516_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0516/ability_0516_R1.webm"
+  },
+  "Pantheon": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_R1.webm"
+  },
+  "Poppy": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_R1.webm"
+  },
+  "Pyke": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0555/ability_0555_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0555/ability_0555_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0555/ability_0555_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0555/ability_0555_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0555/ability_0555_R1.webm"
+  },
+  "Qiyana": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0246/ability_0246_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0246/ability_0246_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0246/ability_0246_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0246/ability_0246_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0246/ability_0246_R1.webm"
+  },
+  "Quinn": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0133/ability_0133_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0133/ability_0133_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0133/ability_0133_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0133/ability_0133_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0133/ability_0133_R1.webm"
+  },
+  "Rakan": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0497/ability_0497_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0497/ability_0497_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0497/ability_0497_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0497/ability_0497_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0497/ability_0497_R1.webm"
+  },
+  "Rammus": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0033/ability_0033_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0033/ability_0033_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0033/ability_0033_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0033/ability_0033_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0033/ability_0033_R1.webm"
+  },
+  "RekSai": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0421/ability_0421_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0421/ability_0421_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0421/ability_0421_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0421/ability_0421_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0421/ability_0421_R1.webm"
+  },
+  "Rell": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0526/ability_0526_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0526/ability_0526_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0526/ability_0526_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0526/ability_0526_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0526/ability_0526_R1.webm"
+  },
+  "Renata": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0888/ability_0888_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0888/ability_0888_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0888/ability_0888_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0888/ability_0888_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0888/ability_0888_R1.webm"
+  },
+  "Renekton": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0058/ability_0058_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0058/ability_0058_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0058/ability_0058_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0058/ability_0058_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0058/ability_0058_R1.webm"
+  },
+  "Rengar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0107/ability_0107_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0107/ability_0107_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0107/ability_0107_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0107/ability_0107_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0107/ability_0107_R1.webm"
+  },
+  "Riven": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_R1.webm"
+  },
+  "Rumble": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0068/ability_0068_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0068/ability_0068_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0068/ability_0068_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0068/ability_0068_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0068/ability_0068_R1.webm"
+  },
+  "Ryze": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0013/ability_0013_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0013/ability_0013_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0013/ability_0013_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0013/ability_0013_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0013/ability_0013_R1.webm"
+  },
+  "Samira": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0360/ability_0360_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0360/ability_0360_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0360/ability_0360_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0360/ability_0360_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0360/ability_0360_R1.webm"
+  },
+  "Sejuani": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0113/ability_0113_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0113/ability_0113_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0113/ability_0113_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0113/ability_0113_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0113/ability_0113_R1.webm"
+  },
+  "Senna": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0235/ability_0235_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0235/ability_0235_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0235/ability_0235_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0235/ability_0235_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0235/ability_0235_R1.webm"
+  },
+  "Seraphine": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0147/ability_0147_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0147/ability_0147_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0147/ability_0147_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0147/ability_0147_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0147/ability_0147_R1.webm"
+  },
+  "Sett": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0875/ability_0875_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0875/ability_0875_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0875/ability_0875_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0875/ability_0875_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0875/ability_0875_R1.webm"
+  },
+  "Shaco": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0035/ability_0035_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0035/ability_0035_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0035/ability_0035_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0035/ability_0035_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0035/ability_0035_R1.webm"
+  },
+  "Shen": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_R1.webm"
+  },
+  "Shyvana": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0102/ability_0102_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0102/ability_0102_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0102/ability_0102_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0102/ability_0102_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0102/ability_0102_R1.webm"
+  },
+  "Singed": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_R1.webm"
+  },
+  "Sion": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0014/ability_0014_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0014/ability_0014_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0014/ability_0014_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0014/ability_0014_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0014/ability_0014_R1.webm"
+  },
+  "Sivir": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0015/ability_0015_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0015/ability_0015_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0015/ability_0015_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0015/ability_0015_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0015/ability_0015_R1.webm"
+  },
+  "Skarner": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0072/ability_0072_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0072/ability_0072_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0072/ability_0072_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0072/ability_0072_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0072/ability_0072_R1.webm"
+  },
+  "Sona": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0037/ability_0037_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0037/ability_0037_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0037/ability_0037_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0037/ability_0037_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0037/ability_0037_R1.webm"
+  },
+  "Soraka": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_R1.webm"
+  },
+  "Swain": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0050/ability_0050_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0050/ability_0050_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0050/ability_0050_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0050/ability_0050_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0050/ability_0050_R1.webm"
+  },
+  "Sylas": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_R1.webm"
+  },
+  "Syndra": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0134/ability_0134_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0134/ability_0134_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0134/ability_0134_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0134/ability_0134_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0134/ability_0134_R1.webm"
+  },
+  "TahmKench": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0223/ability_0223_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0223/ability_0223_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0223/ability_0223_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0223/ability_0223_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0223/ability_0223_R1.webm"
+  },
+  "Taliyah": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0163/ability_0163_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0163/ability_0163_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0163/ability_0163_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0163/ability_0163_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0163/ability_0163_R1.webm"
+  },
+  "Talon": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_R1.webm"
+  },
+  "Taric": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0044/ability_0044_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0044/ability_0044_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0044/ability_0044_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0044/ability_0044_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0044/ability_0044_R1.webm"
+  },
+  "Teemo": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_R1.webm"
+  },
+  "Thresh": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_R1.webm"
+  },
+  "Tristana": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0018/ability_0018_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0018/ability_0018_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0018/ability_0018_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0018/ability_0018_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0018/ability_0018_R1.webm"
+  },
+  "Trundle": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0048/ability_0048_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0048/ability_0048_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0048/ability_0048_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0048/ability_0048_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0048/ability_0048_R1.webm"
+  },
+  "Tryndamere": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0023/ability_0023_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0023/ability_0023_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0023/ability_0023_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0023/ability_0023_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0023/ability_0023_R1.webm"
+  },
+  "TwistedFate": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_R1.webm"
+  },
+  "Twitch": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_R1.webm"
+  },
+  "Udyr": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0077/ability_0077_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0077/ability_0077_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0077/ability_0077_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0077/ability_0077_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0077/ability_0077_R1.webm"
+  },
+  "Urgot": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0006/ability_0006_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0006/ability_0006_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0006/ability_0006_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0006/ability_0006_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0006/ability_0006_R1.webm"
+  },
+  "Varus": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_R1.webm"
+  },
+  "Vayne": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0067/ability_0067_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0067/ability_0067_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0067/ability_0067_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0067/ability_0067_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0067/ability_0067_R1.webm"
+  },
+  "Veigar": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_R1.webm"
+  },
+  "Velkoz": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0161/ability_0161_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0161/ability_0161_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0161/ability_0161_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0161/ability_0161_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0161/ability_0161_R1.webm"
+  },
+  "Vex": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0711/ability_0711_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0711/ability_0711_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0711/ability_0711_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0711/ability_0711_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0711/ability_0711_R1.webm"
+  },
+  "Vi": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_R1.webm"
+  },
+  "Viego": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_R1.webm"
+  },
+  "Viktor": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0112/ability_0112_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0112/ability_0112_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0112/ability_0112_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0112/ability_0112_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0112/ability_0112_R1.webm"
+  },
+  "Vladimir": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_R1.webm"
+  },
+  "Volibear": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0106/ability_0106_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0106/ability_0106_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0106/ability_0106_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0106/ability_0106_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0106/ability_0106_R1.webm"
+  },
+  "Warwick": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0019/ability_0019_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0019/ability_0019_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0019/ability_0019_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0019/ability_0019_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0019/ability_0019_R1.webm"
+  },
+  "MonkeyKing": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_R1.webm"
+  },
+  "Xayah": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0498/ability_0498_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0498/ability_0498_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0498/ability_0498_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0498/ability_0498_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0498/ability_0498_R1.webm"
+  },
+  "Xerath": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0101/ability_0101_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0101/ability_0101_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0101/ability_0101_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0101/ability_0101_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0101/ability_0101_R1.webm"
+  },
+  "XinZhao": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0005/ability_0005_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0005/ability_0005_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0005/ability_0005_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0005/ability_0005_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0005/ability_0005_R1.webm"
+  },
+  "Yasuo": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_R1.webm"
+  },
+  "Yone": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_R1.webm"
+  },
+  "Yorick": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0083/ability_0083_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0083/ability_0083_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0083/ability_0083_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0083/ability_0083_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0083/ability_0083_R1.webm"
+  },
+  "Yuumi": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0350/ability_0350_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0350/ability_0350_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0350/ability_0350_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0350/ability_0350_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0350/ability_0350_R1.webm"
+  },
+  "Zac": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_R1.webm"
+  },
+  "Zed": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_R1.webm"
+  },
+  "Zeri": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0221/ability_0221_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0221/ability_0221_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0221/ability_0221_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0221/ability_0221_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0221/ability_0221_R1.webm"
+  },
+  "Ziggs": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_R1.webm"
+  },
+  "Zilean": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_R1.webm"
+  },
+  "Zoe": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0142/ability_0142_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0142/ability_0142_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0142/ability_0142_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0142/ability_0142_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0142/ability_0142_R1.webm"
+  },
+  "Zyra": {
+    "P": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0143/ability_0143_P1.webm",
+    "Q": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0143/ability_0143_Q1.webm",
+    "W": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0143/ability_0143_W1.webm",
+    "E": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0143/ability_0143_E1.webm",
+    "R": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0143/ability_0143_R1.webm"
+  }
+}
