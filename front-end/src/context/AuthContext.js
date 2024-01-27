@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { getItemFromLocalStorage } from "../services/localStorage";
