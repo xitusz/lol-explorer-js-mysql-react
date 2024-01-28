@@ -47,61 +47,61 @@
 
 Tela inicial com 2 opções, navegar para personagens ou regiões
 
-![Home Gif](https://i.imgur.com/EYZQS5J.gif)
+![Home Gif](./readme-images/home.gif)
 
 ### Champion
 
 Lista dos personagens, opção de favoritar, campo de busca, botões de filtro e ao clicar em algum personagem será redirecionado para os detalhes deste personagem
 
-![Champion Gif](https://i.imgur.com/Whn0PAb.gif)
+![Champion Gif](./readme-images/champion.gif)
 
 ### Champion Details
 
 Detalhes do personagem selecionado
 
-![Champion Details Gif](https://i.imgur.com/BfO7qTi.gif)
+![Champion Details Gif](./readme-images/championDetails.gif)
 
 ### Region
 
 Lista das regiões com campo de busca e ao clicar em alguma região será redirecionado para os detalhes desta região
 
-![Region Gif](https://i.imgur.com/KEWLbQx.gif)
+![Region Gif](./readme-images/region.gif)
 
 ### Region Details
 
 Detalhes da região selecionada
 
-![Region Details Gif](https://i.imgur.com/zBu9Wq9.gif)
+![Region Details Gif](./readme-images/regionDetails.gif)
 
 ### Login
 
 Tela de login
 
-![Login Gif](https://i.imgur.com/52eTQsU.gif)
+![Login Gif](./readme-images/login.gif)
 
 ### Register
 
 Tela de registro
 
-![Register Gif](https://i.imgur.com/eW72qMA.gif)
+![Register Gif](./readme-images/register.gif)
 
 ### Profile
 
 Perfil com nome e email, opção de editar perfil e a lista dos personagens favoritos
 
-![Profile Gif](https://i.imgur.com/51i398J.gif)
+![Profile Gif](./readme-images/profile.gif)
 
 ### Profile Edit
 
 Opções de editar o nome, email ou senha e de deletar o usuario
 
-![Profile Edit Gif](https://i.imgur.com/ksRDsA7.gif)
+![Profile Edit Gif](./readme-images/profileEdit.gif)
 
 ### Diagram
 
 Diagrama do banco de dados
 
-![Diagram image](https://i.imgur.com/e8LYJD7.png)
+![Diagram image](./readme-images/diagram.png)
 
 ---
 
