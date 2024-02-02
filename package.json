@@ -1,5 +1,5 @@
 {
-  "name": "personal-project-1",
+  "name": "personal-project-1-js",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run start-backend & npm run start-frontend",
@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xitusz/personal-project-1.git"
+    "url": "git+https://github.com/xitusz/personal-project-1-js.git"
   },
   "keywords": [],
   "author": "Gabriel Alves",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xitusz/personal-project-1/issues"
+    "url": "https://github.com/xitusz/personal-project-1-js/issues"
   },
-  "homepage": "https://github.com/xitusz/personal-project-1#readme"
+  "homepage": "https://github.com/xitusz/personal-project-1-js#readme"
 }
