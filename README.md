@@ -1,4 +1,6 @@
-# Personal Project 1 - League of legends
+# Personal Project 1 - JS
+
+[Personal Project 1 - TS](https://github.com/xitusz/personal-project-1-ts)
 
 ---
 
