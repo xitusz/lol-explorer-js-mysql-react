@@ -91,6 +91,8 @@ describe("Register page", () => {
     const nameInput = screen.getByPlaceholderText(/nome/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
 
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
+
     fireEvent.change(nameInput, { target: { value: "a" } });
     fireEvent.click(registerButton);
 
@@ -107,6 +109,8 @@ describe("Register page", () => {
     const nameInput = screen.getByPlaceholderText(/nome/i);
     const emailInput = screen.getByPlaceholderText(/digite seu email/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
+
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
 
     fireEvent.change(nameInput, { target: { value: "name" } });
     fireEvent.change(emailInput, { target: { value: "email" } });
@@ -148,6 +152,8 @@ describe("Register page", () => {
       screen.getByPlaceholderText(/confirme sua senha/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
 
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
+
     fireEvent.change(nameInput, { target: { value: "name" } });
     fireEvent.change(emailInput, { target: { value: "email@example.com" } });
     fireEvent.change(passwordInput, { target: { value: "pass" } });
@@ -158,7 +164,9 @@ describe("Register page", () => {
     expect(confirmPasswordInput.value).toBe("pass");
 
     await waitFor(() => {
-      // expect(screen.getByText(/A senha deve ter de 6 a 12 caracteres/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/A senha deve ter de 6 a 12 caracteres/i)
+      ).toBeInTheDocument();
       expect(screen.getByTestId("error-validation")).toBeInTheDocument();
     });
   });
@@ -170,6 +178,8 @@ describe("Register page", () => {
     const confirmPasswordInput =
       screen.getByPlaceholderText(/confirme sua senha/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
+
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
 
     fireEvent.change(nameInput, { target: { value: "name" } });
     fireEvent.change(emailInput, { target: { value: "email@example.com" } });
@@ -196,6 +206,8 @@ describe("Register page", () => {
       screen.getByPlaceholderText(/confirme sua senha/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
 
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
+
     fireEvent.change(nameInput, { target: { value: "name" } });
     fireEvent.change(emailInput, { target: { value: "email@example.com" } });
     fireEvent.change(passwordInput, { target: { value: "password" } });
@@ -218,6 +230,8 @@ describe("Register page", () => {
       screen.getByPlaceholderText(/confirme sua senha/i);
     const registerButton = screen.getByRole("button", { name: /cadastrar/i });
     const recaptcha = screen.getByTestId("recaptcha-register");
+
+    jest.spyOn(axios, "post").mockResolvedValue({ data: true });
 
     fireEvent.change(nameInput, { target: { value: "name" } });
     fireEvent.change(emailInput, { target: { value: "email@example.com" } });
