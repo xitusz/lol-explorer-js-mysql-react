@@ -20,6 +20,7 @@
   - [Diagram](#diagram)
 - [Clonando Repositório](#clonando-repositório)
 - [Instalando Dependências](#instalando-dependências)
+- [Criando Banco de Dados](#criando-banco-de-dados)
 - [Executando Aplicação](#executando-aplicação)
 
 ---
@@ -112,7 +113,7 @@ Diagrama do banco de dados
 - Clone o repositório
 
   ```sh
-    git clone git@github.com:xitusz/personal-project-1.git
+    git clone git@github.com:xitusz/personal-project-1-js.git
   ```
 
 ---
@@ -122,7 +123,7 @@ Diagrama do banco de dados
 - Entre na pasta do repositório que você clonou:
 
   ```sh
-    cd personal-project-1
+    cd personal-project-1-js
   ```
 
 - Instale as dependências
@@ -133,12 +134,28 @@ Diagrama do banco de dados
 
 ---
 
+## Criando Banco de Dados
+
+- Entre na pasta do back-end:
+
+  ```sh
+    cd personal-project-1-js/back-end
+  ```
+
+- Crie o banco de dados:
+
+  ```sh
+    npm run db:reset
+  ```
+
+---
+
 ## Executando Aplicação
 
 - Entre na pasta do repositório que você clonou:
 
   ```sh
-    cd personal-project-1
+    cd personal-project-1-js
   ```
 
 - Inicie o projeto:
