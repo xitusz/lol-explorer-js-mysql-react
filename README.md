@@ -20,6 +20,7 @@
   - [Diagram](#diagram)
 - [Clonando Repositório](#clonando-repositório)
 - [Instalando Dependências](#instalando-dependências)
+- [Configuração do Ambiente](#configuração-do-ambiente)
 - [Criando Banco de Dados](#criando-banco-de-dados)
 - [Executando Aplicação](#executando-aplicação)
 
@@ -131,6 +132,14 @@ Diagrama do banco de dados
   ```sh
     npm run install-all
   ```
+
+---
+
+## Configuração do Ambiente
+
+- Antes de iniciar o frontend e o backend, certifique-se de criar e preencher o arquivo .env seguindo o exemplo fornecido em .env.example.
+
+- Antes de iniciar o backend, é necessário criar uma chave JWT para autenticação. Crie o arquivo jwt.evaluation.key na raiz do backend com uma chave
 
 ---
 
