@@ -1,6 +1,6 @@
-# Personal Project 1 - JS
+# LoL Explorer - JS, MySQL, React
 
-[Personal Project 1 - TS](https://github.com/xitusz/personal-project-1-ts)
+[LoL Explorer - TS, MySQL, React](https://github.com/xitusz/lol-explorer-ts-mysql-react)
 
 ---
 
@@ -113,7 +113,7 @@ Diagrama do banco de dados
 - Clone o repositório
 
   ```sh
-    git clone git@github.com:xitusz/personal-project-1-js.git
+    git clone git@github.com:xitusz/lol-explorer-js-mysql-react.git
   ```
 
 ---
@@ -123,7 +123,7 @@ Diagrama do banco de dados
 - Entre na pasta do repositório que você clonou:
 
   ```sh
-    cd personal-project-1-js
+    cd lol-explorer-js-mysql-react
   ```
 
 - Instale as dependências
@@ -139,7 +139,7 @@ Diagrama do banco de dados
 - Entre na pasta do back-end:
 
   ```sh
-    cd personal-project-1-js/back-end
+    cd lol-explorer-js-mysql-react/back-end
   ```
 
 - Crie o banco de dados:
@@ -155,7 +155,7 @@ Diagrama do banco de dados
 - Entre na pasta do repositório que você clonou:
 
   ```sh
-    cd personal-project-1-js
+    cd lol-explorer-js-mysql-react
   ```
 
 - Inicie o projeto:
