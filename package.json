@@ -1,5 +1,5 @@
 {
-  "name": "personal-project-1-js",
+  "name": "lol-explorer-js-mysql-react",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run start-backend & npm run start-frontend",
@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xitusz/personal-project-1-js.git"
+    "url": "git+https://github.com/xitusz/lol-explorer-js-mysql-react.git"
   },
   "keywords": [],
   "author": "Gabriel Alves",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xitusz/personal-project-1-js/issues"
+    "url": "https://github.com/xitusz/lol-explorer-js-mysql-react/issues"
   },
-  "homepage": "https://github.com/xitusz/personal-project-1-js#readme"
+  "homepage": "https://github.com/xitusz/lol-explorer-js-mysql-react#readme"
 }
