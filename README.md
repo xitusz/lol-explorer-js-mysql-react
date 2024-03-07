@@ -1,6 +1,6 @@
 # LoL Explorer - JS, MySQL, React
 
-[LoL Explorer - TS, MySQL, React](https://github.com/xitusz/lol-explorer-ts-mysql-react)
+[LoL Explorer - TS, MySQL, Angular](https://github.com/xitusz/lol-explorer-ts-mysql-angular)
 
 ---
 
