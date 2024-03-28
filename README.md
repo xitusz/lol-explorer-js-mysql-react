@@ -1,6 +1,7 @@
 # LoL Explorer - JS, MySQL, React
 
 [LoL Explorer - TS, MySQL, Angular](https://github.com/xitusz/lol-explorer-ts-mysql-angular)
+[LoL Explorer - TS, Mongo, Vue](https://github.com/xitusz/lol-explorer-ts-mongo-vue)
 
 ---
 
@@ -32,16 +33,21 @@
 - React
 - Bootstrap
 - Google Recaptcha
-- Jest
-- Node.js
-- Express.js
+- Node
+- Express
 - Sequelize
 - MySQL2
 - Bcrypt
+- Axios
 - Jwt
+- Rtl
+- Jest
 - Mocha
 - Chai
 - Sinon
+- Eslint
+- Prettier
+- Stylelint
 
 ---
 
