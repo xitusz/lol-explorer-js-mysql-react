@@ -62,7 +62,6 @@ const Login = () => {
 
         setUserToken(token);
         setItemToLocalStorage("isLoggedIn", true);
-        setItemToLocalStorage("token", token);
         createFavorites(token);
         navigate("/");
       } catch (error) {
