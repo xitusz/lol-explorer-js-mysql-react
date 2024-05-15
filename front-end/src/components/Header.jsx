@@ -15,7 +15,6 @@ const Header = () => {
 
   const handleExiting = () => {
     setUserToken("");
-    removeItemFromLocalStorage("token");
     removeItemFromLocalStorage("isLoggedIn");
     navigate("/login");
   };

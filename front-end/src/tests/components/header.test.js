@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 
 jest.mock("../../context/AuthContext", () => ({
   useAuth: () => ({
+    userToken: "fakeToken",
     setUserToken: jest.fn(),
   }),
 }));
@@ -59,7 +60,6 @@ describe("Header component", () => {
 
   describe("when user is logged in", () => {
     beforeEach(() => {
-      localStorage.setItem("token", JSON.stringify("fakeToken"));
       localStorage.setItem("isLoggedIn", true);
     });
 

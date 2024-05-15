@@ -184,7 +184,6 @@ const ProfileEdit = () => {
         },
       });
 
-      removeItemFromLocalStorage("token");
       removeItemFromLocalStorage("isLoggedIn");
       navigate("/");
     }
